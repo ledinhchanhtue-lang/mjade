@@ -2,13 +2,17 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { Search, User, ShoppingBag, Menu, ChevronDown } from "lucide-react";
+import { usePathname } from "next/navigation";
+import { Search, ShoppingBag, Menu } from "lucide-react";
 import { navigation } from "@/data/navigation";
+import { useCart } from "@/components/cart/CartProvider";
 import MobileMenu from "./MobileMenu";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const pathname = usePathname();
+  const { count, ready } = useCart();
 
   useEffect(() => {
     function onScroll() {
@@ -18,6 +22,11 @@ export default function Header() {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  function isActive(href: string): boolean {
+    if (href === "/") return pathname === "/";
+    return pathname.startsWith(href);
+  }
 
   return (
     <header
@@ -29,18 +38,19 @@ export default function Header() {
     >
       <div className="mx-auto flex max-w-page items-center justify-between px-5 py-4 md:px-10 lg:px-[72px]">
         <div className="flex flex-1 items-center gap-6">
-          <button
-            type="button"
+          <Link
+            href="/tim-kiem"
             aria-label="Tìm kiếm sản phẩm"
             className="hidden text-text-primary transition-colors hover:text-jade-deep md:inline-flex"
           >
             <Search size={19} strokeWidth={1.4} />
-          </button>
+          </Link>
           <button
             type="button"
             aria-label="Mở menu"
+            aria-expanded={mobileOpen}
             onClick={() => setMobileOpen(true)}
-            className="inline-flex text-text-primary md:hidden"
+            className="inline-flex min-h-11 min-w-11 items-center justify-center text-text-primary md:hidden"
           >
             <Menu size={24} strokeWidth={1.4} />
           </button>
@@ -55,42 +65,42 @@ export default function Header() {
         </Link>
 
         <div className="flex flex-1 items-center justify-end gap-5 md:gap-6">
-          <button
-            type="button"
-            className="hidden items-center gap-1 text-[11px] font-medium uppercase tracking-[0.1em] text-text-primary transition-colors hover:text-jade-deep md:inline-flex"
+          <Link
+            href="/lien-he-tu-van"
+            className="hidden text-[11px] font-medium uppercase tracking-[0.1em] text-text-primary transition-colors hover:text-jade-deep lg:inline-flex"
           >
-            VND đ
-            <span className="text-text-secondary">|</span>
-            VI
-            <ChevronDown size={12} strokeWidth={1.4} />
-          </button>
-          <button
-            type="button"
-            aria-label="Tài khoản"
-            className="hidden text-text-primary transition-colors hover:text-jade-deep md:inline-flex"
-          >
-            <User size={19} strokeWidth={1.4} />
-          </button>
-          <button
-            type="button"
-            aria-label="Giỏ hàng"
-            className="inline-flex text-text-primary transition-colors hover:text-jade-deep"
+            Đặt lịch tư vấn
+          </Link>
+          <Link
+            href="/gio-hang"
+            aria-label={`Danh sách đặt giữ${ready && count > 0 ? ` (${count} sản phẩm)` : ""}`}
+            className="relative inline-flex text-text-primary transition-colors hover:text-jade-deep"
           >
             <ShoppingBag size={19} strokeWidth={1.4} />
-          </button>
+            {ready && count > 0 ? (
+              <span
+                aria-hidden
+                className="absolute -right-2 -top-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-jade-deep text-[9px] font-medium text-white"
+              >
+                {count}
+              </span>
+            ) : null}
+          </Link>
         </div>
       </div>
 
-      <nav
-        aria-label="Điều hướng chính"
-        className="hidden border-t border-border/60 md:block"
-      >
+      <nav aria-label="Điều hướng chính" className="hidden border-t border-border/60 md:block">
         <ul className="mx-auto flex max-w-page items-center justify-center gap-9 px-10 py-3.5 lg:gap-10">
           {navigation.map((item) => (
             <li key={item.href}>
               <Link
                 href={item.href}
-                className="text-[11px] font-medium uppercase tracking-[0.12em] text-text-primary transition-colors hover:text-jade-deep"
+                aria-current={isActive(item.href) ? "page" : undefined}
+                className={`border-b pb-1 text-[11px] font-medium uppercase tracking-[0.12em] transition-colors hover:text-jade-deep ${
+                  isActive(item.href)
+                    ? "border-jade-deep text-jade-deep"
+                    : "border-transparent text-text-primary"
+                }`}
               >
                 {item.label}
               </Link>

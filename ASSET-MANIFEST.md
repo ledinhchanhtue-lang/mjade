@@ -1,51 +1,82 @@
-# Asset Manifest — MJADE Homepage
+# ASSET MANIFEST — MJADE
 
-Homepage imagery now uses **licensed stock photos from Pexels** (free for
-commercial use, no attribution required — see pexels.com/license). They are
-tone-matched placeholders: real MJADE product photography should still replace
-them before launch, because several show emerald/green-gemstone jewelry rather
-than certified Myanmar jadeite, and product photos must show the actual items
-sold. Every image is wired through `next/image` with honest Vietnamese `alt`
-text, so swapping a file is a drop-in replacement.
+Cập nhật: 2026-07-04 (Phase 2)
 
-## Reference mockup
+**Trạng thái chung:** toàn bộ ảnh production là **ảnh stock có giấy phép từ Pexels**
+(miễn phí thương mại, không cần ghi công — pexels.com/license), đã được xử lý
+(crop, đồng bộ tỷ lệ, chuyển WebP) bằng sharp. Chúng khớp tông màu ivory–jade
+của thương hiệu nhưng **chưa phải ảnh sản phẩm MJADE thật** — mọi file có trạng
+thái `TẠM` bên dưới cần thay bằng ảnh chụp thật trước khi chạy chiến dịch bán hàng.
 
-| File | Status |
+Không có ảnh nào hotlink từ bên ngoài; tất cả nằm trong `public/images/`.
+Không dùng ảnh Pinterest hoặc ảnh của thương hiệu trang sức khác.
+
+## Quy ước trạng thái
+
+- `THẬT` — ảnh do MJADE cung cấp, dùng được lâu dài.
+- `TẠM` — stock hợp lệ về bản quyền, đúng tông màu, cần thay bằng ảnh thật.
+- `THIẾU` — chưa có file; đang dùng placeholder trung tính.
+
+## public/images/home/
+
+| File | Kích thước | Vị trí | Trạng thái | Nguồn (Pexels ID) | Art direction khi thay | Ưu tiên |
+| --- | --- | --- | --- | --- | --- | --- |
+| hero-jade-woman.webp | 2200×1500 | Hero trang chủ | TẠM | 27969667 | Người phụ nữ Việt/Á Đông 32–45t, áo lụa ivory, MỘT mặt dây jade + nhẫn + hoa tai nhỏ, tóc búi thấp, trang điểm tự nhiên, ánh sáng cửa sổ, người bên phải khung, khoảng trống trái. Không bridal, không chandelier. | **P0** |
+| featured-pendant.webp | 1200×1500 (4:5) | Card SP nổi bật 1 | TẠM | 10561322 | Một mặt dây jadeite + dây chuyền gọn, nền ivory, bố cục centered editorial. | **P0** |
+| featured-ring.webp | 1200×1500 (4:5) | Card SP nổi bật 2 | TẠM | 16242337 | MỘT nhẫn jadeite hoàn thiện đúng sản phẩm thật, nền ivory. | **P0** |
+| featured-earrings.webp | 1200×1500 (4:5) | Card SP nổi bật 3 | TẠM | 13595669 | Một đôi hoa tai jadeite thanh lịch hiện đại, nền ivory, không quá nhiều bạc. | **P0** |
+| featured-bracelet.webp | 1200×1500 (4:5) | Card SP nổi bật 4 | TẠM | 11157508 | Một lắc tay jadeite hoàn thiện, sản phẩm chiếm phần lớn khung. | **P0** |
+| limited-pendant.webp | 1200×1200 (1:1) | Limited strip 1 | TẠM ⚠️ nền xanh rêu, chưa đúng palette lụa champagne | 21235148 | Mặt dây jade trên lụa champagne, macro editorial. | **P0 — thay sớm nhất** |
+| limited-ring.webp | 1200×1200 (1:1) | Limited strip 2 | TẠM | 13780712 | Nhẫn jade trên linen ivory hoặc đeo trên tay, ánh sáng ấm. | P1 |
+| limited-earrings.webp | 1200×1200 (1:1) | Limited strip 3 | TẠM | 7360327 | Đôi hoa tai jade, macro trên đá kem hoặc đeo trên tai. | P1 |
+| limited-bangle.webp | 1200×1200 (1:1) | Limited strip 4 | TẠM ⚠️ ảnh hiện tại là nhẫn bản jade, chưa phải vòng bản đeo tay | 7347433 | MỘT vòng bản jadeite nguyên khối hoàn thiện trên nền lụa/đá kem. | **P0 — thay sớm nhất** |
+| jade-inspection.webp | 1200×1500 (4:5) | Section kiểm định trang chủ | TẠM (đã crop bỏ smartwatch) | 13613422 | Chuyên gia soi ngọc jadeite bằng nhíp + loupe, palette ivory, jade là chủ thể trung tâm. | P1 |
+| certificate.svg | 900×1120 | Section kiểm định + trang /kiem-dinh | THIẾU (placeholder trung tính có chủ đích) | vẽ tay | **Chỉ dùng chứng thư THẬT của MJADE.** Che thông tin cá nhân nếu cần, giữ nguyên tên lab và kết quả. Hỗ trợ ảnh hoặc PDF qua các field certificateImage/certificatePdf trong data/products.ts. | **P0** |
+
+## public/images/products/
+
+Ảnh chi tiết sản phẩm (4:5, 1200×1500) — hiện dùng lại nguồn tương ứng ở trên, trạng thái `TẠM`:
+
+| File | Sản phẩm (slug) |
 | --- | --- |
-| `public/reference/mjade-homepage-reference.png` | **Missing** — could not be written from chat (see `public/reference/README.md`). Save the original reference screenshot there manually. Not used in production code. |
+| mat-day-chuyen-ngoc-phi-thuy-1.webp | mat-day-chuyen-ngoc-phi-thuy |
+| nhan-ngoc-phi-thuy-boc-vang-trang-1.webp | nhan-ngoc-phi-thuy-boc-vang-trang |
+| hoa-tai-ngoc-phi-thuy-vang-18k-1.webp | hoa-tai-ngoc-phi-thuy-vang-18k |
+| lac-tay-ngoc-phi-thuy-thiet-ke-rieng-1.webp | lac-tay-ngoc-phi-thuy-thiet-ke-rieng |
+| mat-day-chuyen-gioi-han-1.webp | mat-day-chuyen-gioi-han |
+| nhan-ngoc-gioi-han-1.webp | nhan-ngoc-gioi-han |
+| hoa-tai-ngoc-gioi-han-1.webp | hoa-tai-ngoc-gioi-han |
+| vong-ban-ngoc-gioi-han-1.webp | vong-ban-ngoc-gioi-han |
 
-## Homepage imagery
+Khi có ảnh thật: mỗi sản phẩm nên có 2–4 ảnh (chính diện, nghiêng, đeo trên người,
+cận vân ngọc) — thêm đường dẫn vào mảng `images` trong `data/products.ts`.
 
-| File | Used in | Source (Pexels ID) | Replace with |
+## public/images/editorial/
+
+| File | Kích thước | Vị trí | Trạng thái |
 | --- | --- | --- | --- |
-| `public/images/home/hero-jade-woman.jpg` | [Hero.tsx](components/home/Hero.tsx) | [17129493](https://www.pexels.com/photo/17129493/) — woman with green gemstone jewelry set, warm beige backdrop | Editorial portrait of a Vietnamese/SEA woman in her 30s–40s, ivory silk, real MJADE jadeite pendant/ring/earrings, window light, model right, negative space left. |
-| `public/images/home/featured-pendant.jpg` | [FeaturedCollection.tsx](components/home/FeaturedCollection.tsx) via `data/products.ts` | [21235148](https://www.pexels.com/photo/21235148/) — green stone pendant necklace | Real MJADE jadeite pendant, ivory/beige studio shot, 4:5. |
-| `public/images/home/featured-ring.jpg` | same | [7347433](https://www.pexels.com/photo/7347433/) — jadeite rings on white plush | Real MJADE jadeite ring, 4:5. |
-| `public/images/home/featured-earrings.jpg` | same | [13595669](https://www.pexels.com/photo/13595669/) — green stone earrings on ivory pedestal | Real MJADE jadeite earrings, 4:5. |
-| `public/images/home/featured-bracelet.jpg` | same | [34372579](https://www.pexels.com/photo/34372579/) — green bead bracelet on white stone | Real MJADE jadeite bracelet, 4:5. |
-| `public/images/home/jade-inspection.jpg` | [StoryCertification.tsx](components/home/StoryCertification.tsx) | [13613422](https://www.pexels.com/photo/13613422/) — gemologist sorting green stones with tweezers | Macro of MJADE jadeite cabochon under tweezers/loupe on raw stone, warm ivory light. |
-| `public/images/home/certificate.svg` | same | Hand-drawn neutral placeholder (unchanged) | **Real MJADE certificate only.** No fabricated lab name or number — keep this placeholder until a real, unedited certificate photo (personal info redacted if needed) is supplied. |
-| `public/images/home/limited-pendant.jpg` | [LimitedCollection.tsx](components/home/LimitedCollection.tsx) via `data/products.ts` | [10561322](https://www.pexels.com/photo/10561322/) — green pendant on cream agate plate | MJADE limited pendant on champagne silk, 1:1. |
-| `public/images/home/limited-ring.jpg` | same | [16242337](https://www.pexels.com/photo/16242337/) — macro green gemstone ring, ivory/gold tones | MJADE limited ring on ivory linen, 1:1. |
-| `public/images/home/limited-earrings.jpg` | same | [13780712](https://www.pexels.com/photo/13780712/) — hand with jadeite ring on embroidered silk | MJADE limited earrings, 1:1. |
-| `public/images/home/limited-bangle.jpg` | same | [37924957](https://www.pexels.com/photo/37924957/) — polished green jade stones on white | MJADE solid jadeite bangle, 1:1. |
+| story-hero.webp | 2000×1100 | /cau-chuyen, /ve-mjade | TẠM (nguồn 27969667) |
+| inspection-wide.webp | 1600×1000 | /kiem-dinh, bài viết | TẠM (nguồn 13613422) |
 
-## Licensing notes
+## public/images/certificates/
 
-- All `.jpg` files above were downloaded from Pexels on 2026-07-04 under the
-  Pexels license: free to use commercially, modification allowed, no
-  attribution required. Do **not** redistribute them as standalone stock.
-- Pinterest or other scraped imagery was deliberately **not** used — images
-  there are third-party copyrighted work without a usable license.
-- No fabricated lab name, certificate number, or gemological report appears
-  anywhere in the codebase.
+Trống — dành cho ảnh/PDF chứng thư thật. Đặt file theo mã sản phẩm
+(vd `MJ-P001.webp`, `MJ-P001.pdf`) rồi điền vào `certificateImage`/`certificatePdf`
+của sản phẩm tương ứng trong `data/products.ts`.
 
-## Replacement steps
+## public/images/placeholders/
 
-1. Produce the real asset per art direction above (full AI prompts are in the
-   original design brief if needed).
-2. Export as `.webp` or `.jpg` (installing `sharp` is recommended for
-   production image optimization).
-3. Save under the same file name (extension may change) and update the single
-   `src` string in `data/products.ts` or the relevant component.
-4. Update the `imageAlt` text to describe the real product.
+Trống — dự phòng cho placeholder trung tính khi thêm sản phẩm chưa có ảnh.
+
+## public/reference/
+
+`mjade-homepage-reference.png` — **THIẾU**. Ảnh reference gửi qua chat không thể
+ghi ra đĩa tự động; lưu tay vào đường dẫn này (không dùng trong production).
+
+## Quy trình thay ảnh thật
+
+1. Chụp theo art direction ở cột tương ứng (hệ ánh sáng ấm, nền ivory/beige, jade là màu mạnh duy nhất).
+2. Xuất WebP (hoặc JPG chất lượng cao — Next/sharp sẽ tự tối ưu).
+3. Ghi đè đúng tên file, giữ nguyên tỷ lệ khung.
+4. Cập nhật `imageAlt` và đặt `imageIsTemporary: false` trong `data/products.ts`.
+5. Xóa dòng cảnh báo tương ứng trong file này.

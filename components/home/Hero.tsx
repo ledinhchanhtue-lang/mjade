@@ -36,12 +36,12 @@ export default function Hero() {
 
         <div className="relative order-1 aspect-[10/7] w-full md:order-2 md:aspect-auto md:h-full md:min-h-[440px] lg:min-h-[500px]">
           <Image
-            src="/images/home/hero-jade-woman.jpg"
-            alt="Người phụ nữ tóc búi thấp đeo bộ trang sức đá xanh lục gồm hoa tai, dây chuyền và nhẫn trên nền be ấm"
+            src="/images/home/hero-jade-woman.webp"
+            alt="Người phụ nữ mặc áo dệt màu ngà đeo dây chuyền vàng điểm đá xanh lục, ánh sáng cửa sổ ấm"
             fill
             priority
             sizes="(min-width: 768px) 50vw, 100vw"
-            className="object-cover"
+            className="object-cover object-[center_35%] md:object-center"
           />
         </div>
       </div>

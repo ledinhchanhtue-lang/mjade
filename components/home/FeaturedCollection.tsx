@@ -15,7 +15,7 @@ export default function FeaturedCollection() {
         <div className="mt-8 grid grid-cols-2 gap-5 sm:grid-cols-2 lg:mt-10 lg:grid-cols-5 lg:gap-6">
           {featuredProducts.map((product, index) => (
             <Reveal key={product.id} delay={index * 80}>
-              <ProductCard {...product} />
+              <ProductCard product={product} />
             </Reveal>
           ))}
           <Reveal delay={featuredProducts.length * 80} className="col-span-2 lg:col-span-1">

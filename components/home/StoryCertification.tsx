@@ -30,8 +30,8 @@ export default function StoryCertification() {
 
           <Reveal delay={120} className="relative aspect-[4/5] w-full flex-1 lg:max-w-[420px]">
             <Image
-              src="/images/home/jade-inspection.jpg"
-              alt="Chuyên gia đá quý dùng nhíp phân loại những viên đá xanh lục trên bàn kiểm định"
+              src="/images/home/jade-inspection.webp"
+              alt="Bàn tay chuyên gia dùng nhíp phân loại các viên đá xanh lục bên kính loupe trên bàn kiểm định"
               fill
               sizes="(min-width: 1024px) 30vw, 90vw"
               className="object-cover"

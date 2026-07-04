@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import SectionLabel from "@/components/ui/SectionLabel";
 import EditorialButton from "@/components/ui/EditorialButton";
 import Reveal from "@/components/ui/Reveal";
@@ -22,14 +23,19 @@ export default function LimitedCollection() {
 
         <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:w-[64%]">
           {limitedPieces.map((piece, index) => (
-            <Reveal key={piece.id} delay={index * 80} className="relative aspect-square w-full">
-              <Image
-                src={piece.image}
-                alt={piece.imageAlt}
-                fill
-                sizes="(min-width: 1024px) 30vw, 45vw"
-                className="object-cover transition-transform duration-500 ease-out hover:scale-[1.03]"
-              />
+            <Reveal key={piece.id} delay={index * 80}>
+              <Link
+                href={`/san-pham/${piece.slug}`}
+                className="relative block aspect-square w-full overflow-hidden"
+              >
+                <Image
+                  src={piece.image}
+                  alt={piece.imageAlt}
+                  fill
+                  sizes="(min-width: 1024px) 30vw, 45vw"
+                  className="object-cover transition-transform duration-500 ease-out hover:scale-[1.025]"
+                />
+              </Link>
             </Reveal>
           ))}
         </div>
