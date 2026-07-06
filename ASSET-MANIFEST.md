@@ -1,12 +1,18 @@
 # ASSET MANIFEST — MJADE
 
-Cập nhật: 2026-07-04 (Phase 2)
+Cập nhật: 2026-07-06 (Phase 3 — thay ảnh MJADE thật)
 
-**Trạng thái chung:** toàn bộ ảnh production là **ảnh stock có giấy phép từ Pexels**
-(miễn phí thương mại, không cần ghi công — pexels.com/license), đã được xử lý
-(crop, đồng bộ tỷ lệ, chuyển WebP) bằng sharp. Chúng khớp tông màu ivory–jade
-của thương hiệu nhưng **chưa phải ảnh sản phẩm MJADE thật** — mọi file có trạng
-thái `TẠM` bên dưới cần thay bằng ảnh chụp thật trước khi chạy chiến dịch bán hàng.
+**Trạng thái chung:** phần lớn ảnh chính đã được thay bằng **ảnh MJADE THẬT** do
+client cung cấp qua Google Drive (liệt kê trong spreadsheet tài nguyên của khách —
+lookbook "Băng Ngọc Thanh Tâm" + các folder ảnh sản phẩm). Ảnh gốc là ảnh chụp
+thật của thương hiệu, được xử lý (crop theo tỷ lệ chuẩn, chuyển WebP q82) bằng sharp.
+
+Còn `TẠM` (chưa có ảnh thật phù hợp): **2 ảnh hoa tai** (chưa tìm được ảnh product-only
+sạch trong kho — vẫn dùng stock cũ, đánh dấu `imageIsTemporary: true`).
+Còn `THIẾU`: **certificate.svg** (chờ chứng thư thật — TUYỆT ĐỐI không dựng giả).
+
+Nguồn ảnh thật (Google Drive folder ID, từ spreadsheet client):
+`01-lookbook-bangngoc` = 16Je7nHy… · `04-tonghop-a` = 1i80Kh6U… · `05-tonghop-b` = 1xlG5yfi…
 
 Không có ảnh nào hotlink từ bên ngoài; tất cả nằm trong `public/images/`.
 Không dùng ảnh Pinterest hoặc ảnh của thương hiệu trang sức khác.
@@ -19,23 +25,25 @@ Không dùng ảnh Pinterest hoặc ảnh của thương hiệu trang sức khá
 
 ## public/images/home/
 
-| File | Kích thước | Vị trí | Trạng thái | Nguồn (Pexels ID) | Art direction khi thay | Ưu tiên |
-| --- | --- | --- | --- | --- | --- | --- |
-| hero-jade-woman.webp | 2200×1500 | Hero trang chủ | TẠM | 27969667 | Người phụ nữ Việt/Á Đông 32–45t, áo lụa ivory, MỘT mặt dây jade + nhẫn + hoa tai nhỏ, tóc búi thấp, trang điểm tự nhiên, ánh sáng cửa sổ, người bên phải khung, khoảng trống trái. Không bridal, không chandelier. | **P0** |
-| featured-pendant.webp | 1200×1500 (4:5) | Card SP nổi bật 1 | TẠM | 10561322 | Một mặt dây jadeite + dây chuyền gọn, nền ivory, bố cục centered editorial. | **P0** |
-| featured-ring.webp | 1200×1500 (4:5) | Card SP nổi bật 2 | TẠM | 16242337 | MỘT nhẫn jadeite hoàn thiện đúng sản phẩm thật, nền ivory. | **P0** |
-| featured-earrings.webp | 1200×1500 (4:5) | Card SP nổi bật 3 | TẠM | 13595669 | Một đôi hoa tai jadeite thanh lịch hiện đại, nền ivory, không quá nhiều bạc. | **P0** |
-| featured-bracelet.webp | 1200×1500 (4:5) | Card SP nổi bật 4 | TẠM | 11157508 | Một lắc tay jadeite hoàn thiện, sản phẩm chiếm phần lớn khung. | **P0** |
-| limited-pendant.webp | 1200×1200 (1:1) | Limited strip 1 | TẠM ⚠️ nền xanh rêu, chưa đúng palette lụa champagne | 21235148 | Mặt dây jade trên lụa champagne, macro editorial. | **P0 — thay sớm nhất** |
-| limited-ring.webp | 1200×1200 (1:1) | Limited strip 2 | TẠM | 13780712 | Nhẫn jade trên linen ivory hoặc đeo trên tay, ánh sáng ấm. | P1 |
-| limited-earrings.webp | 1200×1200 (1:1) | Limited strip 3 | TẠM | 7360327 | Đôi hoa tai jade, macro trên đá kem hoặc đeo trên tai. | P1 |
-| limited-bangle.webp | 1200×1200 (1:1) | Limited strip 4 | TẠM ⚠️ ảnh hiện tại là nhẫn bản jade, chưa phải vòng bản đeo tay | 7347433 | MỘT vòng bản jadeite nguyên khối hoàn thiện trên nền lụa/đá kem. | **P0 — thay sớm nhất** |
-| jade-inspection.webp | 1200×1500 (4:5) | Section kiểm định trang chủ | TẠM (đã crop bỏ smartwatch) | 13613422 | Chuyên gia soi ngọc jadeite bằng nhíp + loupe, palette ivory, jade là chủ thể trung tâm. | P1 |
-| certificate.svg | 900×1120 | Section kiểm định + trang /kiem-dinh | THIẾU (placeholder trung tính có chủ đích) | vẽ tay | **Chỉ dùng chứng thư THẬT của MJADE.** Che thông tin cá nhân nếu cần, giữ nguyên tên lab và kết quả. Hỗ trợ ảnh hoặc PDF qua các field certificateImage/certificatePdf trong data/products.ts. | **P0** |
+| File | Kích thước | Vị trí | Trạng thái | Nguồn ảnh thật | Ghi chú |
+| --- | --- | --- | --- | --- | --- |
+| hero-jade-woman.webp | 1500×1875 (4:5) | Hero trang chủ | **THẬT** | lookbook 01 (model áo lụa trắng, mặt dây jade lavender + vòng, uống trà) | Người mẫu bên phải khung, khoảng trống trái cho chữ — đúng art direction. |
+| featured-pendant.webp | 1200×1500 (4:5) | Card SP nổi bật 1 | **THẬT** | folder 05 (chuỗi hạt ngọc + mặt dây, khay linen) | Dùng chung cho product detail MJ-P001. |
+| featured-ring.webp | 1200×1500 (4:5) | Card SP nổi bật 2 | **THẬT** | folder 04 (3 nhẫn ngọc nguyên khối trên cành hoa, có logo MJADE) | Dùng chung cho MJ-R002. |
+| featured-earrings.webp | 1200×1500 (4:5) | Card SP nổi bật 3 | TẠM | (stock cũ) | **Chưa có ảnh hoa tai product-only sạch trong kho.** Cần thay. |
+| featured-bracelet.webp | 1200×1500 (4:5) | Card SP nổi bật 4 | **THẬT** | lookbook 01 (lắc tay hạt ngọc đeo trên cổ tay) | Dùng chung cho MJ-B004. |
+| limited-pendant.webp | 1200×1200 (1:1) | Limited strip 1 | **THẬT** | folder 04 (chuỗi ngọc xanh lục trên lá) | |
+| limited-ring.webp | 1200×1200 (1:1) | Limited strip 2 | **THẬT** | folder 04 (2 nhẫn ngọc trên tulip trắng) | |
+| limited-earrings.webp | 1200×1200 (1:1) | Limited strip 3 | TẠM | (stock cũ) | **Chưa có ảnh hoa tai.** Cần thay. |
+| limited-bangle.webp | 1200×1200 (1:1) | Limited strip 4 | **THẬT** | folder 05 (vòng bản ngọc nguyên khối, khay gỗ) | ✅ Đã sửa lỗi cũ (trước là ảnh nhẫn bản). |
+| jade-inspection.webp | 1200×1500 (4:5) | Section câu chuyện trang chủ | **THẬT** | lookbook 01 (chân dung model áo trắng đeo vòng ngọc) | Đã đổi alt trong StoryCertification.tsx. |
+| certificate.svg | 900×1120 | Section kiểm định + trang /kiem-dinh | THIẾU (placeholder trung tính có chủ đích) | — | **Chỉ dùng chứng thư THẬT của MJADE.** Hỗ trợ ảnh/PDF qua field certificateImage/certificatePdf trong data/products.ts. **P0** |
 
 ## public/images/products/
 
-Ảnh chi tiết sản phẩm (4:5, 1200×1500) — hiện dùng lại nguồn tương ứng ở trên, trạng thái `TẠM`:
+Ảnh chi tiết sản phẩm (4:5, 1200×1500). **6/8 đã là ảnh MJADE THẬT** (`imageIsTemporary: false`);
+2 sản phẩm hoa tai (`hoa-tai-*`) vẫn `TẠM`. Lưu ý: khi thay ảnh thật đã set `metal: null` cho các
+món ngọc nguyên khối (ảnh cho thấy không có đế kim loại) — giữ đúng nguyên tắc không bịa thông số:
 
 | File | Sản phẩm (slug) |
 | --- | --- |
@@ -55,8 +63,8 @@ cận vân ngọc) — thêm đường dẫn vào mảng `images` trong `data/pr
 
 | File | Kích thước | Vị trí | Trạng thái |
 | --- | --- | --- | --- |
-| story-hero.webp | 2000×1100 | /cau-chuyen, /ve-mjade | TẠM (nguồn 27969667) |
-| inspection-wide.webp | 1600×1000 | /kiem-dinh, bài viết | TẠM (nguồn 13613422) |
+| story-hero.webp | 2000×1100 | /cau-chuyen, /ve-mjade | **THẬT** — lookbook 01 (model tựa cửa, đeo vòng + hoa tai ngọc) |
+| inspection-wide.webp | 1600×1000 | /kiem-dinh, bài viết | **THẬT** — folder 05 (vòng + nhẫn + chuỗi ngọc trên khay linen, nắng) |
 
 ## public/images/certificates/
 

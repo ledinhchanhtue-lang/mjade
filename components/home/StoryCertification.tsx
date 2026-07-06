@@ -13,15 +13,15 @@ export default function StoryCertification() {
           <Reveal className="flex flex-1 flex-col gap-5">
             <SectionLabel>Câu chuyện MJADE</SectionLabel>
             <h2 className="font-heading text-[30px] leading-tight text-text-primary md:text-[36px] lg:text-[42px]">
-              Từ Myanmar đến
+              Trong mỗi chúng ta
               <br />
-              trái tim người phụ nữ Việt
+              đều ẩn chứa một viên ngọc
             </h2>
             <p className="max-w-md text-[14px] leading-relaxed text-text-secondary">
-              Mỗi viên ngọc là món quà của đất trời Myanmar, được chọn lọc
-              bằng sự trân trọng và hiểu biết sâu sắc. MJADE kết nối vẻ đẹp
-              truyền thống với phong cách sống hiện đại của người phụ nữ
-              thành đạt.
+              Viên ngọc ấy không bao giờ mất đi, chỉ là bị lớp bụi cuộc đời
+              phủ mờ ánh sáng vốn có. MJADE không chạy theo sự hoàn hảo, mà
+              tôn vinh sự thật và vẻ đẹp đến từ bên trong — cùng bạn đi trên
+              hành trình thức tỉnh và trở về.
             </p>
             <EditorialButton href="/cau-chuyen" variant="text" className="mt-1">
               Khám phá câu chuyện
@@ -31,7 +31,7 @@ export default function StoryCertification() {
           <Reveal delay={120} className="relative aspect-[4/5] w-full flex-1 lg:max-w-[420px]">
             <Image
               src="/images/home/jade-inspection.webp"
-              alt="Bàn tay chuyên gia dùng nhíp phân loại các viên đá xanh lục bên kính loupe trên bàn kiểm định"
+              alt="Người phụ nữ áo lụa trắng đeo vòng ngọc phỉ thúy, ánh nhìn trầm tĩnh"
               fill
               sizes="(min-width: 1024px) 30vw, 90vw"
               className="object-cover"

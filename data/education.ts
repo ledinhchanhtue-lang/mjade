@@ -40,7 +40,7 @@ export const educationSections: EduSection[] = [
     heading: "Màu sắc",
     body: [
       "Màu được đánh giá theo ba tiêu chí: sắc (hue) — xanh thuần hay ngả vàng/xám; độ đậm (saturation) — càng rực càng quý; và độ đều (evenness) — màu trải đều khắp viên hiếm hơn màu loang.",
-      "Ngoài xanh lục, phỉ thúy còn có màu trắng, vàng mật, tím lavender và đen — mỗi màu có vẻ đẹp và nhóm người yêu thích riêng.",
+      "Đỉnh cao của phỉ thúy là sắc xanh lục bảo trong trẻo và đều màu, thường được ngầm hiểu là Imperial Jade (Ngọc Hoàng Đế) — dòng ngọc quý và hiếm bậc nhất. Ngoài xanh lục, phỉ thúy còn có màu trắng, vàng mật, tím lavender và đen — mỗi màu có vẻ đẹp và nhóm người yêu thích riêng.",
     ],
   },
   {
@@ -49,6 +49,17 @@ export const educationSections: EduSection[] = [
     body: [
       "Độ trong là khả năng ánh sáng xuyên qua viên ngọc — từ đục (opaque), bán trong (semi-translucent) đến gần trong suốt (highly translucent, thường gọi là 'ngọc kính').",
       "Cùng một màu, viên có độ trong cao hơn sẽ 'sống' hơn hẳn khi đeo — ánh sáng đi vào trong đá rồi tỏa ngược ra, tạo cảm giác viên ngọc phát sáng từ bên trong.",
+    ],
+  },
+  {
+    id: "chung-ngoc",
+    heading: "Chủng ngọc (phân loại theo độ trong và kết cấu)",
+    body: [
+      "Trong ngọc học, 'chủng' mô tả tổng hòa độ trong, độ mịn và độ 'sống' của viên ngọc — càng trong và mịn thì chủng càng cao. Đây là cách người sành ngọc gọi tên chất ngọc, bên cạnh màu sắc.",
+    ],
+    list: [
+      "Băng Chủng — trong như băng, ánh sáng đi sâu vào đá tạo cảm giác mát và tinh khiết; thuộc nhóm chủng cao.",
+      "Lão Khanh Chủng — kết cấu lâu năm, màu sâu và đằm, độ trong tốt; là dòng chủng được giới sưu tầm trân trọng.",
     ],
   },
   {

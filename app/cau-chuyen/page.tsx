@@ -6,49 +6,50 @@ import EditorialButton from "@/components/ui/EditorialButton";
 import { site } from "@/data/site";
 
 export const metadata: Metadata = {
-  title: "Câu Chuyện MJADE — Từ Myanmar Đến Trái Tim Người Phụ Nữ Việt",
+  title: "Câu Chuyện MJADE — Meet Your Inner Jade",
   description:
-    "Hành trình của một viên ngọc phỉ thúy: từ nguồn đá Myanmar, qua bàn tay tuyển chọn, đến những khoảnh khắc đời thường của người phụ nữ hiện đại.",
+    "Trong mỗi chúng ta đều ẩn chứa một viên ngọc. MJADE dùng ngọc phỉ thúy Myanmar Type A như một nhân duyên để bạn trở về với ánh sáng bên trong chính mình.",
   alternates: { canonical: `${site.url}/cau-chuyen` },
 };
 
 const chapters: { eyebrow: string; heading: string; body: string[] }[] = [
   {
     eyebrow: "Khởi nguồn",
-    heading: "Từ lòng đất Myanmar",
+    heading: "Trong mỗi chúng ta đều ẩn chứa một viên ngọc",
     body: [
-      "Hàng triệu năm trước, dưới áp suất khổng lồ của những đứt gãy địa chất, jadeite hình thành — hiếm hoi và chậm rãi. Miền bắc Myanmar là nơi duy nhất trên thế giới cho ra ngọc phỉ thúy chất lượng trang sức với trữ lượng đáng kể.",
-      "Mỗi viên ngọc rời khỏi lòng đất đã mang sẵn cấu trúc, sắc độ và vân đá không lặp lại. Việc của MJADE chỉ là tìm ra viên xứng đáng — và kể đúng câu chuyện của nó.",
+      "Bạn có tin không, rằng trong mỗi chúng ta đều ẩn chứa một viên ngọc? Ẩn sau những vai trò, những hành trình, những ước mơ và hoài bão. Viên ngọc trong ta không bao giờ mất đi — chỉ là bị lớp bụi của cuộc đời phủ mờ ánh sáng vốn có.",
+      "MJADE ra đời từ niềm tin ấy: rằng vẻ đẹp quý giá nhất không đến từ bên ngoài, mà là ánh sáng luôn sẵn có bên trong mỗi người.",
     ],
   },
   {
-    eyebrow: "Tuyển chọn",
-    heading: "Từ chối nhiều hơn lựa chọn",
+    eyebrow: "Chất liệu",
+    heading: "Kết tinh của đất trời và thời gian",
     body: [
-      "Phần lớn đá đi qua tay MJADE không được chọn. Màu chưa đủ sâu, độ trong chưa đạt, hay đơn giản là viên đá không có 'thần' — chúng tôi để lại. Bởi một thương hiệu tuyển chọn được định nghĩa bằng những gì nó dám từ chối.",
+      "Chúng tôi dày công tuyển chọn ngọc phỉ thúy Myanmar Type A 100% tự nhiên — những viên ngọc được khai sinh từ lòng đất mẹ qua hàng triệu năm, kết tinh năng lượng của đất trời, sự nhẫn nại của thời gian, và vẻ đẹp thuần khiết không thể sao chép.",
+      "Ngọc phỉ thúy thay MJADE gieo một nhân duyên: để bạn dừng lại, chạm vào ánh sáng bên trong, và nhận ra rằng bạn luôn có thể lấp lánh dù cuộc đời bao lần thử thách.",
     ],
   },
   {
-    eyebrow: "Người chọn ngọc",
-    heading: "Người phụ nữ chọn ngọc",
+    eyebrow: "Triết lý",
+    heading: "Tôn vinh sự thật, không chạy theo hoàn hảo",
     body: [
-      "Cô ấy có thể là nữ doanh nhân ở Sài Gòn, người mẹ hai con ở California, hay cô gái vừa nhận vị trí mới ở Singapore. Điểm chung của họ: tự chủ, có đức tin riêng, và trân trọng những giá trị thật.",
-      "Với họ, viên ngọc không phải trang sức phô trương — mà là khoảng lặng nhỏ giữa nhịp sống vội, một lời nhắc về nội lực của chính mình, một vật phẩm sẽ theo họ qua những cột mốc quan trọng.",
+      "Mỗi thiết kế của MJADE không chạy theo sự hoàn hảo, mà tôn vinh sự thật và vẻ đẹp đến từ bên trong. Những vân đá, những điểm không đều của ngọc tự nhiên không phải khuyết điểm — chúng là dấu ấn độc bản, là câu chuyện riêng của từng viên ngọc và của từng người đeo.",
+      "Bởi viên ngọc quý nhất không nằm trên cổ hay trong tay, mà nằm trong ánh mắt biết soi sáng chính mình.",
     ],
   },
   {
-    eyebrow: "Khoảnh khắc thật",
-    heading: "Trong đời sống thường ngày",
+    eyebrow: "Đồng hành",
+    heading: "Meet your Inner Jade",
     body: [
-      "Ngọc phỉ thúy của MJADE không nằm trong két. Nó đi làm cùng chủ nhân dưới lớp áo sơ mi lụa, xuất hiện trong buổi họp quan trọng, trong bữa cơm gia đình ngày Tết, trong khoảnh khắc cô ấy chạm nhẹ lên mặt dây chuyền để tự nhắc mình: bình tĩnh, vững vàng.",
-      "Một món ngọc riêng tư — không phải thứ xa xỉ đại trà.",
+      "MJADE không chỉ làm đẹp cho bạn, mà cùng bạn đi trên hành trình thức tỉnh và trở về. Chúng tôi mong muốn mỗi người, khi có duyên chạm vào ngọc, đều tìm lại được sự an nhiên, tự tin và ánh sáng bên trong chính mình — rồi lan tỏa ánh sáng đó qua chính sự hiện diện của họ.",
+      "Meet your Inner Jade. Vẻ đẹp thật sự là ánh sáng lấp lánh bên trong chính bạn.",
     ],
   },
   {
     eyebrow: "Sự thật",
-    heading: "Kiểm định và minh bạch",
+    heading: "Nền của cái đẹp là sự chân thật",
     body: [
-      "Câu chuyện đẹp chỉ có giá trị khi dựa trên sự thật. Vì vậy mỗi sản phẩm MJADE đi kèm chứng thư kiểm định độc lập, mã đối chiếu riêng và cam kết hoàn tiền 100% nếu không đúng Type A.",
+      "Câu chuyện đẹp chỉ có giá trị khi dựa trên sự thật. Vì vậy MJADE cam kết ngọc phỉ thúy Myanmar Type A 100% tự nhiên, không qua xử lý — mỗi sản phẩm đi kèm chứng thư kiểm định, mã đối chiếu riêng, và khuyến khích bạn kiểm định lại độc lập.",
     ],
   },
 ];
@@ -61,9 +62,9 @@ export default function StoryPage() {
         eyebrow="Câu chuyện MJADE"
         title={
           <>
-            Từ Myanmar đến
+            Đánh thức
             <br />
-            <em className="italic text-jade-deep">trái tim người phụ nữ Việt.</em>
+            <em className="italic text-jade-deep">viên ngọc trong bạn.</em>
           </>
         }
       />
@@ -96,8 +97,8 @@ export default function StoryPage() {
 
           <section className="border-y border-border py-10 text-center">
             <p className="font-heading text-[22px] italic leading-relaxed text-text-primary md:text-[26px]">
-              “Mỗi viên ngọc là món quà của đất trời Myanmar, được chọn lọc bằng sự trân trọng
-              và hiểu biết sâu sắc.”
+              “Viên ngọc quý nhất không nằm trên cổ hay trong tay, mà nằm trong
+              ánh mắt biết soi sáng chính mình.”
             </p>
           </section>
 

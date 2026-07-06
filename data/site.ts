@@ -1,9 +1,11 @@
 export const site = {
   name: "MJADE",
   url: "https://mjade.vercel.app",
-  tagline: "Tinh túy từ thiên nhiên. Tận tâm trong từng trải nghiệm.",
+  brandLine: "Meet your Inner Jade",
+  tagline: "Đánh thức viên ngọc trong bạn.",
+  essence: "Vẻ đẹp thật sự là ánh sáng lấp lánh bên trong chính bạn.",
   description:
-    "MJADE tuyển chọn trang sức ngọc phỉ thúy Myanmar Type A 100%, có kiểm định, nguồn gốc minh bạch và trải nghiệm tư vấn cá nhân hóa.",
+    "MJADE tuyển chọn trang sức ngọc phỉ thúy Myanmar Type A 100% tự nhiên — đồng hành cùng bạn trên hành trình trở về với ánh sáng bên trong. Bao kiểm định, minh bạch nguồn gốc, tư vấn cá nhân hóa.",
   email: "lienhe@mjade.vn",
   consultChannels: ["Điện thoại", "Zalo", "WhatsApp", "Email"] as const,
   shippingDestinations: [

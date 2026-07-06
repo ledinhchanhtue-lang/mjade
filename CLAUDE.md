@@ -123,8 +123,14 @@ Tóm tắt: toàn bộ ảnh hiện tại là **stock Pexels có giấy phép** 
 - 18 route mới + product detail + form tư vấn/newsletter/đặt giữ hoạt động thật + search + SEO đầy đủ (chi tiết như mục 4–5).
 - Commit `9852ba7`.
 
+### Phase 3 (2026-07-06): Tích hợp tài nguyên thật của client
+Client gửi Google Sheet tài nguyên (link Drive lookbook/ảnh sản phẩm + Branding Guideline + info sản phẩm + size chart + 4 feedback KH). Đọc qua WebFetch/curl (Drive folder enumerate được bằng cách bóc file ID 33-char từ HTML rồi tải qua `drive.usercontent.google.com/download?id=…`).
+- **Nội dung brand THẬT** thay copy placeholder: định vị "Low-key Luxury / Tỉnh thức", tagline **"Meet your Inner Jade — Đánh thức viên ngọc trong bạn"**, essence "Vẻ đẹp thật sự là ánh sáng lấp lánh bên trong chính bạn". Sửa `data/site.ts`, `Hero.tsx`, `StoryCertification.tsx`, `app/cau-chuyen`, `app/ve-mjade` (Tầm nhìn/Sứ mệnh/Lời hứa nguyên văn client), `data/education.ts` (thêm Imperial Jade + chủng Băng Chủng/Lão Khanh Chủng).
+- **Ảnh MJADE THẬT** (16 file) thay hero + 2 editorial banner + home story + 6/8 ảnh sản phẩm. Xử lý sharp từ lookbook 01 + folder sản phẩm 04/05. Đã set `imageIsTemporary: false` + `metal: null` cho món ngọc nguyên khối (ảnh không có đế kim loại). Chi tiết ASSET-MANIFEST.md.
+- **Chưa xử lý:** ảnh 2 SP hoa tai (chưa có ảnh product-only sạch → giữ stock tạm); testimonial (feedback FB nói về công dụng làm đẹp da — KHÔNG bịa trích dẫn, chờ text client duyệt); info-sản-phẩm PDF (scan ảnh, chưa OCR).
+
 ### Việc CHƯA làm / cần client xác nhận
-1. **Từ MJADE:** giá thật, ảnh sản phẩm thật, chứng thư thật + tên lab, email/SĐT/Zalo thật (đang là `lienhe@mjade.vn` placeholder trong `data/site.ts`), địa chỉ showroom, duyệt pháp lý nội dung chính sách.
+1. **Từ MJADE:** giá thật (hiện `priceVnd` là số đặt tạm), ảnh 2 SP hoa tai, chứng thư thật + tên lab, email/SĐT/Zalo thật (đang là `lienhe@mjade.vn` placeholder trong `data/site.ts`), địa chỉ showroom, text testimonial duyệt để đăng, duyệt pháp lý nội dung chính sách.
 2. **Kỹ thuật còn mở:** webhook thật cho 3 form (điền env trên Vercel dashboard rồi redeploy) · tiếng Anh + USD (CHỈ làm khi có bản dịch/bảng giá thật — đó là lý do selector bị gỡ) · backend tra cứu chứng thư (CertLookup đã có UI + chỗ nối API) · Lighthouse audit chưa chạy chính thức · ảnh reference gốc cần lưu tay vào `public/reference/mjade-homepage-reference.png`.
 
 ---

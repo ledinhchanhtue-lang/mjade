@@ -15,46 +15,48 @@ export const metadata: Metadata = {
 const blocks: { eyebrow: string; heading: string; body: string[] }[] = [
   {
     eyebrow: "Vì sao MJADE ra đời",
-    heading: "Một thị trường cần sự minh bạch",
+    heading: "Trả lại ánh sáng vốn có",
     body: [
-      "Thị trường ngọc phỉ thúy đầy những sản phẩm xử lý hóa chất được bán như ngọc tự nhiên. Người mua thiệt hại không chỉ tiền bạc — mà cả niềm tin vào một món trang sức lẽ ra được truyền qua nhiều thế hệ.",
-      "MJADE ra đời để làm điều ngược lại: chỉ bán ngọc phỉ thúy Myanmar Type A tự nhiên, nói đúng về từng sản phẩm, và chịu trách nhiệm trọn đời với cam kết của mình.",
+      "Trong mỗi chúng ta đều ẩn chứa một viên ngọc — chỉ là bị lớp bụi cuộc đời phủ mờ ánh sáng vốn có. MJADE ra đời để dùng ngọc phỉ thúy như một nhân duyên, giúp bạn dừng lại và chạm vào ánh sáng bên trong chính mình.",
+      "Chúng tôi chọn con đường của sự thật: chỉ ngọc Myanmar Type A 100% tự nhiên, nói đúng về từng sản phẩm, và tôn vinh vẻ đẹp đến từ bên trong thay vì chạy theo sự hoàn hảo bề mặt.",
     ],
   },
   {
-    eyebrow: "Không qua trung gian",
-    heading: "Từ nguồn ngọc đến tay bạn",
+    eyebrow: "Tầm nhìn",
+    heading: "Biểu tượng của vẻ đẹp tự nhiên và tỉnh thức",
     body: [
-      "MJADE tuyển chọn ngọc trực tiếp từ nguồn Myanmar thay vì mua lại qua nhiều lớp trung gian. Điều đó cho phép chúng tôi biết rõ nguồn gốc từng viên ngọc, kiểm soát chất lượng từ khâu thô — và giữ mức giá tương xứng với giá trị thật.",
+      "Trở thành biểu tượng, hình mẫu về vẻ đẹp của tự nhiên và tỉnh thức — nơi những viên ngọc phỉ thúy kể câu chuyện về hành trình trở về với bản thể, để mỗi người nhận ra rằng: họ vốn đã là một viên ngọc sáng.",
     ],
   },
   {
-    eyebrow: "Khách hàng của MJADE",
-    heading: "Người phụ nữ hiểu giá trị của mình",
+    eyebrow: "Sứ mệnh",
+    heading: "Tôn vinh vẻ đẹp tự nhiên và năng lượng tỉnh thức",
     body: [
-      "Khách hàng của MJADE là những người phụ nữ thành đạt, có chính kiến — ở Việt Nam và ở khắp nơi trên thế giới. Họ không tìm món trang sức để phô trương; họ tìm một vật phẩm đồng hành, một câu chuyện riêng, một vẻ đẹp trầm tĩnh phản chiếu nội lực của chính mình.",
-      "Vì vậy trải nghiệm MJADE được thiết kế quanh sự riêng tư: tư vấn 1-1, xem ngọc theo lịch hẹn, và hỗ trợ chu đáo cho khách hàng ở xa.",
+      "Tôn vinh vẻ đẹp tự nhiên và năng lượng tỉnh thức của con người hiện đại, thông qua những thiết kế ngọc phỉ thúy tinh tế, chân thật và mang sức sống của đất trời.",
+      "MJADE mong muốn mỗi người, khi có duyên chạm vào ngọc, đều tìm lại được sự an nhiên, tự tin và ánh sáng bên trong chính mình — rồi lan tỏa ánh sáng đó qua sự hiện diện của họ.",
     ],
   },
   {
-    eyebrow: "Chuyên môn",
-    heading: "Tuyển chọn bằng hiểu biết",
+    eyebrow: "Định vị",
+    heading: "Sang trọng kín đáo (Low-key Luxury)",
     body: [
-      "Mỗi viên ngọc trước khi thành sản phẩm MJADE đều đi qua quy trình đánh giá về màu sắc, độ trong, kết cấu và độ an toàn của chế tác. Chúng tôi từ chối nhiều hơn là lựa chọn — bởi một thương hiệu tuyển chọn chỉ có giá trị khi dám nói 'không' với đá kém.",
+      "MJADE dành cho những người trân trọng chiều sâu hơn sự phô trương. Ngọc phỉ thúy với sắc xanh trầm và độ bóng sâu là vẻ đẹp kín đáo — chỉ thật sự tỏa sáng với người hiểu nó.",
+      "Đó là thứ quý giá bạn sở hữu cho chính mình, không cần bất kỳ ai cũng phải nhận ra giá trị thực sự của nó.",
     ],
   },
   {
-    eyebrow: "Minh bạch",
-    heading: "Nói đúng, bán đúng, chịu trách nhiệm",
+    eyebrow: "Khác biệt",
+    heading: "Vẻ đẹp được kể bằng câu chuyện thật",
     body: [
-      "Mọi sản phẩm đi kèm chứng thư kiểm định và mã sản phẩm riêng. MJADE khuyến khích khách kiểm định lại độc lập — nếu kết quả không đúng cam kết Type A, chúng tôi hoàn tiền 100%, không giới hạn thời gian.",
+      "MJADE không cạnh tranh bằng độ lấp lánh chói lòa. Sự độc bản của chúng tôi là tự nhiên và có sẵn trong chất liệu: mỗi viên ngọc Type A là duy nhất trên đời, và những điểm 'không hoàn hảo' của nó chính là câu chuyện về sự thật và chiều sâu cá nhân.",
+      "Sự tương đồng giữa viên ngọc không thể sao chép và bản thể độc nhất của người đeo — đó là điều MJADE trân trọng nhất.",
     ],
   },
   {
-    eyebrow: "Quốc tế",
-    heading: "Phục vụ người Việt ở khắp nơi",
+    eyebrow: "Cam kết",
+    heading: "Authentic — làm thật, sống thật",
     body: [
-      "Từ California đến Sydney, từ Praha đến Tokyo — MJADE đồng hành cùng cộng đồng người Việt xa quê qua tư vấn video call, vận chuyển quốc tế có bảo hiểm và chứng từ đầy đủ. Khoảng cách địa lý không nên là rào cản giữa bạn và viên ngọc dành cho mình.",
+      "Mọi sản phẩm đi kèm chứng thư kiểm định và mã sản phẩm riêng. MJADE khuyến khích khách kiểm định lại độc lập — nếu kết quả không đúng cam kết Type A, chúng tôi hoàn tiền 100%. Từ trong nước đến cộng đồng người Việt khắp nơi, chúng tôi đồng hành qua tư vấn cá nhân hóa và vận chuyển quốc tế có bảo hiểm.",
     ],
   },
 ];
@@ -104,7 +106,8 @@ export default function AboutPage() {
 
       <section className="bg-background-warm px-5 py-14 text-center md:px-10 lg:px-[72px]">
         <p className="mx-auto max-w-2xl font-heading text-[24px] italic leading-snug text-text-primary md:text-[30px]">
-          “Chúng tôi không bán đá quý. Chúng tôi giúp bạn tìm viên ngọc sẽ đi cùng bạn nhiều thập kỷ.”
+          “Mjade — Meet your Inner Jade. Vẻ đẹp thật sự là ánh sáng lấp lánh
+          bên trong chính bạn.”
         </p>
         <div className="mt-8 flex justify-center">
           <EditorialButton href="/lien-he-tu-van">Đặt lịch tư vấn riêng</EditorialButton>
