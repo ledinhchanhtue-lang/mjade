@@ -4,9 +4,17 @@ export const site = {
   brandLine: "Meet your Inner Jade",
   tagline: "Đánh thức viên ngọc trong bạn.",
   essence: "Vẻ đẹp thật sự là ánh sáng lấp lánh bên trong chính bạn.",
+  descriptor: "Đệ nhất ngọc phỉ thúy Myanmar",
   description:
     "MJADE tuyển chọn trang sức ngọc phỉ thúy Myanmar Type A 100% tự nhiên — đồng hành cùng bạn trên hành trình trở về với ánh sáng bên trong. Bao kiểm định, minh bạch nguồn gốc, tư vấn cá nhân hóa.",
   email: "lienhe@mjade.vn",
+  phone: "0798530579",
+  stores: [
+    { city: "TP.HCM", address: "11A Tôn Đức Thắng, P. Bến Nghé, Quận 1, TP.HCM" },
+    { city: "TP.HCM", address: "764 Nguyễn Chí Thanh, P. 4, Quận 11, TP.HCM" },
+    { city: "Hà Nội", address: "240 Xã Đàn, Đống Đa, Hà Nội" },
+    { city: "Nha Trang", address: "31 Huỳnh Thúc Kháng, TP. Nha Trang, Khánh Hòa" },
+  ],
   consultChannels: ["Điện thoại", "Zalo", "WhatsApp", "Email"] as const,
   shippingDestinations: [
     "Việt Nam",

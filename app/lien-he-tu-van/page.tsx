@@ -67,6 +67,15 @@ export default async function ConsultPage({ searchParams }: Props) {
             ))}
             <div className="border-t border-border pt-6">
               <p className="text-[12px] font-medium uppercase tracking-[0.12em] text-text-primary">
+                Hotline
+              </p>
+              <a
+                href={`tel:${site.phone}`}
+                className="mt-2 inline-block text-[14px] text-jade-deep underline-offset-4 hover:underline"
+              >
+                {site.phone}
+              </a>
+              <p className="mt-4 text-[12px] font-medium uppercase tracking-[0.12em] text-text-primary">
                 Email trực tiếp
               </p>
               <a
@@ -75,6 +84,21 @@ export default async function ConsultPage({ searchParams }: Props) {
               >
                 {site.email}
               </a>
+            </div>
+
+            <div className="border-t border-border pt-6">
+              <p className="text-[12px] font-medium uppercase tracking-[0.12em] text-text-primary">
+                Hệ thống cửa hàng
+              </p>
+              <ul className="mt-3 flex flex-col gap-3">
+                {site.stores.map((s) => (
+                  <li key={s.address} className="text-[13px] leading-relaxed text-text-secondary">
+                    <span className="font-medium text-text-primary">{s.city}</span>
+                    <br />
+                    {s.address}
+                  </li>
+                ))}
+              </ul>
             </div>
           </aside>
         </div>
