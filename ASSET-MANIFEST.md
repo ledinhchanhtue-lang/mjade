@@ -66,6 +66,20 @@ cận vân ngọc) — thêm đường dẫn vào mảng `images` trong `data/pr
 | story-hero.webp | 2000×1100 | /cau-chuyen, /ve-mjade | **THẬT** — lookbook 01 (model tựa cửa, đeo vòng + hoa tai ngọc) |
 | inspection-wide.webp | 1600×1000 | /kiem-dinh, bài viết | **THẬT** — folder 05 (vòng + nhẫn + chuỗi ngọc trên khay linen, nắng) |
 
+## public/images/brand/
+
+Logo peacock thật của MJADE ("ĐỆ NHẤT NGỌC PHỈ THỦY"). **Trích từ watermark trên ảnh sản phẩm**
+(folder 04, file 09) bằng sharp: crop sát + `linear()` làm sạch nền về trắng. Hiển thị với
+CSS `mix-blend-mode: multiply` để nền trắng hòa vào nền ivory (không cần alpha trong suốt).
+
+| File | Nội dung | Vị trí | Ghi chú |
+| --- | --- | --- | --- |
+| mjade-emblem.webp | Chỉ hình peacock | Header (cạnh wordmark "MJADE") | ~468px, hiển thị 36px |
+| mjade-logo.webp | Logo đầy đủ (peacock + MJADE + slogan) | Footer | ~714px, hiển thị 76px |
+
+⚠️ Đây là bản trích từ ảnh, **chưa phải file logo gốc**. Nên xin client file logo chính thức
+(PNG nền trong suốt hoặc SVG) để thay, cho nét ở mọi kích thước. **P1**.
+
 ## public/images/certificates/
 
 Trống — dành cho ảnh/PDF chứng thư thật. Đặt file theo mã sản phẩm

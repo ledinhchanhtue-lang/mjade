@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ChevronDown } from "lucide-react";
 import { footerColumns } from "@/data/footer";
 import Newsletter from "@/components/home/Newsletter";
@@ -42,13 +43,17 @@ export default function Footer() {
           ))}
 
           <div className="lg:col-span-1">
-            <span className="font-heading text-[28px] tracking-[0.08em] text-text-primary">
-              MJADE
-            </span>
-            <p className="mt-3 text-[13px] leading-relaxed text-text-secondary">
-              Tinh túy từ thiên nhiên.
+            <Image
+              src="/images/brand/mjade-logo.webp"
+              alt="MJADE — Đệ nhất ngọc phỉ thúy Myanmar"
+              width={238}
+              height={205}
+              className="h-[76px] w-auto mix-blend-multiply"
+            />
+            <p className="mt-4 text-[13px] leading-relaxed text-text-secondary">
+              Đánh thức viên ngọc trong bạn.
               <br />
-              Tận tâm trong từng trải nghiệm.
+              Meet your Inner Jade.
             </p>
             <p className="mt-6 text-[12px] text-text-secondary">
               © 2026 MJADE. All rights reserved.

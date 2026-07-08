@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Search, ShoppingBag, Menu } from "lucide-react";
 import { navigation } from "@/data/navigation";
@@ -58,10 +59,20 @@ export default function Header() {
 
         <Link
           href="/"
-          className="flex-none font-heading text-[26px] tracking-[0.08em] text-text-primary md:text-[32px] lg:text-[40px]"
+          className="flex flex-none items-center gap-2 md:gap-2.5"
           aria-label="MJADE — Trang chủ"
         >
-          MJADE
+          <Image
+            src="/images/brand/mjade-emblem.webp"
+            alt=""
+            width={156}
+            height={116}
+            priority
+            className="h-7 w-auto mix-blend-multiply md:h-8 lg:h-9"
+          />
+          <span className="font-heading text-[24px] tracking-[0.08em] text-text-primary md:text-[30px] lg:text-[38px]">
+            MJADE
+          </span>
         </Link>
 
         <div className="flex flex-1 items-center justify-end gap-5 md:gap-6">
