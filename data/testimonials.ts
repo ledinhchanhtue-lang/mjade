@@ -2,6 +2,9 @@ export type Testimonial = {
   quote: string;
   name: string;
   role: string | null;
+  /** Ảnh ngọc thật minh họa (đúng loại món khách nhắc tới) — không dùng ảnh chân dung khách */
+  image: string;
+  imageAlt: string;
   /** Link bài feedback gốc do MJADE đăng — để khách kiểm chứng, không bịa */
   source: string;
 };
@@ -17,6 +20,8 @@ export const testimonials: Testimonial[] = [
       "Chiếc vòng không thay đổi mọi thứ. Nó giúp mình kết nối lại với sự cân bằng bên trong.",
     name: "Ms. Tammy",
     role: "Marketing Leader, AIA",
+    image: "/images/home/testimonial-tammy.webp",
+    imageAlt: "Vòng bản ngọc phỉ thúy sắc xanh nhạt trên khay gỗ ấm",
     source: "https://www.facebook.com/share/p/1BHstqhmeU/",
   },
   {
@@ -24,6 +29,8 @@ export const testimonials: Testimonial[] = [
       "Bén duyên với một chiếc nhẫn ngọc của MJADE, đến nay nó đã thành “vật bất ly thân” trong rất nhiều hành trình làm nghề của mình.",
     name: "Bích Tuyền",
     role: "MC / Voice Talent",
+    image: "/images/home/testimonial-bichtuyen.webp",
+    imageAlt: "Ba chiếc nhẫn ngọc phỉ thúy nguyên khối gác trên cành, nền ngà",
     source: "https://www.facebook.com/share/p/18qZxXshT3/",
   },
   {
@@ -31,6 +38,8 @@ export const testimonials: Testimonial[] = [
       "Sau khi đi khắp Sài Gòn, mình dừng lại ở MJADE — nơi đủ uy tín để đặt trọn niềm tin: 100% ngọc Myanmar, không gia nhiệt, không tẩm keo, kèm kiểm định rõ ràng.",
     name: "Chị Kim",
     role: null,
+    image: "/images/home/testimonial-kim.webp",
+    imageAlt: "Vòng và nhẫn ngọc phỉ thúy trên khay linen, nắng ấm",
     source: "https://www.facebook.com/share/p/1BpP6NZsiX/",
   },
 ];

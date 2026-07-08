@@ -1,3 +1,4 @@
+import Image from "next/image";
 import SectionLabel from "@/components/ui/SectionLabel";
 import Reveal from "@/components/ui/Reveal";
 import { testimonials } from "@/data/testimonials";
@@ -20,6 +21,13 @@ export default function Testimonials() {
               delay={i * 100}
               className="flex flex-col border border-border bg-white p-7"
             >
+              <Image
+                src={t.image}
+                alt={t.imageAlt}
+                width={480}
+                height={480}
+                className="mb-5 h-16 w-16 rounded-full object-cover ring-1 ring-border/70"
+              />
               <p className="font-heading text-[18px] italic leading-relaxed text-text-primary md:text-[19px]">
                 “{t.quote}”
               </p>
