@@ -22,10 +22,10 @@ export type ServicePanelItem = {
 export const servicePanels: ServicePanelItem[] = [
   {
     icon: "user",
-    title: "Tư vấn cá nhân hóa",
+    title: "Tư vấn Khám Ngọc",
     description:
-      "Lắng nghe câu chuyện của bạn, để gợi ý viên ngọc dành riêng cho bạn.",
-    linkLabel: "Đặt lịch tư vấn",
+      "Nếu bạn có một ngọc phẩm trước đó chưa rõ nguồn gốc và chất lượng, hãy mang đến cửa hàng MJADE gần nhất để được hỗ trợ Khám Ngọc.",
+    linkLabel: "Đặt lịch Khám Ngọc",
     href: "/lien-he-tu-van",
   },
   {

@@ -63,12 +63,12 @@ export default function Header() {
           aria-label="MJADE — Trang chủ"
         >
           <Image
-            src="/images/brand/mjade-emblem.webp"
+            src="/images/brand/mjade-emblem.png"
             alt=""
-            width={156}
-            height={116}
+            width={468}
+            height={348}
             priority
-            className="h-7 w-auto mix-blend-multiply md:h-8 lg:h-9"
+            className="h-7 w-auto md:h-8 lg:h-9"
           />
           <span className="font-heading text-[24px] tracking-[0.08em] text-text-primary md:text-[30px] lg:text-[38px]">
             MJADE

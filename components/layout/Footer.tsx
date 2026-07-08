@@ -44,11 +44,11 @@ export default function Footer() {
 
           <div className="lg:col-span-1">
             <Image
-              src="/images/brand/mjade-logo.webp"
+              src="/images/brand/mjade-logo.png"
               alt="MJADE — Đệ nhất ngọc phỉ thúy Myanmar"
-              width={238}
-              height={205}
-              className="h-[76px] w-auto mix-blend-multiply"
+              width={714}
+              height={615}
+              className="h-[76px] w-auto"
             />
             <p className="mt-4 text-[13px] leading-relaxed text-text-secondary">
               Đánh thức viên ngọc trong bạn.

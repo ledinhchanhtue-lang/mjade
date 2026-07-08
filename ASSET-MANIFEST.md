@@ -69,13 +69,14 @@ cận vân ngọc) — thêm đường dẫn vào mảng `images` trong `data/pr
 ## public/images/brand/
 
 Logo peacock thật của MJADE ("ĐỆ NHẤT NGỌC PHỈ THỦY"). **Trích từ watermark trên ảnh sản phẩm**
-(folder 04, file 09) bằng sharp: crop sát + `linear()` làm sạch nền về trắng. Hiển thị với
-CSS `mix-blend-mode: multiply` để nền trắng hòa vào nền ivory (không cần alpha trong suốt).
+(folder 04, file 09) bằng sharp: crop sát → `linear()` làm sạch nền → **key màu trắng thành alpha
+trong suốt** (raw buffer: pixel sáng + ít bão hòa → alpha 0, có ramp mềm ở rìa). PNG nền trong suốt
+thật — hiển thị đẹp trên mọi nền, không cần blend hack.
 
 | File | Nội dung | Vị trí | Ghi chú |
 | --- | --- | --- | --- |
-| mjade-emblem.webp | Chỉ hình peacock | Header (cạnh wordmark "MJADE") | ~468px, hiển thị 36px |
-| mjade-logo.webp | Logo đầy đủ (peacock + MJADE + slogan) | Footer | ~714px, hiển thị 76px |
+| mjade-emblem.png | Chỉ hình peacock (nền trong suốt) | Header (cạnh wordmark "MJADE") | 468×348, hiển thị 28–36px |
+| mjade-logo.png | Logo đầy đủ (peacock + MJADE + slogan, nền trong suốt) | Footer | 714×615, hiển thị 76px |
 
 ⚠️ Đây là bản trích từ ảnh, **chưa phải file logo gốc**. Nên xin client file logo chính thức
 (PNG nền trong suốt hoặc SVG) để thay, cho nét ở mọi kích thước. **P1**.
