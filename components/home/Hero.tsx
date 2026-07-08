@@ -38,7 +38,7 @@ export default function Hero() {
         <div className="relative order-1 aspect-[10/7] w-full md:order-2 md:aspect-auto md:h-full md:min-h-[440px] lg:min-h-[500px]">
           <Image
             src="/images/home/hero-jade-woman.webp"
-            alt="Người phụ nữ mặc áo dệt màu ngà đeo dây chuyền vàng điểm đá xanh lục, ánh sáng cửa sổ ấm"
+            alt="Người phụ nữ áo lụa trắng đeo vòng ngọc phỉ thúy, tựa tay bên gối gấm trong không gian truyền thống ấm"
             fill
             priority
             sizes="(min-width: 768px) 50vw, 100vw"
