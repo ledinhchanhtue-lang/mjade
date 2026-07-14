@@ -48,8 +48,9 @@ export default function StoryCertification() {
               niềm tin
             </h2>
             <p className="max-w-md text-[14px] leading-relaxed text-text-secondary">
-              Toàn bộ sản phẩm được đi kèm chứng thư kiểm định từ đơn vị
-              kiểm định đá quý phù hợp.
+              Toàn bộ sản phẩm đi kèm chứng thư kiểm định từ Myanmar Treasure
+              Gemological Laboratory — thẩm định công nghệ bởi GIA (America) và
+              FGA (London).
             </p>
             <ul className="flex flex-col gap-2.5">
               {certificationChecklist.map((item) => (

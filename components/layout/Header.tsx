@@ -65,10 +65,10 @@ export default function Header() {
           <Image
             src="/images/brand/mjade-emblem.png"
             alt=""
-            width={468}
-            height={348}
+            width={560}
+            height={442}
             priority
-            className="h-7 w-auto md:h-8 lg:h-9"
+            className="h-8 w-auto md:h-9 lg:h-10"
           />
           <span className="font-heading text-[24px] tracking-[0.08em] text-text-primary md:text-[30px] lg:text-[38px]">
             MJADE
@@ -80,7 +80,7 @@ export default function Header() {
             href="/lien-he-tu-van"
             className="hidden text-[11px] font-medium uppercase tracking-[0.1em] text-text-primary transition-colors hover:text-jade-deep lg:inline-flex"
           >
-            Đặt lịch tư vấn
+            Đặt lịch Khám Ngọc
           </Link>
           <Link
             href="/gio-hang"

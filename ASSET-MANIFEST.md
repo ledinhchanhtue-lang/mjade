@@ -75,8 +75,8 @@ thật — hiển thị đẹp trên mọi nền, không cần blend hack.
 
 | File | Nội dung | Vị trí | Ghi chú |
 | --- | --- | --- | --- |
-| mjade-emblem.png | Chỉ hình peacock (nền trong suốt) | Header (cạnh wordmark "MJADE") | 468×348, hiển thị 28–36px |
-| mjade-logo.png | Logo đầy đủ (peacock + MJADE + slogan, nền trong suốt) | Footer | 714×615, hiển thị 76px |
+| mjade-emblem.png | Chỉ hình peacock (nền trong suốt) | Header (cạnh wordmark "MJADE") | 560×442, chừa biên đủ đầu peacock (fix "cụt logo"), hiển thị 32–40px |
+| mjade-logo.png | Logo đầy đủ (peacock + MJADE + slogan, nền trong suốt) | Footer | 760×743, hiển thị 88px |
 
 ⚠️ Đây là bản trích từ ảnh, **chưa phải file logo gốc**. Nên xin client file logo chính thức
 (PNG nền trong suốt hoặc SVG) để thay, cho nét ở mọi kích thước. **P1**.

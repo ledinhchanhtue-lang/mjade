@@ -46,9 +46,9 @@ export default function Footer() {
             <Image
               src="/images/brand/mjade-logo.png"
               alt="MJADE — Đệ nhất ngọc phỉ thúy Myanmar"
-              width={714}
-              height={615}
-              className="h-[76px] w-auto"
+              width={760}
+              height={743}
+              className="h-[88px] w-auto"
             />
             <p className="mt-4 text-[13px] leading-relaxed text-text-secondary">
               Đánh thức viên ngọc trong bạn.

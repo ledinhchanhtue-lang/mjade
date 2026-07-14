@@ -1,10 +1,10 @@
-import { UserRound, Truck } from "lucide-react";
+import { UserRound, ShieldCheck } from "lucide-react";
 import EditorialButton from "@/components/ui/EditorialButton";
 import { servicePanels } from "@/data/services";
 
 const icons = {
   user: UserRound,
-  truck: Truck,
+  shield: ShieldCheck,
 };
 
 export default function ServicePanel() {

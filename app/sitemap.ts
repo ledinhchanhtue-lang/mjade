@@ -12,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/ngoc-phi-thuy",
     "/kiem-dinh",
     "/cau-chuyen",
+    "/showroom",
     "/lien-he-tu-van",
     "/giao-hang-quoc-te",
     "/tin-tuc",

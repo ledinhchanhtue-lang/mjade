@@ -1,12 +1,10 @@
-import { Gem, HandCoins, BadgeCheck, BookOpen, Sparkles } from "lucide-react";
+import { Gem, Store, BadgeCheck } from "lucide-react";
 import type { TrustPoint } from "@/data/services";
 
 const icons = {
   gem: Gem,
-  handshake: HandCoins,
+  store: Store,
   badge: BadgeCheck,
-  book: BookOpen,
-  sparkles: Sparkles,
 };
 
 export default function TrustItem({ title, icon }: TrustPoint) {
