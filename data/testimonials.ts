@@ -2,7 +2,7 @@ export type Testimonial = {
   quote: string;
   name: string;
   role: string | null;
-  /** Ảnh ngọc thật minh họa (đúng loại món khách nhắc tới) — không dùng ảnh chân dung khách */
+  /** Ảnh chân dung khách hàng do MJADE cung cấp (khách trong các bài feedback thật) */
   image: string;
   imageAlt: string;
   /** Link bài feedback gốc do MJADE đăng — để khách kiểm chứng, không bịa */
@@ -21,7 +21,7 @@ export const testimonials: Testimonial[] = [
     name: "Ms. Tammy",
     role: "Marketing Leader, AIA",
     image: "/images/home/testimonial-tammy.webp",
-    imageAlt: "Vòng bản ngọc phỉ thúy sắc xanh nhạt trên khay gỗ ấm",
+    imageAlt: "Ms. Tammy — khách hàng của MJADE",
     source: "https://www.facebook.com/share/p/1BHstqhmeU/",
   },
   {
@@ -30,7 +30,7 @@ export const testimonials: Testimonial[] = [
     name: "Bích Tuyền",
     role: "MC / Voice Talent",
     image: "/images/home/testimonial-bichtuyen.webp",
-    imageAlt: "Ba chiếc nhẫn ngọc phỉ thúy nguyên khối gác trên cành, nền ngà",
+    imageAlt: "MC Bích Tuyền — khách hàng của MJADE",
     source: "https://www.facebook.com/share/p/18qZxXshT3/",
   },
   {
@@ -39,7 +39,7 @@ export const testimonials: Testimonial[] = [
     name: "Chị Kim",
     role: null,
     image: "/images/home/testimonial-kim.webp",
-    imageAlt: "Vòng và nhẫn ngọc phỉ thúy trên khay linen, nắng ấm",
+    imageAlt: "Chị Kim đeo vòng và nhẫn ngọc phỉ thúy tại showroom MJADE",
     source: "https://www.facebook.com/share/p/1BpP6NZsiX/",
   },
 ];
