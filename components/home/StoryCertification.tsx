@@ -65,10 +65,10 @@ export default function StoryCertification() {
             </EditorialButton>
           </Reveal>
 
-          <Reveal delay={120} className="relative aspect-[4/5] w-full flex-1 lg:max-w-[360px]">
+          <Reveal delay={120} className="relative aspect-[3/4] w-full flex-1 lg:max-w-[360px]">
             <Image
-              src="/images/home/certificate.svg"
-              alt="Placeholder giấy chứng nhận kiểm định, ảnh giấy kiểm định thực tế sẽ được cập nhật"
+              src="/images/certificates/certificate-front.webp"
+              alt="Chứng thư kiểm định Myanmar Treasure Gemological Laboratory — Natural Jadeite Type A, kèm vòng ngọc phỉ thúy"
               fill
               sizes="(min-width: 1024px) 26vw, 90vw"
               className="object-cover"

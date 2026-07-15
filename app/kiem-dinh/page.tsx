@@ -25,7 +25,7 @@ const flow = [
   {
     step: "02",
     title: "Kiểm định độc lập",
-    body: "Sản phẩm hoàn thiện được gửi kiểm định tại đơn vị kiểm định đá quý độc lập với thiết bị quang phổ chuyên dụng.",
+    body: "Sản phẩm hoàn thiện được kiểm định tại Myanmar Treasure Gemological Laboratory — chuyên gia đạt chứng chỉ GIA (America) và FGA (London), thiết bị quang phổ chuyên dụng.",
   },
   {
     step: "03",
@@ -82,7 +82,7 @@ export default function CertificationPage() {
           <div className="relative aspect-[16/10] w-full overflow-hidden bg-background-warm">
             <Image
               src="/images/editorial/inspection-wide.webp"
-              alt="Bàn tay chuyên gia dùng nhíp phân loại các viên đá xanh lục bên kính loupe"
+              alt="Vòng, nhẫn và chuỗi ngọc phỉ thúy trên khay linen dưới ánh nắng tự nhiên"
               fill
               sizes="(min-width: 1024px) 48vw, 100vw"
               className="object-cover"
@@ -127,15 +127,68 @@ export default function CertificationPage() {
               Type A — MJADE hoàn tiền 100%, không giới hạn thời gian.
             </p>
           </div>
-          <div className="relative mx-auto aspect-[4/5] w-full max-w-[380px]">
+          <div className="relative mx-auto aspect-[3/4] w-full max-w-[360px]">
             <Image
-              src="/images/home/certificate.svg"
-              alt="Placeholder chứng thư — chứng thư kiểm định thực tế sẽ được cập nhật"
+              src="/images/certificates/certificate-front.webp"
+              alt="Chứng thư kiểm định Myanmar Treasure Gemological Laboratory — Natural Jadeite Type A"
               fill
               sizes="(min-width: 1024px) 30vw, 80vw"
               className="object-cover"
             />
           </div>
+        </div>
+      </section>
+
+      {/* Mẫu chứng thư thực tế */}
+      <section className="px-5 py-14 md:px-10 lg:px-[72px] lg:py-16">
+        <div className="mx-auto max-w-content">
+          <SectionLabel>Mẫu chứng thư thực tế</SectionLabel>
+          <h2 className="mt-3 font-heading text-[24px] leading-snug text-text-primary md:text-[30px]">
+            Chứng thư từ Myanmar Treasure Gemological Laboratory
+          </h2>
+          <p className="mt-3 max-w-2xl text-[14px] leading-relaxed text-text-secondary">
+            Mỗi sản phẩm MJADE đi kèm một chứng thư kiểm định độc lập như dưới đây — thẩm định
+            công nghệ bởi chuyên gia đạt chứng chỉ GIA (America) và FGA (London), kết luận rõ
+            ràng Natural Jadeite (Type A).
+          </p>
+          <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-3">
+            {[
+              {
+                src: "/images/certificates/certificate-front.webp",
+                alt: "Mặt trước chứng thư — Natural Jadeite Type A, mã ID No.10101054179",
+                caption: "Mặt trước — kết luận Natural Jadeite (Type A)",
+              },
+              {
+                src: "/images/certificates/certificate-detail.webp",
+                alt: "Trang thông số kỹ thuật và chữ ký chuyên gia GIA, FGA London",
+                caption: "Thông số kỹ thuật & chữ ký chuyên gia GIA · FGA",
+              },
+              {
+                src: "/images/certificates/certificate-hand.webp",
+                alt: "Chứng thư kiểm định thực tế cầm trên tay tại showroom MJADE",
+                caption: "Chứng thư bản cứng đi kèm sản phẩm",
+              },
+            ].map((c) => (
+              <figure key={c.src}>
+                <div className="relative aspect-[3/4] w-full overflow-hidden border border-border bg-background-warm">
+                  <Image
+                    src={c.src}
+                    alt={c.alt}
+                    fill
+                    sizes="(min-width: 640px) 30vw, 90vw"
+                    className="object-cover"
+                  />
+                </div>
+                <figcaption className="mt-3 text-[12px] leading-relaxed text-text-secondary">
+                  {c.caption}
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+          <p className="mt-6 text-[12px] italic leading-relaxed text-text-secondary">
+            Ảnh chụp một chứng thư thực tế làm ví dụ. Mã số trên chứng thư của bạn được đối
+            chiếu 1-1 với sản phẩm nhận được.
+          </p>
         </div>
       </section>
 

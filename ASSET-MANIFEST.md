@@ -37,7 +37,17 @@ Không dùng ảnh Pinterest hoặc ảnh của thương hiệu trang sức khá
 | limited-earrings.webp | 1200×1200 (1:1) | Limited strip 3 | TẠM | (stock cũ) | **Chưa có ảnh hoa tai.** Cần thay. |
 | limited-bangle.webp | 1200×1200 (1:1) | Limited strip 4 | **THẬT** | folder 05 (vòng bản ngọc nguyên khối, khay gỗ) | ✅ Đã sửa lỗi cũ (trước là ảnh nhẫn bản). |
 | jade-inspection.webp | 1200×1500 (4:5) | Section câu chuyện trang chủ | **THẬT** | lookbook 01 #05 (model áo trắng, mặt dây jade lavender + vòng, uống trà) | Ảnh hero cũ, chuyển xuống đây khi đổi hero sang #07. |
-| certificate.svg | 900×1120 | Section kiểm định + trang /kiem-dinh | THIẾU (placeholder trung tính có chủ đích) | — | **Chỉ dùng chứng thư THẬT của MJADE.** Hỗ trợ ảnh/PDF qua field certificateImage/certificatePdf trong data/products.ts. **P0** |
+| certificate.svg | 900×1120 | (không còn dùng) | THAY THẾ | — | Đã thay bằng ảnh chứng thư THẬT trong `public/images/certificates/` (xem bên dưới). File svg giữ lại nhưng không tham chiếu. |
+
+## public/images/certificates/
+
+**Ảnh chứng thư THẬT** từ Myanmar Treasure Gemological Laboratory (client cung cấp, không có thông tin cá nhân khách). Dùng ở section kiểm định trang chủ + gallery trang /kiem-dinh. Ảnh gốc để trong `Giấy kiểm định/` (đã gitignore).
+
+| File | Nội dung |
+| --- | --- |
+| certificate-front.webp | Mặt trước: Gem Report, ID No.10101054179, Natural Jadeite (Type A) + vòng ngọc trong hộp |
+| certificate-detail.webp | Trang thông số (47.13g, RI 1.66, SG 3.33, hardness 7) + chữ ký chuyên gia GIA (AJP) & FGA (London), dấu GEM-A member |
+| certificate-hand.webp | Chứng thư cầm trên tay tại showroom |
 
 ## public/images/products/
 
