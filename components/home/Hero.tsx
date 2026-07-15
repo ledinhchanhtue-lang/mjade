@@ -37,7 +37,7 @@ export default function Hero() {
 
         <div className="relative order-1 aspect-[10/7] w-full md:order-2 md:aspect-auto md:h-full md:min-h-[440px] lg:min-h-[500px]">
           <Image
-            src="/images/home/hero-jade-woman.webp"
+            src="/images/home/hero-banner.webp"
             alt="Người phụ nữ áo lụa trắng đeo lắc tay và nhẫn ngọc phỉ thúy giữa những cành hoa mơ, nền tối editorial"
             fill
             priority

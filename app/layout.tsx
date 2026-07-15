@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     locale: "vi_VN",
     type: "website",
     siteName: "MJADE",
-    images: [{ url: "/images/home/hero-jade-woman.webp", width: 2200, height: 1500 }],
+    images: [{ url: "/images/home/hero-banner.webp", width: 2200, height: 1467 }],
   },
   twitter: {
     card: "summary_large_image",

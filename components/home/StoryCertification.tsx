@@ -30,7 +30,7 @@ export default function StoryCertification() {
 
           <Reveal delay={120} className="relative aspect-[4/5] w-full flex-1 lg:max-w-[420px]">
             <Image
-              src="/images/home/jade-inspection.webp"
+              src="/images/home/story-block.webp"
               alt="Người phụ nữ váy xanh đeo chuỗi ngọc phỉ thúy lục, cầm quạt, phông gỗ ấm trầm"
               fill
               sizes="(min-width: 1024px) 30vw, 90vw"
