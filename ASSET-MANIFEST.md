@@ -30,7 +30,7 @@ Không dùng ảnh Pinterest hoặc ảnh của thương hiệu trang sức khá
 | hero-jade-woman.webp | 2200×1467 (3:2) | Hero trang chủ | **THẬT** | Section/Banner.jpg (model váy lụa trắng đeo lắc tay + nhẫn ngọc, cành hoa mơ, nền tối) | Cover NGANG do client gửi. |
 | featured-pendant.webp | 1200×1500 (4:5) | Card SP nổi bật 1 | **THẬT** | folder 05 (chuỗi hạt ngọc + mặt dây, khay linen) | Dùng chung cho product detail MJ-P001. |
 | featured-ring.webp | 1200×1500 (4:5) | Card SP nổi bật 2 | **THẬT** | folder 04 (3 nhẫn ngọc nguyên khối trên cành hoa, có logo MJADE) | Dùng chung cho MJ-R002. |
-| featured-earrings.webp | 1200×1500 (4:5) | Card SP nổi bật 3 | TẠM | (stock cũ) | **Chưa có ảnh hoa tai product-only sạch trong kho.** Cần thay. |
+| featured-earrings-2.webp | 1200×1500 (4:5) | Card SP nổi bật 3 | TẠM | stock (hoa tai NGỌC drop) | ✅ Đã thay ảnh emerald+kim cương lệch tông bằng hoa tai ngọc đúng chất liệu. **Chờ ảnh hoa tai thật của MJADE.** |
 | featured-bracelet.webp | 1200×1500 (4:5) | Card SP nổi bật 4 | **THẬT** | lookbook 01 (lắc tay hạt ngọc đeo trên cổ tay) | Dùng chung cho MJ-B004. |
 | limited-pendant.webp | 1200×1200 (1:1) | Limited strip 1 | **THẬT** | folder 04 (chuỗi ngọc xanh lục trên lá) | |
 | limited-ring.webp | 1200×1200 (1:1) | Limited strip 2 | **THẬT** | folder 04 (2 nhẫn ngọc trên tulip trắng) | |
