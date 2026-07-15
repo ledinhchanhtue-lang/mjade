@@ -27,7 +27,7 @@ Không dùng ảnh Pinterest hoặc ảnh của thương hiệu trang sức khá
 
 | File | Kích thước | Vị trí | Trạng thái | Nguồn ảnh thật | Ghi chú |
 | --- | --- | --- | --- | --- | --- |
-| hero-jade-woman.webp | 2200×1467 (3:2) | Hero trang chủ | **THẬT** | lookbook 01 #07 (model áo lụa trắng đeo vòng ngọc, tựa tay bên gối gấm, sofa xanh) | Cover NGANG do client chọn. |
+| hero-jade-woman.webp | 2200×1467 (3:2) | Hero trang chủ | **THẬT** | Section/Banner.jpg (model váy lụa trắng đeo lắc tay + nhẫn ngọc, cành hoa mơ, nền tối) | Cover NGANG do client gửi. |
 | featured-pendant.webp | 1200×1500 (4:5) | Card SP nổi bật 1 | **THẬT** | folder 05 (chuỗi hạt ngọc + mặt dây, khay linen) | Dùng chung cho product detail MJ-P001. |
 | featured-ring.webp | 1200×1500 (4:5) | Card SP nổi bật 2 | **THẬT** | folder 04 (3 nhẫn ngọc nguyên khối trên cành hoa, có logo MJADE) | Dùng chung cho MJ-R002. |
 | featured-earrings.webp | 1200×1500 (4:5) | Card SP nổi bật 3 | TẠM | (stock cũ) | **Chưa có ảnh hoa tai product-only sạch trong kho.** Cần thay. |
@@ -36,7 +36,7 @@ Không dùng ảnh Pinterest hoặc ảnh của thương hiệu trang sức khá
 | limited-ring.webp | 1200×1200 (1:1) | Limited strip 2 | **THẬT** | folder 04 (2 nhẫn ngọc trên tulip trắng) | |
 | limited-earrings.webp | 1200×1200 (1:1) | Limited strip 3 | TẠM | (stock cũ) | **Chưa có ảnh hoa tai.** Cần thay. |
 | limited-bangle.webp | 1200×1200 (1:1) | Limited strip 4 | **THẬT** | folder 05 (vòng bản ngọc nguyên khối, khay gỗ) | ✅ Đã sửa lỗi cũ (trước là ảnh nhẫn bản). |
-| jade-inspection.webp | 1200×1500 (4:5) | Section câu chuyện trang chủ | **THẬT** | lookbook 01 #05 (model áo trắng, mặt dây jade lavender + vòng, uống trà) | Ảnh hero cũ, chuyển xuống đây khi đổi hero sang #07. |
+| jade-inspection.webp | 1200×1500 (4:5) | Section câu chuyện trang chủ | **THẬT** | Section/Story.jpg (model váy xanh đeo chuỗi ngọc lục, cầm quạt, phông gỗ) | Client gửi. |
 | certificate.svg | 900×1120 | (không còn dùng) | THAY THẾ | — | Đã thay bằng ảnh chứng thư THẬT trong `public/images/certificates/` (xem bên dưới). File svg giữ lại nhưng không tham chiếu. |
 
 ## public/images/certificates/

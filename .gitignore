@@ -46,3 +46,4 @@ next-env.d.ts
 # Ảnh gốc khách gửi (không đưa vào repo)
 Customer/
 Giấy kiểm định/
+Section/
