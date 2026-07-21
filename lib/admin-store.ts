@@ -37,12 +37,27 @@ export async function readContent(file: ContentFile): Promise<unknown> {
 
 export type SaveResult = { mode: "github" | "local"; commit?: string };
 
+/**
+ * Trên Vercel, hệ thống file là chỉ-đọc nên không thể ghi trực tiếp.
+ * Báo lỗi dễ hiểu thay vì để lỗi kỹ thuật EROFS lộ ra cho người dùng.
+ */
+function assertWritable() {
+  if (!githubConfigured() && process.env.VERCEL) {
+    throw new Error(
+      "Chưa cấu hình GITHUB_TOKEN nên không lưu được lên website. " +
+        "Vào Vercel → Settings → Environment Variables thêm GITHUB_TOKEN, GITHUB_REPO, " +
+        "GITHUB_BRANCH rồi Redeploy (xem ADMIN-GUIDE.md)."
+    );
+  }
+}
+
 /** Ghi nội dung: commit lên GitHub nếu đã cấu hình, ngược lại ghi file local (dev). */
 export async function writeContent(
   file: ContentFile,
   data: unknown,
   message: string
 ): Promise<SaveResult> {
+  assertWritable();
   const text = JSON.stringify(data, null, 2) + "\n";
   if (githubConfigured()) {
     const res = await putFile({
@@ -62,6 +77,7 @@ export async function writeImage(
   buf: Buffer,
   message: string
 ): Promise<SaveResult> {
+  assertWritable();
   if (githubConfigured()) {
     const res = await putFile({
       path: repoPath,
