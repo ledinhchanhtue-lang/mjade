@@ -6,6 +6,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Search, ShoppingBag, Menu } from "lucide-react";
 import { navigation } from "@/data/navigation";
+import { site } from "@/data/site";
 import { useCart } from "@/components/cart/CartProvider";
 import MobileMenu from "./MobileMenu";
 
@@ -63,7 +64,7 @@ export default function Header() {
           aria-label="MJADE — Trang chủ"
         >
           <Image
-            src="/images/brand/mjade-emblem.png"
+            src={site.logo.emblem}
             alt=""
             width={560}
             height={442}

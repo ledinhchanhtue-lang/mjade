@@ -1,0 +1,73 @@
+{
+  "hero": {
+    "eyebrow": "Meet your Inner Jade",
+    "titleLine1": "Đánh thức",
+    "titleLine2": "viên ngọc trong bạn.",
+    "body": "MJADE tuyển chọn ngọc phỉ thúy Myanmar Type A 100% tự nhiên — được khai sinh từ lòng đất mẹ qua hàng triệu năm. Mỗi viên là một lời nhắc rằng vẻ đẹp thật sự là ánh sáng lấp lánh sẵn có bên trong chính bạn.",
+    "ctaLabel": "Khám phá ngay",
+    "ctaHref": "/bo-suu-tap",
+    "image": "/images/home/hero-banner.webp",
+    "imageAlt": "Người phụ nữ áo lụa trắng đeo lắc tay và nhẫn ngọc phỉ thúy giữa những cành hoa mơ, nền tối editorial"
+  },
+  "story": {
+    "eyebrow": "Câu chuyện MJADE",
+    "titleLine1": "Trong mỗi chúng ta",
+    "titleLine2": "đều ẩn chứa một viên ngọc",
+    "body": "Viên ngọc ấy không bao giờ mất đi, chỉ là bị lớp bụi cuộc đời phủ mờ ánh sáng vốn có. MJADE không chạy theo sự hoàn hảo, mà tôn vinh sự thật và vẻ đẹp đến từ bên trong — cùng bạn đi trên hành trình thức tỉnh và trở về.",
+    "ctaLabel": "Khám phá câu chuyện",
+    "ctaHref": "/cau-chuyen",
+    "image": "/images/home/story-block.webp",
+    "imageAlt": "Người phụ nữ váy xanh đeo chuỗi ngọc phỉ thúy lục, cầm quạt, phông gỗ ấm trầm"
+  },
+  "certification": {
+    "eyebrow": "Kiểm định & cam kết",
+    "titleLine1": "Uy tín tạo nên",
+    "titleLine2": "niềm tin",
+    "body": "Toàn bộ sản phẩm đi kèm chứng thư kiểm định từ Myanmar Treasure Gemological Laboratory — thẩm định công nghệ bởi GIA (America) và FGA (London).",
+    "ctaLabel": "Xem mẫu kiểm định",
+    "ctaHref": "/kiem-dinh",
+    "image": "/images/certificates/certificate-front.webp",
+    "imageAlt": "Chứng thư kiểm định Myanmar Treasure Gemological Laboratory — Natural Jadeite Type A, kèm vòng ngọc phỉ thúy"
+  },
+  "testimonialsSection": {
+    "eyebrow": "Ngọc nữ của MJADE",
+    "titlePlain": "Những chia sẻ thật",
+    "titleItalic": "từ khách hàng"
+  },
+  "trustPoints": [
+    {
+      "title": "100% Phỉ Thúy\nMyanmar Type A",
+      "icon": "gem"
+    },
+    {
+      "title": "Showroom trải nghiệm\ntrực tiếp",
+      "icon": "store"
+    },
+    {
+      "title": "Kiểm định\nuy tín",
+      "icon": "badge"
+    }
+  ],
+  "servicePanels": [
+    {
+      "icon": "user",
+      "title": "Tư vấn Khám Ngọc",
+      "description": "Nếu bạn có một ngọc phẩm trước đó chưa rõ nguồn gốc và chất lượng, hãy mang đến cửa hàng MJADE gần nhất để được hỗ trợ Khám Ngọc.",
+      "linkLabel": "Đặt lịch Khám Ngọc",
+      "href": "/lien-he-tu-van"
+    },
+    {
+      "icon": "shield",
+      "title": "Kiểm định Quốc Tế",
+      "description": "Kiểm định uy tín từ Myanmar Treasure Gemological Laboratory, thẩm định công nghệ bởi GIA (America) và FGA (London).",
+      "linkLabel": "Tìm hiểu kiểm định",
+      "href": "/kiem-dinh"
+    }
+  ],
+  "certificationChecklist": [
+    "Ngọc phỉ thúy Myanmar Type A 100% tự nhiên.",
+    "Kiểm định từ Myanmar Treasure Gemological Laboratory (thẩm định công nghệ bởi GIA America & FGA London).",
+    "Cam kết minh bạch về sản phẩm.",
+    "Có thông tin nhận diện và mã sản phẩm."
+  ]
+}

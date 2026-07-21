@@ -4,6 +4,7 @@ import SectionLabel from "@/components/ui/SectionLabel";
 import EditorialButton from "@/components/ui/EditorialButton";
 import Reveal from "@/components/ui/Reveal";
 import { certificationChecklist } from "@/data/services";
+import { storyBlock, certificationBlock } from "@/data/home";
 
 export default function StoryCertification() {
   return (
@@ -11,27 +12,24 @@ export default function StoryCertification() {
       <div className="grid grid-cols-1 lg:grid-cols-2">
         <div className="flex flex-col gap-8 bg-background-warm px-5 py-12 sm:px-8 md:px-10 lg:flex-row lg:items-center lg:gap-10 lg:px-[72px] lg:py-20">
           <Reveal className="flex flex-1 flex-col gap-5">
-            <SectionLabel>Câu chuyện MJADE</SectionLabel>
+            <SectionLabel>{storyBlock.eyebrow}</SectionLabel>
             <h2 className="font-heading text-[30px] leading-tight text-text-primary md:text-[36px] lg:text-[42px]">
-              Trong mỗi chúng ta
+              {storyBlock.titleLine1}
               <br />
-              đều ẩn chứa một viên ngọc
+              {storyBlock.titleLine2}
             </h2>
             <p className="max-w-md text-[14px] leading-relaxed text-text-secondary">
-              Viên ngọc ấy không bao giờ mất đi, chỉ là bị lớp bụi cuộc đời
-              phủ mờ ánh sáng vốn có. MJADE không chạy theo sự hoàn hảo, mà
-              tôn vinh sự thật và vẻ đẹp đến từ bên trong — cùng bạn đi trên
-              hành trình thức tỉnh và trở về.
+              {storyBlock.body}
             </p>
-            <EditorialButton href="/cau-chuyen" variant="text" className="mt-1">
-              Khám phá câu chuyện
+            <EditorialButton href={storyBlock.ctaHref} variant="text" className="mt-1">
+              {storyBlock.ctaLabel}
             </EditorialButton>
           </Reveal>
 
           <Reveal delay={120} className="relative aspect-[4/5] w-full flex-1 lg:max-w-[420px]">
             <Image
-              src="/images/home/story-block.webp"
-              alt="Người phụ nữ váy xanh đeo chuỗi ngọc phỉ thúy lục, cầm quạt, phông gỗ ấm trầm"
+              src={storyBlock.image}
+              alt={storyBlock.imageAlt}
               fill
               sizes="(min-width: 1024px) 30vw, 90vw"
               className="object-cover"
@@ -41,16 +39,14 @@ export default function StoryCertification() {
 
         <div className="flex flex-col gap-8 bg-white px-5 py-12 sm:px-8 md:px-10 lg:flex-row lg:items-center lg:gap-10 lg:px-[72px] lg:py-20">
           <Reveal className="flex flex-1 flex-col gap-5">
-            <SectionLabel>Kiểm định &amp; cam kết</SectionLabel>
+            <SectionLabel>{certificationBlock.eyebrow}</SectionLabel>
             <h2 className="font-heading text-[30px] leading-tight text-text-primary md:text-[36px] lg:text-[42px]">
-              Uy tín tạo nên
+              {certificationBlock.titleLine1}
               <br />
-              niềm tin
+              {certificationBlock.titleLine2}
             </h2>
             <p className="max-w-md text-[14px] leading-relaxed text-text-secondary">
-              Toàn bộ sản phẩm đi kèm chứng thư kiểm định từ Myanmar Treasure
-              Gemological Laboratory — thẩm định công nghệ bởi GIA (America) và
-              FGA (London).
+              {certificationBlock.body}
             </p>
             <ul className="flex flex-col gap-2.5">
               {certificationChecklist.map((item) => (
@@ -60,15 +56,15 @@ export default function StoryCertification() {
                 </li>
               ))}
             </ul>
-            <EditorialButton href="/kiem-dinh" variant="text" className="mt-1">
-              Xem mẫu kiểm định
+            <EditorialButton href={certificationBlock.ctaHref} variant="text" className="mt-1">
+              {certificationBlock.ctaLabel}
             </EditorialButton>
           </Reveal>
 
           <Reveal delay={120} className="relative aspect-[3/4] w-full flex-1 lg:max-w-[360px]">
             <Image
-              src="/images/certificates/certificate-front.webp"
-              alt="Chứng thư kiểm định Myanmar Treasure Gemological Laboratory — Natural Jadeite Type A, kèm vòng ngọc phỉ thúy"
+              src={certificationBlock.image}
+              alt={certificationBlock.imageAlt}
               fill
               sizes="(min-width: 1024px) 26vw, 90vw"
               className="object-cover"

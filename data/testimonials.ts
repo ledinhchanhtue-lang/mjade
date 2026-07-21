@@ -1,3 +1,5 @@
+import raw from "@/content/testimonials.json";
+
 export type Testimonial = {
   quote: string;
   name: string;
@@ -10,36 +12,8 @@ export type Testimonial = {
 };
 
 /**
- * Trích từ các bài feedback THẬT do MJADE đăng công khai trên Facebook.
- * Chỉ chọn phần khách chia sẻ về cảm nhận nội tâm / trải nghiệm mua hàng / uy tín —
- * KHÔNG đưa các phát biểu về công dụng sức khỏe/làm đẹp như một sự thật.
+ * Nguồn dữ liệu: `content/testimonials.json` — chỉnh sửa được qua trang /admin.
+ * Chỉ đăng phần khách chia sẻ về cảm nhận/trải nghiệm — KHÔNG đưa phát biểu về
+ * công dụng sức khỏe/làm đẹp như một sự thật.
  */
-export const testimonials: Testimonial[] = [
-  {
-    quote:
-      "Chiếc vòng không thay đổi mọi thứ. Nó giúp mình kết nối lại với sự cân bằng bên trong.",
-    name: "Ms. Tammy",
-    role: "Marketing Leader, AIA",
-    image: "/images/home/testimonial-tammy.webp",
-    imageAlt: "Ms. Tammy — khách hàng của MJADE",
-    source: "https://www.facebook.com/share/p/1BHstqhmeU/",
-  },
-  {
-    quote:
-      "Bén duyên với một chiếc nhẫn ngọc của MJADE, đến nay nó đã thành “vật bất ly thân” trong rất nhiều hành trình làm nghề của mình.",
-    name: "Bích Tuyền",
-    role: "MC / Voice Talent",
-    image: "/images/home/testimonial-bichtuyen.webp",
-    imageAlt: "MC Bích Tuyền — khách hàng của MJADE",
-    source: "https://www.facebook.com/share/p/18qZxXshT3/",
-  },
-  {
-    quote:
-      "Sau khi đi khắp Sài Gòn, mình dừng lại ở MJADE — nơi đủ uy tín để đặt trọn niềm tin: 100% ngọc Myanmar, không gia nhiệt, không tẩm keo, kèm kiểm định rõ ràng.",
-    name: "Chị Kim",
-    role: null,
-    image: "/images/home/testimonial-kim.webp",
-    imageAlt: "Chị Kim đeo vòng và nhẫn ngọc phỉ thúy tại showroom MJADE",
-    source: "https://www.facebook.com/share/p/1BpP6NZsiX/",
-  },
-];
+export const testimonials = raw.testimonials as Testimonial[];

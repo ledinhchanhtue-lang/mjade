@@ -1,0 +1,28 @@
+{
+  "navigation": [
+    {
+      "label": "Trang chủ",
+      "href": "/"
+    },
+    {
+      "label": "Bộ sưu tập",
+      "href": "/bo-suu-tap"
+    },
+    {
+      "label": "Kiểm định",
+      "href": "/kiem-dinh"
+    },
+    {
+      "label": "Câu chuyện",
+      "href": "/cau-chuyen"
+    },
+    {
+      "label": "Tin tức",
+      "href": "/tin-tuc"
+    },
+    {
+      "label": "Showroom",
+      "href": "/showroom"
+    }
+  ]
+}

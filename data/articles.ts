@@ -1,3 +1,5 @@
+import raw from "@/content/articles.json";
+
 export type Article = {
   slug: string;
   title: string;
@@ -9,111 +11,8 @@ export type Article = {
   sections: { heading: string; body: string[] }[];
 };
 
-export const articles: Article[] = [
-  {
-    slug: "cach-nhan-biet-ngoc-phi-thuy-type-a",
-    title: "Cách nhận biết ngọc phỉ thúy Type A",
-    excerpt:
-      "Những dấu hiệu cơ bản giúp bạn phân biệt ngọc phỉ thúy tự nhiên với ngọc đã qua xử lý — và vì sao kiểm định vẫn là bước không thể thay thế.",
-    category: "cam-nang",
-    date: "2026-06-15",
-    readingMinutes: 6,
-    image: "/images/editorial/inspection-wide.webp",
-    sections: [
-      {
-        heading: "Type A, B, C khác nhau thế nào?",
-        body: [
-          "Type A là ngọc phỉ thúy tự nhiên hoàn toàn, chỉ qua cắt mài và đánh bóng. Type B đã được tẩy axit và ngâm nhựa polymer để tăng độ trong. Type C được nhuộm màu nhân tạo. Cũng có sản phẩm vừa ngâm nhựa vừa nhuộm màu (B+C).",
-          "Chỉ Type A giữ được giá trị theo thời gian. Ngọc B và C có thể xuống màu, ngả vàng hoặc rạn bề mặt sau vài năm sử dụng.",
-        ],
-      },
-      {
-        heading: "Quan sát bằng mắt thường",
-        body: [
-          "Ngọc tự nhiên thường có vân đá, điểm bông tuyết và sự chuyển sắc không hoàn hảo — chính sự 'không hoàn hảo' này là dấu hiệu của tự nhiên. Màu quá đều, quá rực hoặc ánh bề mặt như nhựa là tín hiệu cần thận trọng.",
-          "Khi soi dưới ánh sáng mạnh, ngọc ngâm nhựa có thể lộ cấu trúc rạn chân chim đặc trưng do axit ăn mòn.",
-        ],
-      },
-      {
-        heading: "Vì sao vẫn cần kiểm định?",
-        body: [
-          "Công nghệ xử lý ngày càng tinh vi, mắt thường — kể cả người có kinh nghiệm — không đủ để kết luận. Chứng thư từ đơn vị kiểm định độc lập với thiết bị quang phổ là căn cứ đáng tin cậy nhất.",
-          "MJADE bán mọi sản phẩm kèm cam kết Type A và khuyến khích khách hàng kiểm định lại độc lập.",
-        ],
-      },
-    ],
-  },
-  {
-    slug: "y-nghia-van-hoa-cua-ngoc-phi-thuy",
-    title: "Ý nghĩa văn hóa của ngọc phỉ thúy trong đời sống Á Đông",
-    excerpt:
-      "Từ cung đình xưa đến đời sống hiện đại — vì sao ngọc phỉ thúy được xem là món trang sức truyền đời của phụ nữ Á Đông.",
-    category: "cam-nang",
-    date: "2026-05-28",
-    readingMinutes: 5,
-    image: null,
-    sections: [
-      {
-        heading: "Biểu tượng của phẩm hạnh",
-        body: [
-          "Trong văn hóa Á Đông, ngọc gắn với hình ảnh người quân tử và người phụ nữ đức hạnh: bền bỉ, ôn hòa, càng đeo càng đằm. Người xưa tin rằng 'ngọc dưỡng người, người dưỡng ngọc' — một cách nói về mối gắn bó giữa món trang sức và chủ nhân theo năm tháng.",
-          "Những ý nghĩa này thuộc về niềm tin văn hóa và giá trị tinh thần, được trân trọng như một phần di sản — không phải công dụng vật lý của viên đá.",
-        ],
-      },
-      {
-        heading: "Món quà truyền đời",
-        body: [
-          "Khác với nhiều loại trang sức chạy theo xu hướng, vòng ngọc hay mặt dây ngọc thường được truyền từ mẹ sang con gái như một lời chúc bình an. Đó là lý do nhiều khách hàng của MJADE chọn ngọc cho những cột mốc: sinh con, lập nghiệp nơi xứ người, hay kỷ niệm ngày cưới.",
-        ],
-      },
-    ],
-  },
-  {
-    slug: "cham-soc-trang-suc-ngoc-phi-thuy",
-    title: "Chăm sóc trang sức ngọc phỉ thúy đúng cách",
-    excerpt:
-      "Ngọc phỉ thúy bền hơn bạn nghĩ, nhưng vài thói quen đơn giản sẽ giữ sản phẩm đẹp như ngày đầu.",
-    category: "cam-nang",
-    date: "2026-05-10",
-    readingMinutes: 4,
-    image: null,
-    sections: [
-      {
-        heading: "Trong sinh hoạt hằng ngày",
-        body: [
-          "Tháo trang sức khi làm việc nặng, chơi thể thao hoặc tiếp xúc hóa chất tẩy rửa. Ngọc cứng nhưng giòn — va đập mạnh vào cạnh bàn, sàn đá có thể gây nứt ngầm.",
-          "Mồ hôi và mỹ phẩm không làm hỏng ngọc Type A, nhưng nên lau nhẹ bằng vải mềm ẩm sau khi đeo để giữ độ bóng.",
-        ],
-      },
-      {
-        heading: "Cất giữ và bảo dưỡng",
-        body: [
-          "Cất riêng từng món trong hộp lót vải mềm; tránh để chung với kim cương hoặc đá quý cứng hơn có thể làm xước bề mặt ngọc.",
-          "Định kỳ 6–12 tháng, mang sản phẩm đến MJADE để kiểm tra ổ đính, làm sạch chuyên sâu miễn phí.",
-        ],
-      },
-    ],
-  },
-  {
-    slug: "mjade-ra-mat-website",
-    title: "MJADE ra mắt không gian trực tuyến mới",
-    excerpt:
-      "Website chính thức của MJADE đi vào hoạt động — nơi bạn có thể xem bộ sưu tập, tìm hiểu về ngọc phỉ thúy và đặt lịch tư vấn riêng.",
-    category: "tin-tuc",
-    date: "2026-07-01",
-    readingMinutes: 2,
-    image: "/images/editorial/story-hero.webp",
-    sections: [
-      {
-        heading: "Trải nghiệm mới",
-        body: [
-          "Không gian trực tuyến mới của MJADE được thiết kế theo tinh thần của chính thương hiệu: tối giản, nhiều khoảng thở và đặt viên ngọc làm trung tâm. Bạn có thể xem bộ sưu tập, đọc cẩm nang về ngọc phỉ thúy, và đặt lịch tư vấn riêng ngay trên website.",
-          "Trong thời gian tới, MJADE sẽ tiếp tục cập nhật hình ảnh chi tiết từng sản phẩm cùng chứng thư kiểm định tương ứng.",
-        ],
-      },
-    ],
-  },
-];
+/** Nguồn dữ liệu: `content/articles.json` — chỉnh sửa được qua trang /admin. */
+export const articles = raw.articles as Article[];
 
 export function getArticle(slug: string): Article | undefined {
   return articles.find((a) => a.slug === slug);

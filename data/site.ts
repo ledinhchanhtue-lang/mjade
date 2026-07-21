@@ -1,34 +1,24 @@
-export const site = {
-  name: "MJADE",
-  url: "https://mjade.vercel.app",
-  brandLine: "Meet your Inner Jade",
-  tagline: "Đánh thức viên ngọc trong bạn.",
-  essence: "Vẻ đẹp thật sự là ánh sáng lấp lánh bên trong chính bạn.",
-  descriptor: "Đệ nhất ngọc phỉ thúy Myanmar",
-  description:
-    "MJADE tuyển chọn trang sức ngọc phỉ thúy Myanmar Type A 100% tự nhiên — đồng hành cùng bạn trên hành trình trở về với ánh sáng bên trong. Bao kiểm định, minh bạch nguồn gốc, tư vấn cá nhân hóa.",
-  email: "lienhe@mjade.vn",
-  phone: "0798530579",
-  stores: [
-    { city: "TP.HCM", address: "11A Tôn Đức Thắng, P. Bến Nghé, Quận 1, TP.HCM" },
-    { city: "TP.HCM", address: "764 Nguyễn Chí Thanh, P. 4, Quận 11, TP.HCM" },
-    { city: "Hà Nội", address: "240 Xã Đàn, Đống Đa, Hà Nội" },
-    { city: "Nha Trang", address: "31 Huỳnh Thúc Kháng, TP. Nha Trang, Khánh Hòa" },
-  ],
-  consultChannels: ["Điện thoại", "Zalo", "WhatsApp", "Email"] as const,
-  shippingDestinations: [
-    "Việt Nam",
-    "Hoa Kỳ",
-    "Canada",
-    "Úc",
-    "Đức",
-    "Pháp",
-    "Séc",
-    "Nhật Bản",
-    "Hàn Quốc",
-    "Đài Loan",
-    "Singapore",
-  ],
+import raw from "@/content/site.json";
+
+export type Store = { city: string; address: string };
+
+export type Site = {
+  name: string;
+  url: string;
+  brandLine: string;
+  tagline: string;
+  essence: string;
+  descriptor: string;
+  description: string;
+  email: string;
+  phone: string;
+  logo: { emblem: string; full: string };
+  stores: Store[];
+  consultChannels: string[];
+  shippingDestinations: string[];
 };
 
-export type ConsultChannel = (typeof site.consultChannels)[number];
+/** Nguồn dữ liệu: `content/site.json` — chỉnh sửa được qua trang /admin. */
+export const site = raw as Site;
+
+export type ConsultChannel = string;

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Playfair_Display, Montserrat } from "next/font/google";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import HideOnAdmin from "@/components/layout/HideOnAdmin";
 import { CartProvider } from "@/components/cart/CartProvider";
 import "./globals.css";
 
@@ -72,9 +73,13 @@ export default function RootLayout({
       </head>
       <body className="flex min-h-full flex-col bg-background text-text-primary antialiased">
         <CartProvider>
-          <Header />
+          <HideOnAdmin>
+            <Header />
+          </HideOnAdmin>
           <main className="flex-1">{children}</main>
-          <Footer />
+          <HideOnAdmin>
+            <Footer />
+          </HideOnAdmin>
         </CartProvider>
       </body>
     </html>

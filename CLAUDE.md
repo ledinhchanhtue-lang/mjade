@@ -58,6 +58,12 @@ git push             # => Vercel tự deploy production
 
 ## 4. Kiến trúc code
 
+### Content layer (`content/*.json`) — nội dung sửa được qua /admin
+Từ Phase 4, nội dung động nằm ở `content/`: `products.json`, `articles.json`, `site.json`,
+`home.json` (hero/story/certification/USP/service panel/checklist), `testimonials.json`,
+`navigation.json`. Các file `data/*.ts` **chỉ import JSON + giữ type**, nên component không đổi.
+⚠️ Khi thêm field mới: sửa cả JSON, type trong `data/*.ts`, và form trong `components/admin/AdminApp.tsx`.
+
 ### Data layer (`data/`) — nguồn sự thật duy nhất, không hardcode nội dung trong component
 | File | Chứa gì |
 |---|---|
@@ -128,6 +134,19 @@ Client gửi Google Sheet tài nguyên (link Drive lookbook/ảnh sản phẩm +
 - **Nội dung brand THẬT** thay copy placeholder: định vị "Low-key Luxury / Tỉnh thức", tagline **"Meet your Inner Jade — Đánh thức viên ngọc trong bạn"**, essence "Vẻ đẹp thật sự là ánh sáng lấp lánh bên trong chính bạn". Sửa `data/site.ts`, `Hero.tsx`, `StoryCertification.tsx`, `app/cau-chuyen`, `app/ve-mjade` (Tầm nhìn/Sứ mệnh/Lời hứa nguyên văn client), `data/education.ts` (thêm Imperial Jade + chủng Băng Chủng/Lão Khanh Chủng).
 - **Ảnh MJADE THẬT** (16 file) thay hero + 2 editorial banner + home story + 6/8 ảnh sản phẩm. Xử lý sharp từ lookbook 01 + folder sản phẩm 04/05. Đã set `imageIsTemporary: false` + `metal: null` cho món ngọc nguyên khối (ảnh không có đế kim loại). Chi tiết ASSET-MANIFEST.md.
 - **Chưa xử lý:** ảnh 2 SP hoa tai (chưa có ảnh product-only sạch → giữ stock tạm); testimonial (feedback FB nói về công dụng làm đẹp da — KHÔNG bịa trích dẫn, chờ text client duyệt); info-sản-phẩm PDF (scan ảnh, chưa OCR).
+
+### Phase 4 (2026-07-15): Trang quản trị /admin (Git-based CMS)
+Nội dung tách sang `content/*.json`; `/admin` (client chọn phương án Git-based) cho phép sửa
+nội dung/sản phẩm/bài viết/ảnh/logo → API commit vào GitHub → Vercel tự deploy.
+- Auth: `ADMIN_PASSWORD` (env) + cookie httpOnly 8h, so sánh timing-safe (`lib/admin-auth.ts`).
+- Ghi dữ liệu: `lib/github.ts` (Contents API) + `lib/admin-store.ts` (allowlist file, fallback ghi
+  file local khi chạy dev không có token).
+- Upload ảnh: `/api/admin/upload` — sharp resize + WebP, **tự đặt tên file mới** để tránh cache
+  ảnh cũ của Vercel Image Optimizer (lỗi đã gặp ở Phase 3).
+- `/admin` noindex + robots disallow; header/footer site ẩn qua `HideOnAdmin`.
+- Hướng dẫn cho khách: `ADMIN-GUIDE.md`. Env mẫu: `.env.example`.
+- **Cần khách làm 1 lần:** đặt `ADMIN_PASSWORD`, tạo `GITHUB_TOKEN` (fine-grained, Contents RW),
+  `GITHUB_REPO`, `GITHUB_BRANCH` trên Vercel rồi redeploy.
 
 ### Việc CHƯA làm / cần client xác nhận
 1. **Từ MJADE:** giá thật (hiện `priceVnd` là số đặt tạm), ảnh 2 SP hoa tai, chứng thư thật + tên lab, email/SĐT/Zalo thật (đang là `lienhe@mjade.vn` placeholder trong `data/site.ts`), địa chỉ showroom, text testimonial duyệt để đăng, duyệt pháp lý nội dung chính sách.

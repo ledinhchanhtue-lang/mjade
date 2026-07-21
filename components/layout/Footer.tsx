@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ChevronDown } from "lucide-react";
 import { footerColumns } from "@/data/footer";
+import { site } from "@/data/site";
 import Newsletter from "@/components/home/Newsletter";
 
 export default function Footer() {
@@ -44,7 +45,7 @@ export default function Footer() {
 
           <div className="lg:col-span-1">
             <Image
-              src="/images/brand/mjade-logo.png"
+              src={site.logo.full}
               alt="MJADE — Đệ nhất ngọc phỉ thúy Myanmar"
               width={760}
               height={743}

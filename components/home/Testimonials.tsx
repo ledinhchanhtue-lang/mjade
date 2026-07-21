@@ -2,15 +2,17 @@ import Image from "next/image";
 import SectionLabel from "@/components/ui/SectionLabel";
 import Reveal from "@/components/ui/Reveal";
 import { testimonials } from "@/data/testimonials";
+import { testimonialsSection } from "@/data/home";
 
 export default function Testimonials() {
   return (
     <section className="w-full bg-background-warm px-5 py-14 md:px-10 lg:px-[72px] lg:py-20">
       <div className="mx-auto max-w-content">
         <div className="text-center">
-          <SectionLabel>Ngọc nữ của MJADE</SectionLabel>
+          <SectionLabel>{testimonialsSection.eyebrow}</SectionLabel>
           <h2 className="mt-3 font-heading text-[28px] leading-tight text-text-primary md:text-[36px]">
-            Những chia sẻ thật <em className="italic text-jade-deep">từ khách hàng</em>
+            {testimonialsSection.titlePlain}{" "}
+            <em className="italic text-jade-deep">{testimonialsSection.titleItalic}</em>
           </h2>
         </div>
 
