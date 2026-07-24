@@ -1,14 +1,14 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
-import type { Product } from "@/data/products";
+import type { Product, ProductCategory, Availability, JadeColor } from "@/data/products";
 import type { Article } from "@/data/articles";
 import type { Site } from "@/data/site";
 import type { NavItem } from "@/data/navigation";
 import type { TrustPoint, ServicePanelItem } from "@/data/services";
 import type { HomeBlock, TestimonialsSection } from "@/data/home";
 import type { Testimonial } from "@/data/testimonials";
-import { Button, Card, Field, Input, Row, Select, Textarea } from "./ui";
+import { Button, Card, Field, Guide, Input, Row, Select, Textarea } from "./ui";
 import ImageField from "./ImageField";
 
 type HomeDoc = {
@@ -84,7 +84,7 @@ function useDoc<T>(file: string) {
       setDirty(false);
       setMsg(
         j.mode === "github"
-          ? "Đã lưu vào GitHub. Website sẽ cập nhật sau ~1 phút (Vercel tự deploy)."
+          ? "Đã lưu vào GitHub. Website sẽ cập nhật sau khoảng 1 phút (Vercel tự deploy)."
           : "Đã lưu vào file trên máy (chế độ local)."
       );
     } catch (e) {
@@ -128,12 +128,14 @@ function SaveBar({
 
 function BlockEditor({
   title,
+  guide,
   block,
   onChange,
   imgW,
   imgH,
 }: {
   title: string;
+  guide?: string;
   block: HomeBlock;
   onChange: (fn: (b: HomeBlock) => void) => void;
   imgW: number;
@@ -141,6 +143,7 @@ function BlockEditor({
 }) {
   return (
     <Card title={title}>
+      {guide ? <Guide>{guide}</Guide> : null}
       <Row>
         <Field label="Nhãn nhỏ (eyebrow)">
           <Input value={block.eyebrow} onChange={(e) => onChange((b) => void (b.eyebrow = e.target.value))} />
@@ -189,11 +192,16 @@ function ContentTab() {
       {/* Home blocks */}
       <div className="flex flex-col gap-5">
         <h2 className="font-heading text-[22px] text-text-primary">Trang chủ</h2>
+        <Guide>
+          Trang chủ gồm nhiều khối nội dung xếp từ trên xuống. Mỗi khối có tiêu đề, mô tả, ảnh và nút bấm.
+          Sau khi sửa xong bấm <strong>Lưu thay đổi</strong> — website tự cập nhật sau ~1 phút.
+        </Guide>
         {home.loading ? <p className="text-[13px] text-text-secondary">Đang tải…</p> : null}
         {home.data ? (
           <>
             <BlockEditor
-              title="Khối Hero (đầu trang)"
+              title="Khối Hero (banner đầu trang)"
+              guide="Đây là ảnh và chữ đầu tiên khách thấy khi vào trang chủ. Ảnh nên chụp ngang (landscape), nền tối hoặc trung tính để chữ trắng nổi rõ. Kích thước lý tưởng 2200×1467px — hệ thống sẽ tự resize nếu ảnh lớn hơn."
               block={home.data.hero}
               imgW={2200}
               imgH={1467}
@@ -201,6 +209,7 @@ function ContentTab() {
             />
             <BlockEditor
               title="Khối Câu chuyện"
+              guide="Nằm giữa trang chủ, giới thiệu về thương hiệu MJADE và hành trình mang ngọc đến khách hàng. Ảnh dọc (portrait) 1200×1500px — thường là ảnh editorial hoặc ảnh người mẫu đeo ngọc."
               block={home.data.story}
               imgW={1200}
               imgH={1500}
@@ -208,6 +217,7 @@ function ContentTab() {
             />
             <BlockEditor
               title="Khối Kiểm định"
+              guide="Giới thiệu quy trình kiểm định ngọc Type A 100% của MJADE. Nên dùng ảnh giấy kiểm định hoặc ảnh thợ đang kiểm tra ngọc. Ảnh dọc 1200×1600px."
               block={home.data.certification}
               imgW={1200}
               imgH={1600}
@@ -215,6 +225,10 @@ function ContentTab() {
             />
 
             <Card title="3 điểm mạnh dưới Hero (USP)">
+              <Guide>
+                Ba dòng ngắn hiện ngay dưới banner đầu trang, tóm tắt lý do khách nên chọn MJADE.
+                Mỗi USP gồm một biểu tượng và một vài dòng chữ. Nên viết ngắn gọn, dễ hiểu.
+              </Guide>
               {home.data.trustPoints.map((tp, i) => (
                 <Row key={i}>
                   <Field label={`USP ${i + 1} — chữ (xuống dòng bằng Enter)`}>
@@ -241,6 +255,10 @@ function ContentTab() {
             </Card>
 
             <Card title="2 ô dịch vụ (cạnh sản phẩm nổi bật)">
+              <Guide>
+                Hai ô này nằm cạnh phần sản phẩm nổi bật trên trang chủ, giới thiệu dịch vụ tư vấn và kiểm định.
+                Mỗi ô có tiêu đề, mô tả ngắn, biểu tượng và nút dẫn tới trang tương ứng.
+              </Guide>
               {home.data.servicePanels.map((sp, i) => (
                 <div key={i} className="flex flex-col gap-3 border-t border-border pt-4 first:border-0 first:pt-0">
                   <Row>
@@ -273,6 +291,10 @@ function ContentTab() {
             </Card>
 
             <Card title="Danh sách cam kết (khối Kiểm định)">
+              <Guide>
+                Các gạch đầu dòng hiện bên cạnh ảnh kiểm định trên trang chủ. Mỗi dòng là một cam kết của MJADE
+                (ví dụ: &quot;Ngọc phỉ thuý Type A 100% tự nhiên&quot;). Viết mỗi cam kết trên một dòng riêng.
+              </Guide>
               <Field label="Mỗi dòng là một gạch đầu dòng">
                 <Textarea
                   className="min-h-[110px]"
@@ -285,6 +307,9 @@ function ContentTab() {
             </Card>
 
             <Card title="Tiêu đề khối cảm nhận khách hàng">
+              <Guide>
+                Tiêu đề phần cảm nhận khách hàng trên trang chủ. Phần &quot;in nghiêng&quot; sẽ hiện dưới dạng chữ nghiêng, tạo điểm nhấn.
+              </Guide>
               <Row>
                 <Field label="Nhãn nhỏ">
                   <Input value={home.data.testimonialsSection.eyebrow} onChange={(e) => home.update((d) => void (d.testimonialsSection.eyebrow = e.target.value))} />
@@ -305,6 +330,10 @@ function ContentTab() {
       {/* Testimonials */}
       <div className="flex flex-col gap-5">
         <h2 className="font-heading text-[22px] text-text-primary">Cảm nhận khách hàng</h2>
+        <Guide>
+          Mỗi cảm nhận gồm ảnh chân dung vuông (600×600px), tên khách, chức danh (tuỳ chọn), và trích dẫn nguyên văn.
+          Chỉ đăng trích dẫn đã được khách đồng ý công khai. Nếu có link bài gốc trên Facebook, điền vào để tăng độ tin cậy.
+        </Guide>
         {tst.data?.testimonials.map((t, i) => (
           <Card key={i} title={t.name || `Khách ${i + 1}`}>
             <Row>
@@ -366,9 +395,16 @@ function ContentTab() {
       {/* Site info */}
       <div className="flex flex-col gap-5">
         <h2 className="font-heading text-[22px] text-text-primary">Thông tin thương hiệu & liên hệ</h2>
+        <Guide>
+          Thông tin ở đây hiện trên footer, trang Về MJADE, trang Liên hệ, và thẻ meta SEO khi chia sẻ trên mạng xã hội.
+        </Guide>
         {site.data ? (
           <>
             <Card title="Thương hiệu">
+              <Guide>
+                Tên và các dòng mô tả thương hiệu. &quot;Tagline&quot; là câu slogan chính.
+                &quot;Mô tả SEO&quot; là đoạn văn ngắn Google hiện khi ai đó tìm kiếm MJADE.
+              </Guide>
               <Row>
                 <Field label="Tên">
                   <Input value={site.data.name} onChange={(e) => site.update((d) => void (d.name = e.target.value))} />
@@ -392,6 +428,9 @@ function ContentTab() {
             </Card>
 
             <Card title="Liên hệ">
+              <Guide>
+                Email và hotline hiện ở footer, trang Liên hệ, và dùng cho các form tư vấn trên site.
+              </Guide>
               <Row>
                 <Field label="Email">
                   <Input value={site.data.email} onChange={(e) => site.update((d) => void (d.email = e.target.value))} />
@@ -403,6 +442,9 @@ function ContentTab() {
             </Card>
 
             <Card title="Hệ thống showroom">
+              <Guide>
+                Danh sách showroom hiện ở footer trang web. Bấm &quot;+ Thêm showroom&quot; nếu mở thêm cửa hàng.
+              </Guide>
               {site.data.stores.map((s, i) => (
                 <Row key={i}>
                   <Field label={`Showroom ${i + 1} — thành phố`}>
@@ -432,6 +474,10 @@ function ContentTab() {
       {/* Menu */}
       <div className="flex flex-col gap-5">
         <h2 className="font-heading text-[22px] text-text-primary">Menu điều hướng</h2>
+        <Guide>
+          Thứ tự các mục trên thanh menu chính (đầu trang). Đường dẫn bắt đầu bằng / (ví dụ: /bo-suu-tap).
+          Bấm &quot;+ Thêm mục&quot; nếu muốn thêm trang mới vào menu. Kéo thứ tự bằng cách xoá rồi thêm lại ở vị trí mong muốn.
+        </Guide>
         {nav.data ? (
           <>
             <Card title="Các mục menu (theo thứ tự hiển thị)">
@@ -462,6 +508,53 @@ function ContentTab() {
   );
 }
 
+function newProduct(): Product {
+  const ts = Date.now().toString(36);
+  return {
+    id: `sp-${ts}`,
+    slug: `san-pham-moi-${ts}`,
+    name: "Sản phẩm mới",
+    shortName: "Sản phẩm mới",
+    productCode: `MJ-${ts.toUpperCase()}`,
+    category: "mat-day-chuyen",
+    collection: "signature",
+    priceVnd: null,
+    availability: "lien-he",
+    stockQuantity: null,
+    limited: false,
+    featured: false,
+    images: [],
+    thumbnail: "",
+    imageAlt: "",
+    imageIsTemporary: true,
+    jadeType: "Jadeite Type A",
+    origin: "Myanmar",
+    color: null,
+    colorLabel: null,
+    translucency: null,
+    texture: null,
+    dimensions: null,
+    weight: null,
+    metal: null,
+    certificateAvailable: false,
+    certificateIssuer: null,
+    certificateNumber: null,
+    certificateImage: null,
+    certificatePdf: null,
+    certificateVerificationUrl: null,
+    shortDescription: "",
+    story: "",
+    careInstructions: [
+      "Tránh va chạm mạnh",
+      "Không để tiếp xúc hoá chất, nước hoa, xà phòng",
+      "Lau bằng vải mềm sau khi đeo",
+    ],
+    shippingNotes: "Giao hàng trong hộp quà cao cấp, kèm giấy kiểm định (nếu có).",
+    seoTitle: "",
+    seoDescription: "",
+  };
+}
+
 function ProductsTab() {
   const doc = useDoc<ProductsDoc>("products.json");
   const [idx, setIdx] = useState(0);
@@ -469,25 +562,66 @@ function ProductsTab() {
 
   return (
     <div className="flex flex-col gap-5">
+      <Guide>
+        Mỗi sản phẩm có trang riêng tại <strong>/san-pham/[slug]</strong>.
+        Bạn có thể thêm sản phẩm mới, sửa thông tin sản phẩm đang bán, hoặc xoá sản phẩm đã ngừng kinh doanh.
+        Nhớ bấm <strong>Lưu thay đổi</strong> sau khi sửa xong.
+      </Guide>
       {doc.loading ? <p className="text-[13px] text-text-secondary">Đang tải…</p> : null}
       {doc.data ? (
         <>
-          <Field label="Chọn sản phẩm">
-            <Select value={idx} onChange={(e) => setIdx(Number(e.target.value))}>
-              {doc.data.products.map((x, i) => (
-                <option key={x.id} value={i}>
-                  {x.name} — {x.productCode}
-                </option>
-              ))}
-            </Select>
-          </Field>
+          <div className="flex flex-wrap items-end gap-3">
+            <div className="min-w-[260px] flex-1">
+              <Field label="Chọn sản phẩm">
+                <Select value={idx} onChange={(e) => setIdx(Number(e.target.value))}>
+                  {doc.data.products.map((x, i) => (
+                    <option key={x.id} value={i}>
+                      {x.name} — {x.productCode}
+                    </option>
+                  ))}
+                </Select>
+              </Field>
+            </div>
+            <Button
+              variant="ghost"
+              onClick={() => {
+                doc.update((d) => void d.products.push(newProduct()));
+                setIdx(doc.data!.products.length);
+              }}
+            >
+              + Thêm sản phẩm
+            </Button>
+            {doc.data.products.length > 1 ? (
+              <Button
+                variant="danger"
+                onClick={() => {
+                  if (!confirm(`Xoá sản phẩm "${p?.name}"? Thao tác này không thể hoàn tác sau khi bấm Lưu.`)) return;
+                  doc.update((d) => void d.products.splice(idx, 1));
+                  setIdx(0);
+                }}
+              >
+                Xoá sản phẩm này
+              </Button>
+            ) : null}
+          </div>
 
           {p ? (
             <>
               <Card title="Thông tin chính">
+                <Guide>
+                  Tên và mã hiện trên thẻ sản phẩm. <strong>Slug</strong> là phần cuối đường dẫn URL (ví dụ: &quot;nhan-ngoc-xanh&quot; → trang sẽ là /san-pham/nhan-ngoc-xanh) — chỉ dùng chữ thường, số và gạch ngang.
+                  Giá để trống thì trang sẽ hiện &quot;Liên hệ tư vấn&quot; thay vì số tiền.
+                </Guide>
                 <Row>
                   <Field label="Tên sản phẩm">
                     <Input value={p.name} onChange={(e) => doc.update((d) => void (d.products[idx].name = e.target.value))} />
+                  </Field>
+                  <Field label="Slug (đường dẫn URL)">
+                    <Input
+                      value={p.slug}
+                      onChange={(e) => doc.update((d) => void (d.products[idx].slug = e.target.value))}
+                      placeholder="vi-du: nhan-ngoc-xanh"
+                    />
                   </Field>
                   <Field label="Mã sản phẩm">
                     <Input value={p.productCode} onChange={(e) => doc.update((d) => void (d.products[idx].productCode = e.target.value))} />
@@ -501,16 +635,51 @@ function ProductsTab() {
                       }
                     />
                   </Field>
+                  <Field label="Loại sản phẩm">
+                    <Select
+                      value={p.category}
+                      onChange={(e) => doc.update((d) => void (d.products[idx].category = e.target.value as ProductCategory))}
+                    >
+                      <option value="vong-ban">Vòng bản</option>
+                      <option value="vong-tay">Vòng tay</option>
+                      <option value="nhan">Nhẫn</option>
+                      <option value="mat-day-chuyen">Mặt dây chuyền</option>
+                      <option value="day-chuyen">Dây chuyền</option>
+                      <option value="hoa-tai">Hoa tai</option>
+                    </Select>
+                  </Field>
+                  <Field label="Bộ sưu tập">
+                    <Select
+                      value={p.collection}
+                      onChange={(e) => doc.update((d) => void (d.products[idx].collection = e.target.value as "signature" | "limited"))}
+                    >
+                      <option value="signature">Signature (chính)</option>
+                      <option value="limited">Limited (giới hạn)</option>
+                    </Select>
+                  </Field>
                   <Field label="Tình trạng">
                     <Select
                       value={p.availability}
-                      onChange={(e) => doc.update((d) => void (d.products[idx].availability = e.target.value as Product["availability"]))}
+                      onChange={(e) => doc.update((d) => void (d.products[idx].availability = e.target.value as Availability))}
                     >
                       <option value="con-hang">Còn hàng</option>
                       <option value="chi-con-1">Chỉ còn 1</option>
                       <option value="da-dat-truoc">Đã đặt trước</option>
                       <option value="da-ban">Đã bán</option>
                       <option value="lien-he">Liên hệ tư vấn</option>
+                    </Select>
+                  </Field>
+                  <Field label="Màu ngọc">
+                    <Select
+                      value={p.color ?? ""}
+                      onChange={(e) => doc.update((d) => void (d.products[idx].color = (e.target.value || null) as JadeColor | null))}
+                    >
+                      <option value="">— Chưa chọn —</option>
+                      <option value="xanh-luc">Xanh lục</option>
+                      <option value="xanh-dam">Xanh đậm</option>
+                      <option value="xanh-nhat">Xanh nhạt</option>
+                      <option value="trang">Trắng</option>
+                      <option value="lavender">Lavender</option>
                     </Select>
                   </Field>
                 </Row>
@@ -526,7 +695,7 @@ function ProductsTab() {
                 <div className="flex flex-wrap gap-6">
                   <label className="flex items-center gap-2 text-[13px]">
                     <input type="checkbox" checked={p.featured} onChange={(e) => doc.update((d) => void (d.products[idx].featured = e.target.checked))} />
-                    Hiện ở “Bộ sưu tập nổi bật” (trang chủ)
+                    Hiện ở &quot;Bộ sưu tập nổi bật&quot; (trang chủ)
                   </label>
                   <label className="flex items-center gap-2 text-[13px]">
                     <input type="checkbox" checked={p.limited} onChange={(e) => doc.update((d) => void (d.products[idx].limited = e.target.checked))} />
@@ -536,6 +705,11 @@ function ProductsTab() {
               </Card>
 
               <Card title="Hình ảnh">
+                <Guide>
+                  Ảnh thẻ (thumbnail) hiện ở trang chủ và danh sách bộ sưu tập. Ảnh chi tiết hiện khi bấm vào sản phẩm.
+                  Tỷ lệ 4:5 (ảnh dọc). Nếu chưa có ảnh sản phẩm thật, hãy tick &quot;ảnh minh hoạ tạm&quot; — trang sẽ hiện
+                  ghi chú trung thực cho khách biết.
+                </Guide>
                 <ImageField
                   label="Ảnh thẻ (trang chủ / danh sách) — 4:5"
                   value={p.thumbnail}
@@ -563,7 +737,11 @@ function ProductsTab() {
                 </label>
               </Card>
 
-              <Card title="Thông số ngọc (để trống = ẩn khỏi trang, KHÔNG bịa số liệu)">
+              <Card title="Thông số ngọc">
+                <Guide>
+                  Chỉ điền thông số đã kiểm chứng thực tế. Trường nào để trống sẽ tự động ẩn trên trang sản phẩm, không hiện ra cho khách.
+                  <strong> Tuyệt đối không bịa số liệu.</strong>
+                </Guide>
                 <Row>
                   <Field label="Nguồn gốc">
                     <Input value={p.origin ?? ""} onChange={(e) => doc.update((d) => void (d.products[idx].origin = e.target.value || null))} />
@@ -588,6 +766,101 @@ function ProductsTab() {
                   </Field>
                 </Row>
               </Card>
+
+              <Card title="Giấy kiểm định">
+                <Guide>
+                  Chỉ điền khi đã có giấy kiểm định thật từ phòng kiểm định uy tín.
+                  <strong> Tuyệt đối không bịa tên lab hay số chứng thư.</strong> Nếu chưa có giấy kiểm định,
+                  bỏ trống tất cả — trang sẽ hiện dòng &quot;Đang cập nhật chứng thư kiểm định&quot; thay vì thông tin giả.
+                </Guide>
+                <label className="flex items-center gap-2 text-[13px]">
+                  <input
+                    type="checkbox"
+                    checked={p.certificateAvailable}
+                    onChange={(e) => doc.update((d) => void (d.products[idx].certificateAvailable = e.target.checked))}
+                  />
+                  Đã có giấy kiểm định
+                </label>
+                {p.certificateAvailable ? (
+                  <>
+                    <Row>
+                      <Field label="Tên phòng kiểm định">
+                        <Input
+                          value={p.certificateIssuer ?? ""}
+                          onChange={(e) => doc.update((d) => void (d.products[idx].certificateIssuer = e.target.value || null))}
+                          placeholder="VD: Myanmar Treasure Lab"
+                        />
+                      </Field>
+                      <Field label="Số chứng thư">
+                        <Input
+                          value={p.certificateNumber ?? ""}
+                          onChange={(e) => doc.update((d) => void (d.products[idx].certificateNumber = e.target.value || null))}
+                        />
+                      </Field>
+                    </Row>
+                    <ImageField
+                      label="Ảnh giấy kiểm định"
+                      value={p.certificateImage ?? ""}
+                      width={1200}
+                      height={1600}
+                      onChange={(path) => doc.update((d) => void (d.products[idx].certificateImage = path || null))}
+                    />
+                    <Field label="Link xác minh online (nếu lab có hệ thống tra cứu)">
+                      <Input
+                        value={p.certificateVerificationUrl ?? ""}
+                        onChange={(e) => doc.update((d) => void (d.products[idx].certificateVerificationUrl = e.target.value || null))}
+                        placeholder="https://..."
+                      />
+                    </Field>
+                  </>
+                ) : null}
+              </Card>
+
+              <Card title="Bảo quản & giao hàng">
+                <Guide>
+                  Hướng dẫn bảo quản hiện ở cuối trang sản phẩm. Mỗi dòng là một mục. Ghi chú giao hàng hiện bên cạnh nút đặt giữ.
+                </Guide>
+                <Field label="Hướng dẫn bảo quản (mỗi dòng là một mục)">
+                  <Textarea
+                    className="min-h-[90px]"
+                    value={(p.careInstructions ?? []).join("\n")}
+                    onChange={(e) =>
+                      doc.update(
+                        (d) => void (d.products[idx].careInstructions = e.target.value.split("\n").filter(Boolean))
+                      )
+                    }
+                  />
+                </Field>
+                <Field label="Ghi chú giao hàng">
+                  <Textarea
+                    value={p.shippingNotes ?? ""}
+                    onChange={(e) => doc.update((d) => void (d.products[idx].shippingNotes = e.target.value))}
+                  />
+                </Field>
+              </Card>
+
+              <Card title="SEO (tối ưu tìm kiếm Google)">
+                <Guide>
+                  Tiêu đề SEO hiện trên tab trình duyệt và kết quả Google. Mô tả SEO là đoạn 2–3 câu mô tả sản phẩm cho Google.
+                  Nếu để trống, hệ thống sẽ tự dùng tên và mô tả ngắn của sản phẩm.
+                </Guide>
+                <Row>
+                  <Field label="Tiêu đề SEO">
+                    <Input
+                      value={p.seoTitle ?? ""}
+                      onChange={(e) => doc.update((d) => void (d.products[idx].seoTitle = e.target.value))}
+                      placeholder="VD: Nhẫn Ngọc Phỉ Thuý Type A — MJADE"
+                    />
+                  </Field>
+                </Row>
+                <Field label="Mô tả SEO">
+                  <Textarea
+                    value={p.seoDescription ?? ""}
+                    onChange={(e) => doc.update((d) => void (d.products[idx].seoDescription = e.target.value))}
+                    placeholder="2–3 câu mô tả sản phẩm cho Google (150–160 ký tự)"
+                  />
+                </Field>
+              </Card>
             </>
           ) : null}
           <SaveBar dirty={doc.dirty} saving={doc.saving} msg={doc.msg} err={doc.err} onSave={doc.save} onReload={doc.load} />
@@ -604,6 +877,10 @@ function ArticlesTab() {
 
   return (
     <div className="flex flex-col gap-5">
+      <Guide>
+        Bài viết hiện ở trang <strong>Tin tức</strong> hoặc <strong>Cẩm nang ngọc</strong> tuỳ chuyên mục.
+        Mỗi bài có đường dẫn riêng tại /tin-tuc/[slug]. Bạn có thể thêm bài mới, sửa nội dung, hoặc xoá bài cũ.
+      </Guide>
       {doc.loading ? <p className="text-[13px] text-text-secondary">Đang tải…</p> : null}
       {doc.data ? (
         <>
@@ -643,6 +920,7 @@ function ArticlesTab() {
               <Button
                 variant="danger"
                 onClick={() => {
+                  if (!confirm(`Xoá bài "${a?.title}"? Thao tác này không thể hoàn tác sau khi bấm Lưu.`)) return;
                   doc.update((d) => void d.articles.splice(idx, 1));
                   setIdx(0);
                 }}
@@ -655,6 +933,11 @@ function ArticlesTab() {
           {a ? (
             <>
               <Card title="Thông tin bài viết">
+                <Guide>
+                  <strong>Slug</strong> là phần cuối đường dẫn URL — chỉ dùng chữ thường và gạch ngang
+                  (ví dụ: &quot;cach-nhan-biet-ngoc-that&quot; → trang sẽ là /tin-tuc/cach-nhan-biet-ngoc-that).
+                  Tóm tắt là đoạn ngắn hiện trên thẻ bài viết ở trang danh sách.
+                </Guide>
                 <Row>
                   <Field label="Tiêu đề">
                     <Input value={a.title} onChange={(e) => doc.update((d) => void (d.articles[idx].title = e.target.value))} />
@@ -692,6 +975,11 @@ function ArticlesTab() {
               </Card>
 
               <Card title="Nội dung bài viết">
+                <Guide>
+                  Mỗi bài gồm nhiều phần (section). Mỗi phần có một tiêu đề và nội dung bên dưới.
+                  Để tách đoạn văn, cách nhau bằng <strong>một dòng trống</strong> (bấm Enter 2 lần).
+                  Bấm &quot;+ Thêm phần&quot; để thêm mục mới vào bài.
+                </Guide>
                 {a.sections.map((s, si) => (
                   <div key={si} className="flex flex-col gap-3 border-t border-border pt-4 first:border-0 first:pt-0">
                     <Field label={`Phần ${si + 1} — tiêu đề`}>
@@ -745,6 +1033,10 @@ function ImagesTab() {
   return (
     <div className="flex flex-col gap-5">
       <h2 className="font-heading text-[22px] text-text-primary">Logo</h2>
+      <Guide>
+        Logo header là biểu tượng chim công nhỏ ở góc trái trên cùng. Logo footer là bản đầy đủ có chữ MJADE ở cuối trang.
+        Nên dùng file <strong>PNG nền trong suốt</strong> để logo hòa đẹp với nền ivory của website.
+      </Guide>
       {site.data ? (
         <>
           <Card title="Logo thương hiệu">
@@ -767,13 +1059,15 @@ function ImagesTab() {
       ) : null}
 
       <h2 className="mt-4 font-heading text-[22px] text-text-primary">Tải ảnh bất kỳ</h2>
+      <Guide>
+        Dùng khi cần thay một ảnh cụ thể trên site mà không có ô chuyên dụng ở trên (ví dụ: ảnh chứng thư, ảnh editorial).
+        Nhập đường dẫn ảnh cần thay (bắt đầu bằng /images/...), chọn file mới — hệ thống sẽ tự đặt tên file mới để tránh trình duyệt hiện ảnh cũ từ cache.
+      </Guide>
       <Card title="Thay ảnh theo đường dẫn tự chọn">
-        <p className="text-[12px] leading-relaxed text-text-secondary">
-          Dùng khi cần thay một ảnh cụ thể trên site (ví dụ ảnh chứng thư, ảnh editorial). Nhập
-          đường dẫn ảnh hiện tại rồi chọn file mới — hệ thống lưu bằng tên mới để tránh cache ảnh cũ.
-          Sau khi tải xong, ảnh chỉ hiển thị nếu đường dẫn mới được dùng ở nơi tương ứng.
-        </p>
-        <ImageField label="Ảnh" value={customPath} onChange={setCustomPath} />
+        <Field label="Đường dẫn ảnh cần thay (ví dụ: /images/home/hero-banner.webp)">
+          <Input value={customPath} onChange={(e) => setCustomPath(e.target.value)} />
+        </Field>
+        <ImageField label="Ảnh mới" value={customPath} onChange={setCustomPath} />
       </Card>
     </div>
   );

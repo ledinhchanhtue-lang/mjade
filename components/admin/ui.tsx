@@ -68,3 +68,11 @@ export function Button({
 export function Row({ children }: { children: ReactNode }) {
   return <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">{children}</div>;
 }
+
+export function Guide({ children }: { children: ReactNode }) {
+  return (
+    <div className="border-l-2 border-jade-light bg-background-warm px-4 py-3 text-[12px] leading-relaxed text-text-secondary">
+      {children}
+    </div>
+  );
+}
