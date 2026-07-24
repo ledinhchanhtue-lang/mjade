@@ -1,19 +1,19 @@
 {
   "hero": {
-    "eyebrow": "Meet your Inner Jade",
-    "titleLine1": "Đánh thức",
-    "titleLine2": "viên ngọc trong bạn.",
-    "body": "MJADE tuyển chọn ngọc phỉ thúy Myanmar Type A 100% tự nhiên — được khai sinh từ lòng đất mẹ qua hàng triệu năm. Mỗi viên là một lời nhắc rằng vẻ đẹp thật sự là ánh sáng lấp lánh sẵn có bên trong chính bạn.",
+    "eyebrow": "The Ist Mystic Jade",
+    "titleLine1": "Đệ Nhất",
+    "titleLine2": "Ngọc Phỉ Thuý ",
+    "body": "Được tuyển chọn từ những mỏ ngọc lâu đời tại Myanmar, mỗi chiếc vòng là Ngọc Phỉ Thuý Type A tự nhiên, hoàn toàn không xử lý hoá chất hay gia nhiệt. Trải qua hàng triệu năm kiến tạo trong lòng đất, mỗi viên ngọc mang một sắc độ, vân ngọc và khí chất riêng biệt - không có hai chiếc nào hoàn toàn giống nhau. Trong quan niệm phương Đông, người ta tin rằng mỗi chiếc vòng đều có duyên với một chủ nhân nhất định. Không phải ta chọn ngọc, mà là ngọc tìm đến đúng người vào đúng thời điểm.",
     "ctaLabel": "Khám phá ngay",
     "ctaHref": "/bo-suu-tap",
     "image": "/images/home/hero-banner.webp",
-    "imageAlt": "Người phụ nữ áo lụa trắng đeo lắc tay và nhẫn ngọc phỉ thúy giữa những cành hoa mơ, nền tối editorial"
+    "imageAlt": "CEO-Brand Ambassador Phan Thanh Nhàn (The Winner Of Sing My Song 2018) "
   },
   "story": {
     "eyebrow": "Câu chuyện MJADE",
-    "titleLine1": "Trong mỗi chúng ta",
-    "titleLine2": "đều ẩn chứa một viên ngọc",
-    "body": "Viên ngọc ấy không bao giờ mất đi, chỉ là bị lớp bụi cuộc đời phủ mờ ánh sáng vốn có. MJADE không chạy theo sự hoàn hảo, mà tôn vinh sự thật và vẻ đẹp đến từ bên trong — cùng bạn đi trên hành trình thức tỉnh và trở về.",
+    "titleLine1": "Vòng Ngọc Phỉ Thuý Myanmar Type A Tự Nhiên",
+    "titleLine2": "Tinh hoa của Ngọc Phỉ Thuý Myanmar",
+    "body": "MJADE là một Maison chuyên về Ngọc Phỉ Thuý Myanmar Type A, nơi hội tụ vẻ đẹp của thiên nhiên, tinh hoa chế tác và chiều sâu di sản văn hoá Á Đông.\n\nChúng tôi tuyển chọn Natural Jadeite Jade 100% Type A từ Myanmar – dòng ngọc được giới sưu tầm quốc tế trân quý bởi vẻ đẹp thuần khiết, giá trị bền vững và khả năng truyền đời, với niềm tin rằng ngọc không chỉ là món quà của thiên nhiên, mà còn là cầu nối giữa con người với những giá trị sâu thẳm bên trong chính mình. ",
     "ctaLabel": "Khám phá câu chuyện",
     "ctaHref": "/cau-chuyen",
     "image": "/images/home/story-block.webp",
@@ -21,8 +21,8 @@
   },
   "certification": {
     "eyebrow": "Kiểm định & cam kết",
-    "titleLine1": "Uy tín tạo nên",
-    "titleLine2": "niềm tin",
+    "titleLine1": "Kiểm định uy tín ",
+    "titleLine2": "từ Myanmar Treasure Gemological Laboratory",
     "body": "Toàn bộ sản phẩm đi kèm chứng thư kiểm định từ Myanmar Treasure Gemological Laboratory — thẩm định công nghệ bởi GIA (America) và FGA (London).",
     "ctaLabel": "Xem mẫu kiểm định",
     "ctaHref": "/kiem-dinh",
@@ -30,7 +30,7 @@
     "imageAlt": "Chứng thư kiểm định Myanmar Treasure Gemological Laboratory — Natural Jadeite Type A, kèm vòng ngọc phỉ thúy"
   },
   "testimonialsSection": {
-    "eyebrow": "Ngọc nữ của MJADE",
+    "eyebrow": "Ngọc nữ MJADE",
     "titlePlain": "Những chia sẻ thật",
     "titleItalic": "từ khách hàng"
   },
