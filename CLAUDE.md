@@ -145,8 +145,13 @@ nội dung/sản phẩm/bài viết/ảnh/logo → API commit vào GitHub → Ve
   ảnh cũ của Vercel Image Optimizer (lỗi đã gặp ở Phase 3).
 - `/admin` noindex + robots disallow; header/footer site ẩn qua `HideOnAdmin`.
 - Hướng dẫn cho khách: `ADMIN-GUIDE.md`. Env mẫu: `.env.example`.
-- **Cần khách làm 1 lần:** đặt `ADMIN_PASSWORD`, tạo `GITHUB_TOKEN` (fine-grained, Contents RW),
-  `GITHUB_REPO`, `GITHUB_BRANCH` trên Vercel rồi redeploy.
+- **Env đã cấu hình xong (2026-07-24):** `ADMIN_PASSWORD` (khách đặt), `GITHUB_TOKEN` (dùng token
+  `gh auth token` của CLI — scope `repo`; nếu muốn chặt hơn thì thay bằng fine-grained token
+  Contents RW sau), `GITHUB_REPO`, `GITHUB_BRANCH` — tất cả trên Vercel Production. Đã test
+  end-to-end: login → đọc → lưu tạo commit `content(admin): ...` trên GitHub → Vercel tự deploy.
+- **2026-07-24:** thêm ô hướng dẫn (component `Guide` trong `components/admin/ui.tsx`) cho mọi
+  section; tab Sản phẩm có nút thêm/xoá sản phẩm (+ confirm), field mới: slug, category,
+  collection, màu ngọc, khối Giấy kiểm định (ẩn/hiện theo checkbox), bảo quản & giao hàng, SEO.
 
 ### Việc CHƯA làm / cần client xác nhận
 1. **Từ MJADE:** giá thật (hiện `priceVnd` là số đặt tạm), ảnh 2 SP hoa tai, chứng thư thật + tên lab, email/SĐT/Zalo thật (đang là `lienhe@mjade.vn` placeholder trong `data/site.ts`), địa chỉ showroom, text testimonial duyệt để đăng, duyệt pháp lý nội dung chính sách.
