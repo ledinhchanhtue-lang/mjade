@@ -278,27 +278,27 @@
     },
     {
       "id": "p-103",
-      "slug": "hoa-tai-ngoc-gioi-han",
-      "name": "Set Ngọc phỉ thúy Lục đế vương ",
-      "shortName": "Hoa tai ngọc \ngiới hạn",
+      "slug": "vong-tay-da-bao-14mm",
+      "name": "Vòng tay phỉ thuý đa bảo 14mm ",
+      "shortName": "Vòng tay \nđa bảo 14mm ",
       "productCode": "MJ-L103",
-      "category": "hoa-tai",
-      "collection": "limited",
+      "category": "vong-tay",
+      "collection": "signature",
       "priceVnd": 19000000,
       "availability": "chi-con-1",
       "stockQuantity": 1,
       "limited": true,
       "featured": false,
       "images": [
-        "/images/products/hoa-tai-ngoc-gioi-han-1.webp"
+        "/images/products/hoa-tai-ngoc-gioi-han-1-ms0nexh9.webp"
       ],
-      "thumbnail": "/images/home/limited-earrings.webp",
+      "thumbnail": "/images/home/limited-ms0nerqd.webp",
       "imageAlt": "Hoa tai ngọc xanh lục dáng giọt đeo trên tai, ánh sáng tự nhiên",
       "imageIsTemporary": true,
       "jadeType": "Jadeite Type A",
       "origin": "Myanmar",
-      "color": "xanh-luc",
-      "colorLabel": "Lục đế vương ",
+      "color": null,
+      "colorLabel": "Đa bảo ",
       "translucency": null,
       "texture": null,
       "dimensions": null,
@@ -310,8 +310,8 @@
       "certificateImage": null,
       "certificatePdf": null,
       "certificateVerificationUrl": null,
-      "shortDescription": "Hoa Tai Ngọc Phỉ Thuý Phiên Bản Giới Hạn được tuyển chọn từ Ngọc Phỉ Thuý Myanmar Type A tự nhiên, sở hữu vẻ đẹp tinh tuyển, thanh lịch và giá trị sưu tầm dành cho những người yêu vẻ đẹp độc bản.\n",
-      "story": "Hoa Tai Ngọc Phỉ Thuý Phiên Bản Giới Hạn nổi bật với sắc Lục Đế Vương quý hiếm – gam màu được giới sưu tầm đặc biệt trân quý bởi độ rực rỡ, chiều sâu và giá trị vượt thời gian. Được tuyển chọn từ Ngọc Phỉ Thuý Myanmar Type A tự nhiên, mỗi đôi hoa tai được chế tác tỉ mỉ để tôn lên vẻ đẹp nguyên bản của chất ngọc và sắc lục tinh tuyển. Với số lượng duy nhất 1 chiếc, đây là tuyệt phẩm dành cho những người yêu vẻ đẹp độc bản, tinh tế và giá trị sưu tầm bền vững.",
+      "shortDescription": "Vòng tay Phỉ Thuý Đa Bảo 14mm kết hợp những viên ngọc Phỉ Thuý đa sắc tự nhiên, tôn lên vẻ đẹp hài hòa, nổi bật và mang ý nghĩa viên mãn, cát tường.",
+      "story": "Mỗi viên ngọc trong vòng tay Đa Bảo đều mang một sắc màu và vẻ đẹp riêng, được thiên nhiên kiến tạo qua hàng triệu năm trước khi hội tụ trên cùng một thiết kế. Sự hòa quyện của những gam xanh, trắng, vàng, tím hay hồng không chỉ tạo nên vẻ đẹp sống động mà còn tượng trưng cho sự cân bằng, viên mãn và những điều tốt lành trong cuộc sống. Vòng tay Đa Bảo 14mm là lựa chọn dành cho những ai trân trọng giá trị nguyên bản của Ngọc Phỉ Thuý, mong muốn đồng hành cùng một món trang sức vừa nổi bật, vừa mang theo lời chúc về may mắn, thịnh vượng và an nhiên trên mỗi hành trình.",
       "careInstructions": [
         "Tránh va đập mạnh và tiếp xúc với hóa chất tẩy rửa.",
         "Lau nhẹ bằng vải mềm ẩm sau khi sử dụng.",
@@ -319,8 +319,8 @@
         "Định kỳ mang đến MJADE để được kiểm tra và làm sạch chuyên sâu."
       ],
       "shippingNotes": "Giao hàng toàn quốc và quốc tế. Đơn hàng quốc tế được tư vấn phương án vận chuyển và bảo hiểm phù hợp trước khi gửi.",
-      "seoTitle": "Hoa tai Ngọc phỉ thúy giới hạn | MJADE",
-      "seoDescription": "Hoa tai ngọc phỉ thúy dáng giọt thuộc bộ sưu tập giới hạn MJADE. Liên hệ tư vấn riêng."
+      "seoTitle": "Vòng tay phỉ thuý đa bảo 14mm | MJADE",
+      "seoDescription": "Vòng tay Phỉ Thuý Đa Bảo 14mm kết hợp những viên ngọc Phỉ Thuý đa sắc tự nhiên, tôn lên vẻ đẹp hài hòa, nổi bật và mang ý nghĩa viên mãn, cát tường."
     },
     {
       "id": "p-104",
