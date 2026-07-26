@@ -1,25 +1,12 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Montserrat } from "next/font/google";
+import type { CSSProperties } from "react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import HideOnAdmin from "@/components/layout/HideOnAdmin";
 import { CartProvider } from "@/components/cart/CartProvider";
+import { getFontPreset } from "./fonts";
+import { site } from "@/data/site";
 import "./globals.css";
-
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
-  subsets: ["latin", "vietnamese"],
-  style: ["normal", "italic"],
-  weight: ["400", "500", "600"],
-  display: "swap",
-});
-
-const montserrat = Montserrat({
-  variable: "--font-montserrat",
-  subsets: ["latin", "vietnamese"],
-  weight: ["400", "500", "600"],
-  display: "swap",
-});
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://mjade.vercel.app";
 
@@ -63,8 +50,17 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const font = getFontPreset(site.fontPreset);
+  const fontStyle = {
+    "--font-heading": font.headingCss,
+    "--font-body": font.bodyCss,
+  } as CSSProperties;
   return (
-    <html lang="vi" className={`${playfair.variable} ${montserrat.variable} h-full`}>
+    <html
+      lang="vi"
+      className={`${font.headingClass} ${font.bodyClass} h-full`}
+      style={fontStyle}
+    >
       <head>
         <script
           type="application/ld+json"

@@ -10,6 +10,7 @@ import type { HomeBlock, TestimonialsSection } from "@/data/home";
 import type { Testimonial } from "@/data/testimonials";
 import { Button, Card, Field, Guide, Input, Row, Select, Textarea } from "./ui";
 import ImageField from "./ImageField";
+import { FONT_PRESET_OPTIONS, FONT_PREVIEW_HREF } from "@/data/fontPresets";
 
 type HomeDoc = {
   hero: HomeBlock;
@@ -175,6 +176,63 @@ function BlockEditor({
       <Field label="Mô tả ảnh (alt — cho SEO & người khiếm thị)">
         <Input value={block.imageAlt} onChange={(e) => onChange((b) => void (b.imageAlt = e.target.value))} />
       </Field>
+    </Card>
+  );
+}
+
+function FontPresetCard({
+  value,
+  onChange,
+}: {
+  value: string;
+  onChange: (key: string) => void;
+}) {
+  useEffect(() => {
+    const id = "mjade-font-preview";
+    if (document.getElementById(id)) return;
+    const link = document.createElement("link");
+    link.id = id;
+    link.rel = "stylesheet";
+    link.href = FONT_PREVIEW_HREF;
+    document.head.appendChild(link);
+  }, []);
+
+  const current = FONT_PRESET_OPTIONS.find((o) => o.key === value) ?? FONT_PRESET_OPTIONS[0];
+
+  return (
+    <Card title="Kiểu chữ toàn website">
+      <Guide>
+        Chọn cặp font (chữ tiêu đề + chữ nội dung) áp dụng cho toàn bộ website. Cả 4 cặp đều hỗ trợ
+        tiếng Việt đầy đủ và được chọn sẵn cho hợp tông thương hiệu. Sau khi bấm Lưu, font mới áp
+        dụng cho cả web sau khoảng 1 phút.
+      </Guide>
+      <Field label="Cặp font">
+        <Select value={value} onChange={(e) => onChange(e.target.value)}>
+          {FONT_PRESET_OPTIONS.map((o) => (
+            <option key={o.key} value={o.key}>
+              {o.label} — {o.heading} / {o.body}
+            </option>
+          ))}
+        </Select>
+      </Field>
+      <p className="text-[12px] text-text-secondary">{current.note}</p>
+      <div className="border border-border bg-white p-5">
+        <p className="mb-2 text-[11px] uppercase tracking-[0.14em] text-text-secondary">Xem trước</p>
+        <p
+          style={{ fontFamily: `'${current.heading}', serif` }}
+          className="text-[30px] leading-tight text-text-primary"
+        >
+          Đánh thức{" "}
+          <em style={{ fontFamily: `'${current.heading}', serif` }}>viên ngọc trong bạn.</em>
+        </p>
+        <p
+          style={{ fontFamily: `'${current.body}', sans-serif` }}
+          className="mt-3 text-[14px] leading-relaxed text-text-secondary"
+        >
+          MJADE tuyển chọn ngọc phỉ thúy Myanmar Type A 100% tự nhiên — mỗi viên ngọc một câu
+          chuyện, bao kiểm định, minh bạch nguồn gốc, tư vấn cá nhân hóa.
+        </p>
+      </div>
     </Card>
   );
 }
@@ -426,6 +484,11 @@ function ContentTab() {
                 <Textarea value={site.data.description} onChange={(e) => site.update((d) => void (d.description = e.target.value))} />
               </Field>
             </Card>
+
+            <FontPresetCard
+              value={site.data.fontPreset ?? "classic"}
+              onChange={(key) => site.update((d) => void (d.fontPreset = key))}
+            />
 
             <Card title="Liên hệ">
               <Guide>

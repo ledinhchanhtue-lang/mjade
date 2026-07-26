@@ -16,6 +16,8 @@ export type Site = {
   stores: Store[];
   consultChannels: string[];
   shippingDestinations: string[];
+  /** Kiểu chữ toàn website — chọn qua /admin. Thiếu = "classic". */
+  fontPreset?: string;
 };
 
 /** Nguồn dữ liệu: `content/site.json` — chỉnh sửa được qua trang /admin. */
