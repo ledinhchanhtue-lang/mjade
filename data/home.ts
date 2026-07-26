@@ -9,6 +9,8 @@ export type HomeBlock = {
   ctaHref: string;
   image: string;
   imageAlt: string;
+  /** Dòng chú thích nhỏ hiển thị trên ảnh (vd: tên người mẫu/đại sứ). Tuỳ chọn. */
+  imageCaption?: string;
 };
 
 export type TestimonialsSection = {

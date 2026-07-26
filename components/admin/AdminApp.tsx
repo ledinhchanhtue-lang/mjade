@@ -134,6 +134,7 @@ function BlockEditor({
   onChange,
   imgW,
   imgH,
+  withCaption,
 }: {
   title: string;
   guide?: string;
@@ -141,6 +142,7 @@ function BlockEditor({
   onChange: (fn: (b: HomeBlock) => void) => void;
   imgW: number;
   imgH: number;
+  withCaption?: boolean;
 }) {
   return (
     <Card title={title}>
@@ -176,6 +178,17 @@ function BlockEditor({
       <Field label="Mô tả ảnh (alt — cho SEO & người khiếm thị)">
         <Input value={block.imageAlt} onChange={(e) => onChange((b) => void (b.imageAlt = e.target.value))} />
       </Field>
+      {withCaption ? (
+        <Field
+          label="Chú thích hiện trên ảnh (để trống nếu không muốn hiện)"
+          hint="Dòng chữ nhỏ ở góc dưới ảnh — ví dụ tên đại sứ thương hiệu."
+        >
+          <Input
+            value={block.imageCaption ?? ""}
+            onChange={(e) => onChange((b) => void (b.imageCaption = e.target.value || undefined))}
+          />
+        </Field>
+      ) : null}
     </Card>
   );
 }
@@ -263,6 +276,7 @@ function ContentTab() {
               block={home.data.hero}
               imgW={2200}
               imgH={1467}
+              withCaption
               onChange={(fn) => home.update((d) => fn(d.hero))}
             />
             <BlockEditor
@@ -528,6 +542,29 @@ function ContentTab() {
                 </Field>
                 <Field label="Hotline">
                   <Input value={site.data.phone} onChange={(e) => site.update((d) => void (d.phone = e.target.value))} />
+                </Field>
+              </Row>
+            </Card>
+
+            <Card title="Nút chat nổi (Zalo / Facebook)">
+              <Guide>
+                Hai nút nổi ở góc phải màn hình để khách bấm gặp tư vấn viên. Để trống một ô thì nút
+                đó tự ẩn. Zalo chỉ cần nhập số điện thoại; Facebook nhập link trang hoặc Messenger.
+              </Guide>
+              <Row>
+                <Field label="Số Zalo (để trống = ẩn nút Zalo)">
+                  <Input
+                    value={site.data.zaloPhone ?? ""}
+                    onChange={(e) => site.update((d) => void (d.zaloPhone = e.target.value))}
+                    placeholder="0798530579"
+                  />
+                </Field>
+                <Field label="Link Facebook (để trống = ẩn nút Facebook)">
+                  <Input
+                    value={site.data.facebookUrl ?? ""}
+                    onChange={(e) => site.update((d) => void (d.facebookUrl = e.target.value))}
+                    placeholder="https://www.facebook.com/MjadeNo.1/"
+                  />
                 </Field>
               </Row>
             </Card>

@@ -22,6 +22,10 @@ export type Site = {
   headerTheme?: string;
   /** Tông màu footer — "ivory" (mặc định) hoặc "jade". */
   footerTheme?: string;
+  /** Link trang/Messenger Facebook cho nút chat nổi. Trống = ẩn nút. */
+  facebookUrl?: string;
+  /** Số điện thoại Zalo cho nút chat nổi. Trống = ẩn nút. */
+  zaloPhone?: string;
 };
 
 /** Nguồn dữ liệu: `content/site.json` — chỉnh sửa được qua trang /admin. */

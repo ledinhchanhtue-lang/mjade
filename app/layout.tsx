@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import type { CSSProperties } from "react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import FloatingContact from "@/components/layout/FloatingContact";
 import HideOnAdmin from "@/components/layout/HideOnAdmin";
 import { CartProvider } from "@/components/cart/CartProvider";
 import { getFontPreset } from "./fonts";
@@ -75,6 +76,9 @@ export default function RootLayout({
           <main className="flex-1">{children}</main>
           <HideOnAdmin>
             <Footer />
+          </HideOnAdmin>
+          <HideOnAdmin>
+            <FloatingContact />
           </HideOnAdmin>
         </CartProvider>
       </body>

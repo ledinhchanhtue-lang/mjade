@@ -42,6 +42,13 @@ export default function Hero() {
             sizes="(min-width: 768px) 50vw, 100vw"
             className="object-cover object-center"
           />
+          {heroBlock.imageCaption ? (
+            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/55 to-transparent px-5 py-4 md:px-8">
+              <p className="text-[11px] font-medium uppercase tracking-[0.12em] text-white/90">
+                {heroBlock.imageCaption}
+              </p>
+            </div>
+          ) : null}
         </div>
       </div>
     </section>
