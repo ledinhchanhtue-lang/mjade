@@ -569,6 +569,103 @@ function ContentTab() {
               </Row>
             </Card>
 
+            <Card title="Nút & chữ khu vực mua hàng">
+              <Guide>
+                Chỉnh chữ trên nút &quot;Mua hàng&quot; (trang sản phẩm) và trang &quot;Hoàn tất đơn hàng&quot;
+                (giỏ hàng). Khi khách đặt xong, đơn được gửi về <strong>email nhận đơn</strong> bên dưới.
+              </Guide>
+              <Field
+                label="Email nhận đơn hàng"
+                hint="Đơn hàng khách đặt sẽ được gửi về địa chỉ này."
+              >
+                <Input
+                  value={site.data.orderEmail ?? ""}
+                  onChange={(e) => site.update((d) => void (d.orderEmail = e.target.value))}
+                  placeholder="mjadefengshui@gmail.com"
+                />
+              </Field>
+              <Row>
+                <Field label="Nút mua trên trang sản phẩm">
+                  <Input
+                    value={site.data.commerce?.addLabel ?? ""}
+                    onChange={(e) =>
+                      site.update((d) => {
+                        d.commerce = { ...d.commerce, addLabel: e.target.value };
+                      })
+                    }
+                    placeholder="Mua hàng"
+                  />
+                </Field>
+                <Field label="Nút khi đã thêm vào giỏ">
+                  <Input
+                    value={site.data.commerce?.inCartLabel ?? ""}
+                    onChange={(e) =>
+                      site.update((d) => {
+                        d.commerce = { ...d.commerce, inCartLabel: e.target.value };
+                      })
+                    }
+                    placeholder="Đã thêm — xem giỏ hàng"
+                  />
+                </Field>
+                <Field label="Tiêu đề trang đặt hàng">
+                  <Input
+                    value={site.data.commerce?.checkoutTitle ?? ""}
+                    onChange={(e) =>
+                      site.update((d) => {
+                        d.commerce = { ...d.commerce, checkoutTitle: e.target.value };
+                      })
+                    }
+                    placeholder="Hoàn tất đơn hàng"
+                  />
+                </Field>
+                <Field label="Nút gửi đơn hàng">
+                  <Input
+                    value={site.data.commerce?.checkoutButton ?? ""}
+                    onChange={(e) =>
+                      site.update((d) => {
+                        d.commerce = { ...d.commerce, checkoutButton: e.target.value };
+                      })
+                    }
+                    placeholder="Hoàn tất đơn hàng"
+                  />
+                </Field>
+              </Row>
+              <Field label="Lời giới thiệu ở trang đặt hàng">
+                <Textarea
+                  value={site.data.commerce?.checkoutIntro ?? ""}
+                  onChange={(e) =>
+                    site.update((d) => {
+                      d.commerce = { ...d.commerce, checkoutIntro: e.target.value };
+                    })
+                  }
+                />
+              </Field>
+              <Row>
+                <Field label="Tiêu đề khi đặt xong">
+                  <Input
+                    value={site.data.commerce?.successTitle ?? ""}
+                    onChange={(e) =>
+                      site.update((d) => {
+                        d.commerce = { ...d.commerce, successTitle: e.target.value };
+                      })
+                    }
+                    placeholder="Đơn hàng đã được gửi."
+                  />
+                </Field>
+                <Field label="Lời cảm ơn khi đặt xong">
+                  <Input
+                    value={site.data.commerce?.successBody ?? ""}
+                    onChange={(e) =>
+                      site.update((d) => {
+                        d.commerce = { ...d.commerce, successBody: e.target.value };
+                      })
+                    }
+                    placeholder="MJADE đã nhận đơn và sẽ liên hệ xác nhận…"
+                  />
+                </Field>
+              </Row>
+            </Card>
+
             <Card title="Hệ thống showroom">
               <Guide>
                 Danh sách showroom hiện ở footer trang web. Bấm &quot;+ Thêm showroom&quot; nếu mở thêm cửa hàng.

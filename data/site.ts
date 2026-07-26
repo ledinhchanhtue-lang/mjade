@@ -26,6 +26,18 @@ export type Site = {
   facebookUrl?: string;
   /** Số điện thoại Zalo cho nút chat nổi. Trống = ẩn nút. */
   zaloPhone?: string;
+  /** Email nhận đơn hàng — sửa được trong /admin. */
+  orderEmail?: string;
+  /** Nhãn nút & tiêu đề khu vực mua hàng — sửa được trong /admin. */
+  commerce?: {
+    addLabel?: string;
+    inCartLabel?: string;
+    checkoutTitle?: string;
+    checkoutIntro?: string;
+    checkoutButton?: string;
+    successTitle?: string;
+    successBody?: string;
+  };
 };
 
 /** Nguồn dữ liệu: `content/site.json` — chỉnh sửa được qua trang /admin. */

@@ -6,6 +6,7 @@ import Link from "next/link";
 import { ArrowRight, LoaderCircle, X } from "lucide-react";
 import { useCart } from "@/components/cart/CartProvider";
 import { getProduct, formatPrice } from "@/data/products";
+import { site } from "@/data/site";
 import AvailabilityBadge from "@/components/product/AvailabilityBadge";
 import EditorialButton from "@/components/ui/EditorialButton";
 
@@ -59,11 +60,11 @@ export default function CartPageClient() {
     return (
       <div className="border border-jade-pale bg-white px-8 py-14 text-center">
         <p className="font-heading text-2xl italic text-jade-deep">
-          Yêu cầu đặt giữ đã được gửi.
+          {site.commerce?.successTitle ?? "Đơn hàng đã được gửi."}
         </p>
         <p className="mx-auto mt-3 max-w-md text-[14px] leading-relaxed text-text-secondary">
-          MJADE sẽ liên hệ xác nhận trong thời gian sớm nhất. Sản phẩm chỉ được giữ chính thức
-          sau khi hai bên xác nhận qua điện thoại hoặc tin nhắn.
+          {site.commerce?.successBody ??
+            "MJADE đã nhận đơn và sẽ liên hệ xác nhận trong thời gian sớm nhất qua điện thoại hoặc tin nhắn."}
         </p>
         <div className="mt-7 flex justify-center">
           <EditorialButton href="/bo-suu-tap">Tiếp tục xem bộ sưu tập</EditorialButton>
@@ -76,11 +77,11 @@ export default function CartPageClient() {
     return (
       <div className="border border-dashed border-border bg-background-warm px-6 py-16 text-center">
         <p className="font-heading text-2xl italic text-text-primary">
-          Danh sách đặt giữ đang trống.
+          Giỏ hàng đang trống.
         </p>
         <p className="mx-auto mt-3 max-w-md text-[14px] leading-relaxed text-text-secondary">
-          Khi tìm thấy món ngọc ưng ý, bạn có thể thêm vào đây để gửi yêu cầu đặt giữ —
-          MJADE sẽ xác nhận và giữ sản phẩm cho bạn.
+          Khi tìm thấy món ngọc ưng ý, bạn có thể thêm vào giỏ để đặt mua —
+          MJADE sẽ liên hệ xác nhận đơn và tư vấn cho bạn.
         </p>
         <div className="mt-7 flex justify-center">
           <EditorialButton href="/bo-suu-tap">Khám phá bộ sưu tập</EditorialButton>
@@ -124,10 +125,12 @@ export default function CartPageClient() {
 
       <form onSubmit={handleSubmit} noValidate className="flex h-fit flex-col gap-5 border border-border bg-background-warm px-6 py-7">
         <div>
-          <p className="font-heading text-[22px] text-text-primary">Gửi yêu cầu đặt giữ</p>
+          <p className="font-heading text-[22px] text-text-primary">
+            {site.commerce?.checkoutTitle ?? "Hoàn tất đơn hàng"}
+          </p>
           <p className="mt-2 text-[13px] leading-relaxed text-text-secondary">
-            Chưa phải thanh toán. MJADE sẽ liên hệ xác nhận, tư vấn và thống nhất phương thức
-            phù hợp — kể cả với đơn quốc tế.
+            {site.commerce?.checkoutIntro ??
+              "Điền thông tin nhận hàng, MJADE sẽ liên hệ xác nhận đơn và tư vấn phương thức phù hợp — kể cả với đơn quốc tế."}
           </p>
         </div>
 
@@ -160,10 +163,23 @@ export default function CartPageClient() {
           <input id="rv-email" name="email" type="email" autoComplete="email" className={inputCls} />
         </div>
         <div>
+          <label htmlFor="rv-address" className={labelCls}>
+            Địa chỉ nhận hàng
+          </label>
+          <input
+            id="rv-address"
+            name="address"
+            type="text"
+            autoComplete="street-address"
+            className={inputCls}
+            placeholder="Số nhà, đường, phường/xã, quận/huyện, tỉnh/thành (hoặc quốc gia)"
+          />
+        </div>
+        <div>
           <label htmlFor="rv-note" className={labelCls}>
             Ghi chú
           </label>
-          <textarea id="rv-note" name="note" rows={3} className={inputCls} placeholder="Thời gian muốn được liên hệ, quốc gia nhận hàng…" />
+          <textarea id="rv-note" name="note" rows={3} className={inputCls} placeholder="Thời gian muốn được liên hệ, yêu cầu riêng…" />
         </div>
 
         {status === "error" && (
@@ -184,7 +200,7 @@ export default function CartPageClient() {
             </>
           ) : (
             <>
-              Gửi yêu cầu đặt giữ
+              {site.commerce?.checkoutButton ?? "Hoàn tất đơn hàng"}
               <ArrowRight size={14} strokeWidth={1.5} className="transition-transform duration-300 group-hover:translate-x-1" />
             </>
           )}

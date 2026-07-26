@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
-import { forwardToWebhook, isValidEmail, isValidPhone } from "@/lib/forward";
-import { getProduct } from "@/data/products";
+import { forwardToWebhook, sendOrderEmail, isValidEmail, isValidPhone } from "@/lib/forward";
+import { getProduct, formatPrice } from "@/data/products";
+import { site } from "@/data/site";
 
 export async function POST(req: Request) {
   let data: Record<string, unknown>;
@@ -28,20 +29,32 @@ export async function POST(req: Request) {
     return NextResponse.json({ ok: false, error: "empty" }, { status: 400 });
   }
 
-  const items = slugs
-    .map((s) => getProduct(s))
-    .filter(Boolean)
-    .map((p) => ({ slug: p!.slug, name: p!.name, code: p!.productCode }));
+  const address = String(data.address ?? "").trim();
+  const note = String(data.note ?? "").trim();
+
+  const products = slugs.map((s) => getProduct(s)).filter(Boolean);
+  const items = products.map((p) => ({ slug: p!.slug, name: p!.name, code: p!.productCode }));
 
   if (items.length === 0) {
     return NextResponse.json({ ok: false, error: "unknown-products" }, { status: 400 });
   }
 
+  // Gửi đơn về email MJADE (Web3Forms) + giữ webhook cũ làm sao lưu.
+  await sendOrderEmail({
+    name,
+    phone,
+    email,
+    address,
+    note,
+    to: site.orderEmail,
+    items: products.map((p) => ({ name: p!.name, code: p!.productCode, price: formatPrice(p!) })),
+  });
   await forwardToWebhook(process.env.RESERVE_WEBHOOK_URL, "reserve", {
     name,
     phone,
     email,
-    note: String(data.note ?? "").trim(),
+    address,
+    note,
     items,
   });
 

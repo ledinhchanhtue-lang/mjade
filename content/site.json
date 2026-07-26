@@ -13,6 +13,16 @@
   "footerTheme": "jade",
   "facebookUrl": "https://www.facebook.com/MjadeNo.1/",
   "zaloPhone": "0798530579",
+  "orderEmail": "mjadefengshui@gmail.com",
+  "commerce": {
+    "addLabel": "Mua hàng",
+    "inCartLabel": "Đã thêm — xem giỏ hàng",
+    "checkoutTitle": "Hoàn tất đơn hàng",
+    "checkoutIntro": "Điền thông tin nhận hàng, MJADE sẽ liên hệ xác nhận đơn và tư vấn phương thức phù hợp — kể cả với đơn quốc tế.",
+    "checkoutButton": "Hoàn tất đơn hàng",
+    "successTitle": "Đơn hàng đã được gửi.",
+    "successBody": "MJADE đã nhận đơn và sẽ liên hệ xác nhận trong thời gian sớm nhất qua điện thoại hoặc tin nhắn."
+  },
   "logo": {
     "emblem": "/images/brand/mjade-mryt8kvl.webp",
     "full": "/images/brand/mjade-logo-mryr2pvo.webp"
