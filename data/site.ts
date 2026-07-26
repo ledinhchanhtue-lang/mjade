@@ -18,6 +18,10 @@ export type Site = {
   shippingDestinations: string[];
   /** Kiểu chữ toàn website — chọn qua /admin. Thiếu = "classic". */
   fontPreset?: string;
+  /** Tông màu thanh header — "ivory" (mặc định) hoặc "jade". */
+  headerTheme?: string;
+  /** Tông màu footer — "ivory" (mặc định) hoặc "jade". */
+  footerTheme?: string;
 };
 
 /** Nguồn dữ liệu: `content/site.json` — chỉnh sửa được qua trang /admin. */

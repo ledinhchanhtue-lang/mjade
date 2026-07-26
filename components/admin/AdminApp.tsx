@@ -490,6 +490,34 @@ function ContentTab() {
               onChange={(key) => site.update((d) => void (d.fontPreset = key))}
             />
 
+            <Card title="Tông màu Header & Footer">
+              <Guide>
+                Chọn màu nền cho thanh đầu trang (header) và chân trang (footer). &quot;Xanh ngọc&quot;
+                cho nền xanh lục bảo, chữ kem — sang trọng, đồng bộ logo. Header và footer chỉnh
+                riêng được.
+              </Guide>
+              <Row>
+                <Field label="Màu thanh header (đầu trang)">
+                  <Select
+                    value={site.data.headerTheme ?? "ivory"}
+                    onChange={(e) => site.update((d) => void (d.headerTheme = e.target.value))}
+                  >
+                    <option value="ivory">Kem (mặc định)</option>
+                    <option value="jade">Xanh ngọc lục bảo</option>
+                  </Select>
+                </Field>
+                <Field label="Màu footer (chân trang)">
+                  <Select
+                    value={site.data.footerTheme ?? "ivory"}
+                    onChange={(e) => site.update((d) => void (d.footerTheme = e.target.value))}
+                  >
+                    <option value="ivory">Kem (mặc định)</option>
+                    <option value="jade">Xanh ngọc lục bảo</option>
+                  </Select>
+                </Field>
+              </Row>
+            </Card>
+
             <Card title="Liên hệ">
               <Guide>
                 Email và hotline hiện ở footer, trang Liên hệ, và dùng cho các form tư vấn trên site.

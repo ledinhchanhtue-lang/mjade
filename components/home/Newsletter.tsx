@@ -13,8 +13,9 @@ const socialIcons = {
 
 type Status = "idle" | "loading" | "success" | "invalid" | "error";
 
-export default function Newsletter() {
+export default function Newsletter({ variant = "light" }: { variant?: "light" | "jade" }) {
   const [status, setStatus] = useState<Status>("idle");
+  const isJade = variant === "jade";
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -51,8 +52,14 @@ export default function Newsletter() {
 
   return (
     <div>
-      <p className="font-heading text-xl italic text-text-primary">Kết nối cùng MJADE</p>
-      <p className="mt-3 text-[13px] leading-relaxed text-text-secondary">
+      <p className={`font-heading text-xl italic ${isJade ? "text-white" : "text-text-primary"}`}>
+        Kết nối cùng MJADE
+      </p>
+      <p
+        className={`mt-3 text-[13px] leading-relaxed ${
+          isJade ? "text-white/70" : "text-text-secondary"
+        }`}
+      >
         Nhận cập nhật bộ sưu tập mới, câu chuyện ngọc và ưu đãi đặc quyền.
       </p>
 
@@ -66,13 +73,19 @@ export default function Newsletter() {
           type="email"
           required
           placeholder="Nhập email của bạn"
-          className="w-full border border-border bg-white px-4 py-3 text-[13px] text-text-primary placeholder:text-text-secondary focus:border-jade-deep focus:outline-none"
+          className={`w-full border bg-white px-4 py-3 text-[13px] text-text-primary placeholder:text-text-secondary focus:outline-none ${
+            isJade ? "border-white/25 focus:border-accent-warm" : "border-border focus:border-jade-deep"
+          }`}
         />
         <button
           type="submit"
           disabled={status === "loading"}
           aria-label="Đăng ký nhận tin"
-          className="flex w-12 shrink-0 items-center justify-center border border-l-0 border-border bg-jade-deep text-white transition-colors hover:bg-text-primary disabled:opacity-70"
+          className={`flex w-12 shrink-0 items-center justify-center border border-l-0 transition-colors disabled:opacity-70 ${
+            isJade
+              ? "border-accent-warm bg-accent-warm text-jade-deep hover:bg-white hover:border-white"
+              : "border-border bg-jade-deep text-white hover:bg-text-primary"
+          }`}
         >
           {status === "loading" ? (
             <LoaderCircle size={16} strokeWidth={1.5} className="animate-spin" />
@@ -84,12 +97,22 @@ export default function Newsletter() {
       <p
         aria-live="polite"
         className={`mt-2 min-h-[1.2em] text-[12px] ${
-          status === "success" ? "text-jade-deep" : "text-red-800"
+          status === "success"
+            ? isJade
+              ? "text-accent-warm"
+              : "text-jade-deep"
+            : isJade
+              ? "text-red-200"
+              : "text-red-800"
         }`}
       >
         {feedback[status]}
       </p>
-      <p className="mt-1 text-[11px] leading-relaxed text-text-secondary">
+      <p
+        className={`mt-1 text-[11px] leading-relaxed ${
+          isJade ? "text-white/55" : "text-text-secondary"
+        }`}
+      >
         Email chỉ dùng để gửi bản tin MJADE, có thể hủy bất cứ lúc nào.
       </p>
 
@@ -103,7 +126,11 @@ export default function Newsletter() {
               aria-label={social.label}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-text-primary transition-colors hover:text-jade-deep"
+              className={`transition-colors ${
+                isJade
+                  ? "text-white/80 hover:text-accent-warm"
+                  : "text-text-primary hover:text-jade-deep"
+              }`}
             >
               <Icon size={18} strokeWidth={1.4} />
             </a>

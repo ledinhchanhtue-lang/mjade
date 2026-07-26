@@ -7,6 +7,7 @@ import {
   Inter,
   EB_Garamond,
   Nunito_Sans,
+  Mulish,
 } from "next/font/google";
 
 /**
@@ -73,8 +74,15 @@ const nunitoSans = Nunito_Sans({
   display: "swap",
   preload: false,
 });
+const mulish = Mulish({
+  variable: "--font-mulish",
+  subsets: ["latin", "vietnamese"],
+  weight: ["400", "500", "600"],
+  display: "swap",
+  preload: false,
+});
 
-export type FontPresetKey = "classic" | "elegant" | "modern" | "soft";
+export type FontPresetKey = "classic" | "elegant" | "modern" | "soft" | "diamond";
 
 export type FontPreset = {
   key: FontPresetKey;
@@ -129,6 +137,16 @@ export const FONT_PRESETS: Record<FontPresetKey, FontPreset> = {
     bodyClass: nunitoSans.variable,
     headingCss: 'var(--font-ebgaramond), "EB Garamond", serif',
     bodyCss: 'var(--font-nunitosans), "Nunito Sans", sans-serif',
+  },
+  diamond: {
+    key: "diamond",
+    label: "Kim cương",
+    headingFamily: "Cormorant Garamond",
+    bodyFamily: "Mulish",
+    headingClass: cormorant.variable,
+    bodyClass: mulish.variable,
+    headingCss: 'var(--font-cormorant), "Cormorant Garamond", serif',
+    bodyCss: 'var(--font-mulish), "Mulish", sans-serif',
   },
 };
 
