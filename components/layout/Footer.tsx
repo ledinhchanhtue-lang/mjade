@@ -7,7 +7,9 @@ import Newsletter from "@/components/home/Newsletter";
 
 export default function Footer() {
   const isJade = site.footerTheme === "jade";
-  const footerBg = isJade ? "border-jade-deep bg-jade-deep" : "border-border bg-background";
+  const footerBg = isJade
+    ? "border-[#1f3a2e] bg-[#1f3a2e]"
+    : "border-border bg-background";
   const titleColor = isJade ? "text-white" : "text-text-primary";
   const linkColor = isJade
     ? "text-white/70 hover:text-accent-warm"
