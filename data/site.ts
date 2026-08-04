@@ -24,7 +24,9 @@ export type Site = {
   footerTheme?: string;
   /** Link trang/Messenger Facebook cho nút chat nổi. Trống = ẩn nút. */
   facebookUrl?: string;
-  /** Số điện thoại Zalo cho nút chat nổi. Trống = ẩn nút. */
+  /** Link Zalo đầy đủ (hoặc số điện thoại) cho nút chat nổi. Trống = ẩn nút. */
+  zaloUrl?: string;
+  /** (Cũ) Số điện thoại Zalo — vẫn hỗ trợ nếu chưa điền zaloUrl. */
   zaloPhone?: string;
   /** Email nhận đơn hàng — sửa được trong /admin. */
   orderEmail?: string;

@@ -549,14 +549,15 @@ function ContentTab() {
             <Card title="Nút chat nổi (Zalo / Facebook)">
               <Guide>
                 Hai nút nổi ở góc phải màn hình để khách bấm gặp tư vấn viên. Để trống một ô thì nút
-                đó tự ẩn. Zalo chỉ cần nhập số điện thoại; Facebook nhập link trang hoặc Messenger.
+                đó tự ẩn. Zalo: dán <strong>link Zalo đầy đủ</strong> (khuyên dùng — ví dụ link OA
+                hoặc zalo.me/…) hoặc chỉ nhập số điện thoại. Facebook: dán link trang hoặc Messenger.
               </Guide>
               <Row>
-                <Field label="Số Zalo (để trống = ẩn nút Zalo)">
+                <Field label="Link Zalo (dán link đầy đủ, để trống = ẩn nút Zalo)">
                   <Input
-                    value={site.data.zaloPhone ?? ""}
-                    onChange={(e) => site.update((d) => void (d.zaloPhone = e.target.value))}
-                    placeholder="0798530579"
+                    value={site.data.zaloUrl ?? ""}
+                    onChange={(e) => site.update((d) => void (d.zaloUrl = e.target.value))}
+                    placeholder="https://zalo.me/0798530579"
                   />
                 </Field>
                 <Field label="Link Facebook (để trống = ẩn nút Facebook)">
