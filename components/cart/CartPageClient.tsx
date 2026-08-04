@@ -20,6 +20,8 @@ export default function CartPageClient() {
   const { items, remove, clear, ready } = useCart();
   const [status, setStatus] = useState<Status>("idle");
   const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({});
+  const [payment, setPayment] = useState<"pickup" | "transfer">("pickup");
+  const bank = site.commerce;
 
   const rows = items
     .map((i) => getProduct(i.slug))
@@ -37,12 +39,14 @@ export default function CartPageClient() {
     setFieldErrors(errors);
     if (Object.keys(errors).length > 0) return;
 
+    const paymentLabel = payment === "transfer" ? "Chuyển khoản" : "Nhận tại quầy";
+
     setStatus("loading");
     try {
       const res = await fetch("/api/reserve", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...values, slugs: rows.map((p) => p.slug) }),
+        body: JSON.stringify({ ...values, payment: paymentLabel, slugs: rows.map((p) => p.slug) }),
       });
       if (!res.ok) throw new Error("bad-status");
       setStatus("success");
@@ -175,6 +179,45 @@ export default function CartPageClient() {
             placeholder="Số nhà, đường, phường/xã, quận/huyện, tỉnh/thành (hoặc quốc gia)"
           />
         </div>
+        <div>
+          <span className={labelCls}>Hình thức thanh toán</span>
+          <div className="flex flex-col gap-2">
+            <label className="flex items-center gap-2.5 text-[13px] text-text-primary">
+              <input
+                type="radio"
+                name="payment"
+                value="pickup"
+                checked={payment === "pickup"}
+                onChange={() => setPayment("pickup")}
+              />
+              Nhận tại quầy
+            </label>
+            <label className="flex items-center gap-2.5 text-[13px] text-text-primary">
+              <input
+                type="radio"
+                name="payment"
+                value="transfer"
+                checked={payment === "transfer"}
+                onChange={() => setPayment("transfer")}
+              />
+              Chuyển khoản
+            </label>
+          </div>
+          {payment === "transfer" ? (
+            <div className="mt-3 border border-jade-pale bg-white px-4 py-3 text-[13px] leading-relaxed text-text-primary">
+              <p className="mb-1 text-[11px] font-medium uppercase tracking-[0.1em] text-text-secondary">
+                Thông tin chuyển khoản
+              </p>
+              <p>Chủ tài khoản: <strong>{bank?.bankHolder ?? "Hộ Kinh Doanh Mgems"}</strong></p>
+              <p>Số tài khoản: <strong>{bank?.bankNumber ?? "571234579"}</strong></p>
+              <p>Ngân hàng: <strong>{bank?.bankName ?? "MB Bank"}</strong></p>
+              <p className="mt-2 text-[12px] text-text-secondary">
+                Nội dung CK: Họ tên + số điện thoại. MJADE xác nhận đơn sau khi nhận được chuyển khoản.
+              </p>
+            </div>
+          ) : null}
+        </div>
+
         <div>
           <label htmlFor="rv-note" className={labelCls}>
             Ghi chú

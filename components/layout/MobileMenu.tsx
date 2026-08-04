@@ -113,7 +113,7 @@ export default function MobileMenu({ open, onClose }: MobileMenuProps) {
             className="flex items-center gap-3 text-[13px] text-text-primary"
           >
             <ShoppingBag size={18} strokeWidth={1.4} />
-            Danh sách đặt giữ
+            Giỏ hàng
           </Link>
         </div>
 

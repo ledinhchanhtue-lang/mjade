@@ -45,6 +45,7 @@ export async function sendOrderEmail(fields: {
   email?: string;
   address?: string;
   note?: string;
+  payment?: string;
   to?: string;
   items: { name: string; code: string; price: string }[];
 }): Promise<{ sent: boolean }> {
@@ -55,6 +56,7 @@ export async function sendOrderEmail(fields: {
     `Số điện thoại: ${fields.phone}`,
     fields.email ? `Email: ${fields.email}` : null,
     fields.address ? `Địa chỉ nhận hàng: ${fields.address}` : null,
+    fields.payment ? `Hình thức thanh toán: ${fields.payment}` : null,
     fields.note ? `Ghi chú: ${fields.note}` : null,
     "",
     "Sản phẩm đặt mua:",

@@ -89,8 +89,12 @@ Từ Phase 4, nội dung động nằm ở `content/`: `products.json`, `article
 ### API routes (`app/api/`) — pattern "webhook forward"
 `consult`, `newsletter`, `reserve` — validate server-side rồi POST tới webhook cấu hình qua env (`lib/forward.ts`). **Chưa có webhook thì log ra console với prefix `[MJADE:kind]`** (xem được trong Vercel Functions log) — không mất lead. Xem `.env.example`.
 
-### Mô hình thương mại: KHÔNG thanh toán online
-Cart = "danh sách đặt giữ". CTA là "GỬI YÊU CẦU ĐẶT GIỮ" / "ĐẶT LỊCH XEM NGỌC" / "NHẬN TƯ VẤN RIÊNG". Đừng thêm nút mua/thanh toán khi chưa có hệ thống thật.
+### Mô hình thương mại (cập nhật 2026-08 theo yêu cầu client)
+Đã chuyển từ "đặt giữ" sang **mua hàng bình thường**: nút "Mua hàng" → giỏ → "Hoàn tất đơn hàng"
+với 2 hình thức thanh toán **Nhận tại quầy / Chuyển khoản** (thông tin STK sửa trong /admin →
+`site.commerce.bank*`). Đơn gửi qua email bằng Web3Forms (`lib/sendOrderEmail`, env `WEB3FORMS_KEY`);
+email nhận đơn = `site.orderEmail`. Nhãn nút + thông tin bank đều sửa được trong /admin
+(`site.commerce.*`). KHÔNG thanh toán online tự động (không cổng thanh toán).
 
 ### SEO
 Metadata + canonical từng trang; `app/sitemap.ts`, `app/robots.ts` (chặn /api, /gio-hang, /tim-kiem); JSON-LD: Organization (layout), Product + BreadcrumbList (product detail), Article (bài viết), FAQPage (/cau-hoi-thuong-gap, /ngoc-phi-thuy). Chỉ đưa vào schema giá trị có thật.

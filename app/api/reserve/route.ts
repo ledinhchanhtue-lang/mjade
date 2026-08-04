@@ -31,6 +31,7 @@ export async function POST(req: Request) {
 
   const address = String(data.address ?? "").trim();
   const note = String(data.note ?? "").trim();
+  const payment = String(data.payment ?? "").trim();
 
   const products = slugs.map((s) => getProduct(s)).filter(Boolean);
   const items = products.map((p) => ({ slug: p!.slug, name: p!.name, code: p!.productCode }));
@@ -46,6 +47,7 @@ export async function POST(req: Request) {
     email,
     address,
     note,
+    payment,
     to: site.orderEmail,
     items: products.map((p) => ({ name: p!.name, code: p!.productCode, price: formatPrice(p!) })),
   });
@@ -55,6 +57,7 @@ export async function POST(req: Request) {
     email,
     address,
     note,
+    payment,
     items,
   });
 

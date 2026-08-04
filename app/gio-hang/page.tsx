@@ -4,9 +4,9 @@ import CartPageClient from "@/components/cart/CartPageClient";
 import { site } from "@/data/site";
 
 export const metadata: Metadata = {
-  title: "Danh Sách Đặt Giữ | MJADE",
+  title: "Giỏ Hàng | MJADE",
   description:
-    "Danh sách sản phẩm bạn muốn đặt giữ. Gửi yêu cầu để MJADE xác nhận và giữ sản phẩm cho bạn.",
+    "Giỏ hàng của bạn tại MJADE. Hoàn tất đơn hàng và chọn hình thức nhận hàng phù hợp.",
   alternates: { canonical: `${site.url}/gio-hang` },
   robots: { index: false },
 };
@@ -15,9 +15,9 @@ export default function CartPage() {
   return (
     <>
       <PageHeader
-        eyebrow="Đặt giữ sản phẩm"
-        title="Danh sách đặt giữ của bạn"
-        lead="Với trang sức ngọc độc bản, MJADE dùng hình thức đặt giữ thay vì thanh toán trực tuyến — để bạn luôn được tư vấn kỹ và xem ngọc trước khi quyết định."
+        eyebrow="Giỏ hàng"
+        title="Giỏ hàng của bạn"
+        lead="Kiểm tra các sản phẩm đã chọn và hoàn tất đơn hàng. MJADE sẽ liên hệ xác nhận và tư vấn hình thức nhận hàng, thanh toán phù hợp — kể cả với đơn quốc tế."
       />
       <div className="px-5 pb-16 md:px-10 lg:px-[72px] lg:pb-20">
         <div className="mx-auto max-w-content">

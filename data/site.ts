@@ -37,6 +37,10 @@ export type Site = {
     checkoutButton?: string;
     successTitle?: string;
     successBody?: string;
+    /** Thông tin thanh toán — chuyển khoản. */
+    bankHolder?: string;
+    bankNumber?: string;
+    bankName?: string;
   };
 };
 

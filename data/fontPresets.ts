@@ -41,10 +41,10 @@ export const FONT_PRESET_OPTIONS: FontPresetOption[] = [
   },
   {
     key: "diamond",
-    label: "Kim cương",
+    label: "Kim cương (Diamond Hedge)",
     heading: "Cormorant Garamond",
-    body: "Mulish",
-    note: "Serif Garamond thanh mảnh + sans nhẹ, phong cách trang sức cao cấp (kiểu Diamond Hedge).",
+    body: "Montserrat",
+    note: "Serif Garamond thanh mảnh + Montserrat — đúng phong cách website Diamond Hedge, có tiếng Việt.",
   },
 ];
 
@@ -60,6 +60,5 @@ export const FONT_PREVIEW_HREF =
     "family=Inter:wght@400;600",
     "family=EB+Garamond:ital,wght@0,400;0,600;1,500",
     "family=Nunito+Sans:wght@400;600",
-    "family=Mulish:wght@400;600",
   ].join("&") +
   "&display=swap";

@@ -664,6 +664,44 @@ function ContentTab() {
                   />
                 </Field>
               </Row>
+              <p className="mt-1 text-[12px] font-medium text-text-primary">
+                Thông tin chuyển khoản (hiện khi khách chọn &quot;Chuyển khoản&quot;)
+              </p>
+              <Row>
+                <Field label="Chủ tài khoản">
+                  <Input
+                    value={site.data.commerce?.bankHolder ?? ""}
+                    onChange={(e) =>
+                      site.update((d) => {
+                        d.commerce = { ...d.commerce, bankHolder: e.target.value };
+                      })
+                    }
+                    placeholder="Hộ Kinh Doanh Mgems"
+                  />
+                </Field>
+                <Field label="Số tài khoản">
+                  <Input
+                    value={site.data.commerce?.bankNumber ?? ""}
+                    onChange={(e) =>
+                      site.update((d) => {
+                        d.commerce = { ...d.commerce, bankNumber: e.target.value };
+                      })
+                    }
+                    placeholder="571234579"
+                  />
+                </Field>
+                <Field label="Ngân hàng">
+                  <Input
+                    value={site.data.commerce?.bankName ?? ""}
+                    onChange={(e) =>
+                      site.update((d) => {
+                        d.commerce = { ...d.commerce, bankName: e.target.value };
+                      })
+                    }
+                    placeholder="MB Bank"
+                  />
+                </Field>
+              </Row>
             </Card>
 
             <Card title="Hệ thống showroom">
@@ -1043,7 +1081,7 @@ function ProductsTab() {
 
               <Card title="Bảo quản & giao hàng">
                 <Guide>
-                  Hướng dẫn bảo quản hiện ở cuối trang sản phẩm. Mỗi dòng là một mục. Ghi chú giao hàng hiện bên cạnh nút đặt giữ.
+                  Hướng dẫn bảo quản hiện ở cuối trang sản phẩm. Mỗi dòng là một mục. Ghi chú giao hàng hiện bên cạnh nút mua hàng.
                 </Guide>
                 <Field label="Hướng dẫn bảo quản (mỗi dòng là một mục)">
                   <Textarea

@@ -8,7 +8,7 @@
   "description": "MJADE tuyển chọn trang sức ngọc phỉ thúy Myanmar Type A 100% tự nhiên — đồng hành cùng bạn trên hành trình trở về với ánh sáng bên trong. Bao kiểm định, minh bạch nguồn gốc, tư vấn cá nhân hóa.",
   "email": "lienhe@mjade.vn",
   "phone": "0798530579",
-  "fontPreset": "classic",
+  "fontPreset": "diamond",
   "headerTheme": "jade",
   "footerTheme": "jade",
   "facebookUrl": "https://www.facebook.com/MjadeNo.1/",
@@ -21,7 +21,10 @@
     "checkoutIntro": "Điền thông tin nhận hàng, MJADE sẽ liên hệ xác nhận đơn và tư vấn phương thức phù hợp — kể cả với đơn quốc tế.",
     "checkoutButton": "Hoàn tất đơn hàng",
     "successTitle": "Đơn hàng đã được gửi.",
-    "successBody": "MJADE đã nhận đơn và sẽ liên hệ xác nhận trong thời gian sớm nhất qua điện thoại hoặc tin nhắn."
+    "successBody": "MJADE đã nhận đơn và sẽ liên hệ xác nhận trong thời gian sớm nhất qua điện thoại hoặc tin nhắn.",
+    "bankHolder": "Hộ Kinh Doanh Mgems",
+    "bankNumber": "571234579",
+    "bankName": "MB Bank"
   },
   "logo": {
     "emblem": "/images/brand/mjade-ms7b6j9h.webp",

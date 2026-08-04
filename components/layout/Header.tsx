@@ -35,8 +35,8 @@ export default function Header() {
   // Lớp màu theo tông header (kem mặc định / xanh ngọc).
   const headerBg = isJade
     ? scrolled
-      ? "border-white/15 bg-jade-deep/95 backdrop-blur-sm"
-      : "border-jade-deep bg-jade-deep"
+      ? "border-white/15 bg-[#1b392d]/95 backdrop-blur-sm"
+      : "border-[#1b392d] bg-[#1b392d]"
     : scrolled
       ? "border-border bg-background/95 backdrop-blur-sm"
       : "border-border/70 bg-background";
@@ -99,7 +99,7 @@ export default function Header() {
           </Link>
           <Link
             href="/gio-hang"
-            aria-label={`Danh sách đặt giữ${ready && count > 0 ? ` (${count} sản phẩm)` : ""}`}
+            aria-label={`Giỏ hàng${ready && count > 0 ? ` (${count} sản phẩm)` : ""}`}
             className={`relative inline-flex ${iconLink}`}
           >
             <ShoppingBag size={19} strokeWidth={1.4} />
