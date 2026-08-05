@@ -135,6 +135,7 @@ function BlockEditor({
   imgW,
   imgH,
   withCaption,
+  withGallery,
 }: {
   title: string;
   guide?: string;
@@ -143,7 +144,9 @@ function BlockEditor({
   imgW: number;
   imgH: number;
   withCaption?: boolean;
+  withGallery?: boolean;
 }) {
+  const gallery = block.images ?? (block.image ? [block.image] : []);
   return (
     <Card title={title}>
       {guide ? <Guide>{guide}</Guide> : null}
@@ -167,14 +170,83 @@ function BlockEditor({
       <Field label="Đoạn mô tả">
         <Textarea value={block.body} onChange={(e) => onChange((b) => void (b.body = e.target.value))} />
       </Field>
-      <ImageField
-        label="Ảnh"
-        value={block.image}
-        width={imgW}
-        height={imgH}
-        hint={`Ảnh sẽ tự resize ${imgW}×${imgH} và nén WebP.`}
-        onChange={(p) => onChange((b) => void (b.image = p))}
-      />
+      {withGallery ? (
+        <div className="flex flex-col gap-4">
+          <p className="text-[13px] font-medium text-text-primary">
+            Ảnh banner — thêm nhiều ảnh để tự động cuộn (slideshow)
+          </p>
+          {gallery.map((img, i) => (
+            <div
+              key={i}
+              className="flex flex-col gap-2 border-t border-border pt-3 first:border-0 first:pt-0"
+            >
+              <ImageField
+                label={`Ảnh ${i + 1}`}
+                value={img}
+                width={imgW}
+                height={imgH}
+                hint={`Ảnh sẽ tự resize ${imgW}×${imgH} và nén WebP.`}
+                onChange={(p) =>
+                  onChange((b) => {
+                    const arr = b.images ?? (b.image ? [b.image] : []);
+                    arr[i] = p;
+                    b.images = arr;
+                    if (i === 0) b.image = p;
+                  })
+                }
+              />
+              {gallery.length > 1 ? (
+                <Button
+                  variant="danger"
+                  className="self-start"
+                  onClick={() =>
+                    onChange((b) => {
+                      const arr = b.images ?? [];
+                      arr.splice(i, 1);
+                      b.images = arr;
+                      b.image = arr[0] ?? "";
+                    })
+                  }
+                >
+                  Xoá ảnh này
+                </Button>
+              ) : null}
+            </div>
+          ))}
+          <Button
+            variant="ghost"
+            className="self-start"
+            onClick={() =>
+              onChange((b) => {
+                const arr = b.images ?? (b.image ? [b.image] : []);
+                arr.push("");
+                b.images = arr;
+              })
+            }
+          >
+            + Thêm ảnh
+          </Button>
+          <Field label="Vị trí khối chữ trên banner">
+            <Select
+              value={block.textPosition ?? "right"}
+              onChange={(e) => onChange((b) => void (b.textPosition = e.target.value))}
+            >
+              <option value="left">Bên trái</option>
+              <option value="center">Chính giữa</option>
+              <option value="right">Bên phải</option>
+            </Select>
+          </Field>
+        </div>
+      ) : (
+        <ImageField
+          label="Ảnh"
+          value={block.image}
+          width={imgW}
+          height={imgH}
+          hint={`Ảnh sẽ tự resize ${imgW}×${imgH} và nén WebP.`}
+          onChange={(p) => onChange((b) => void (b.image = p))}
+        />
+      )}
       <Field label="Mô tả ảnh (alt — cho SEO & người khiếm thị)">
         <Input value={block.imageAlt} onChange={(e) => onChange((b) => void (b.imageAlt = e.target.value))} />
       </Field>
@@ -272,11 +344,12 @@ function ContentTab() {
           <>
             <BlockEditor
               title="Khối Hero (banner đầu trang)"
-              guide="Đây là ảnh và chữ đầu tiên khách thấy khi vào trang chủ. Ảnh nên chụp ngang (landscape), nền tối hoặc trung tính để chữ trắng nổi rõ. Kích thước lý tưởng 2200×1467px — hệ thống sẽ tự resize nếu ảnh lớn hơn."
+              guide="Banner đầu trang. Thêm NHIỀU ảnh để tự động cuộn qua lại (slideshow) — có 1 ảnh thì đứng yên. Ảnh chụp ngang (landscape), nền tối/trung tính để chữ trắng nổi rõ, và chừa khoảng trống ở phía đặt chữ. Lý tưởng 2200×1467px. Chọn 'Vị trí khối chữ' để đặt chữ Trái/Giữa/Phải cho hợp ảnh."
               block={home.data.hero}
               imgW={2200}
               imgH={1467}
               withCaption
+              withGallery
               onChange={(fn) => home.update((d) => fn(d.hero))}
             />
             <BlockEditor

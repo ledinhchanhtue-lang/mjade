@@ -11,6 +11,10 @@ export type HomeBlock = {
   imageAlt: string;
   /** Dòng chú thích nhỏ hiển thị trên ảnh (vd: tên người mẫu/đại sứ). Tuỳ chọn. */
   imageCaption?: string;
+  /** Danh sách ảnh cho slideshow hero (tự cuộn). Trống = dùng `image`. */
+  images?: string[];
+  /** Vị trí khối chữ trên hero: "left" | "center" | "right". Mặc định "right". */
+  textPosition?: string;
 };
 
 export type TestimonialsSection = {

@@ -8,7 +8,9 @@
     "ctaHref": "/bo-suu-tap",
     "image": "/images/home/hero-msezrhdi.webp",
     "imageAlt": "CEO-Brand Ambassador Phan Thanh Nhàn (The Winner Of Sing My Song 2018) ",
-    "imageCaption": "CEO-Brand Ambassador Phan Thanh Nhàn — The Winner Of Sing My Song 2018"
+    "imageCaption": "CEO-Brand Ambassador Phan Thanh Nhàn — The Winner Of Sing My Song 2018",
+    "images": ["/images/home/hero-mryr5do6.webp"],
+    "textPosition": "right"
   },
   "story": {
     "eyebrow": "Câu chuyện MJADE",
