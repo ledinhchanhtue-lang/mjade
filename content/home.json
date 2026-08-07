@@ -9,23 +9,25 @@
     "image": "/images/home/hero-msezrhdi.webp",
     "imageAlt": "CEO-Brand Ambassador Phan Thanh Nhàn (The Winner Of Sing My Song 2018) ",
     "imageCaption": "CEO-Brand Ambassador Phan Thanh Nhàn — The Winner Of Sing My Song 2018",
-    "images": ["/images/home/hero-msezrhdi.webp"],
+    "images": [
+      "/images/home/hero-msezrhdi.webp"
+    ],
     "textPosition": "right"
   },
   "story": {
     "eyebrow": "Câu chuyện MJADE",
-    "titleLine1": "Ngọc Phỉ Thuý Tự Nhiên",
-    "titleLine2": "Tinh hoa của Phỉ Thuý Myanmar",
+    "titleLine1": "Ngọc Phỉ Thuý Type A ",
+    "titleLine2": "Tinh hoa Myanmar",
     "body": "\nChúng tôi tuyển chọn Natural Jadeite Jade 100% Type A từ Myanmar – dòng ngọc được giới sưu tầm quốc tế trân quý bởi vẻ đẹp thuần khiết, giá trị bền vững và khả năng lưu truyền qua nhiều thế hệ. Với MJADE, mỗi tuyệt phẩm không chỉ mang giá trị thẩm mỹ, giá trị sưu tầm hay giá trị đầu tư, mà còn lưu giữ những tầng ý nghĩa văn hoá và tinh thần, để trở thành một di sản được nâng niu và truyền trao theo thời gian.\n\n",
     "ctaLabel": "Khám phá câu chuyện",
     "ctaHref": "/cau-chuyen",
-    "image": "/images/home/story-block-mrywcn55.webp",
+    "image": "/images/home/story-block-msikof7o.webp",
     "imageAlt": "Người phụ nữ váy xanh đeo chuỗi ngọc phỉ thúy lục, cầm quạt, phông gỗ ấm trầm"
   },
   "certification": {
     "eyebrow": "Kiểm định & cam kết",
     "titleLine1": "Kiểm định uy tín ",
-    "titleLine2": "từ Myanmar ",
+    "titleLine2": "Myanmar Treasure Gemological Laboratory",
     "body": "Toàn bộ sản phẩm đi kèm chứng thư kiểm định từ Myanmar Treasure Gemological Laboratory — thẩm định công nghệ bởi GIA (America) và FGA (London).",
     "ctaLabel": "Xem mẫu kiểm định",
     "ctaHref": "/kiem-dinh",
@@ -34,8 +36,8 @@
   },
   "testimonialsSection": {
     "eyebrow": "Ngọc nữ MJADE",
-    "titlePlain": "Những chia sẻ thật",
-    "titleItalic": "từ khách hàng"
+    "titlePlain": "Những chia sẻ ",
+    "titleItalic": "từ khách hàng "
   },
   "trustPoints": [
     {
