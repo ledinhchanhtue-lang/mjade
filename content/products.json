@@ -186,9 +186,9 @@
     },
     {
       "id": "p-101",
-      "slug": "mat-day-chuyen-gioi-han",
-      "name": "Mặt dây chuyền Ngọc phỉ thúy — Bộ sưu tập giới hạn",
-      "shortName": "Mặt dây chuyền\nS-VIP ",
+      "slug": "day-chuyen-phi-thuy",
+      "name": "Dây chuyền Ngọc phỉ thúy ",
+      "shortName": "Dây chuyền phỉ thuý \nlục thuỷ nếp băng ",
       "productCode": "MJ-L101",
       "category": "mat-day-chuyen",
       "collection": "limited",
@@ -198,9 +198,9 @@
       "limited": true,
       "featured": false,
       "images": [
-        "/images/products/mat-day-chuyen-gioi-han-1-mrypbefh.webp"
+        "/images/products/mat-day-chuyen-gioi-han-1-mslh0fch.webp"
       ],
-      "thumbnail": "/images/home/limited-mslgy7y5.webp",
+      "thumbnail": "/images/home/limited-mslh0ben.webp",
       "imageAlt": "Chuỗi hạt ngọc phỉ thúy sắc xanh lục vắt trên phiến lá xanh, nền ngà",
       "imageIsTemporary": false,
       "jadeType": "Jadeite Type A",
@@ -218,8 +218,8 @@
       "certificateImage": null,
       "certificatePdf": null,
       "certificateVerificationUrl": null,
-      "shortDescription": "Đồng Điếu Ngọc Phỉ Thuý Tử La Lan S-VIP sở hữu sắc tím thanh nhã và hiếm quý, độc bản duy nhất 1 chiếc. ",
-      "story": "Đồng Điếu Ngọc Phỉ Thuý Tử La Lan S-VIP sở hữu sắc tím thanh nhã, hiếm quý cùng chất ngọc trong trẻo, là tuyệt phẩm độc bản duy nhất được tuyển chọn từ Ngọc Phỉ Thuý Myanmar Type A tự nhiên. Biểu tượng đồng điếu mang ý nghĩa viên mãn và tròn đầy, kết hợp cùng sắc tím được xem là gam màu của sự cao quý trong văn hoá phương Đông, tạo nên một tác phẩm vừa có giá trị sưu tầm, vừa lưu giữ vẻ đẹp vượt thời gian dành cho những nhà sưu tầm tinh hoa.",
+      "shortDescription": "Dây chuyền Ngọc Phỉ Thuý Lục Thuỷ Nếp Băng, nổi bật với sắc xanh lục trong dịu cùng chất ngọc mềm mại, thanh thoát.\n",
+      "story": "Được chế tác từ Ngọc Phỉ Thuý Myanmar Type A tự nhiên, Dây chuyền Lục Thuỷ Nếp Băng mang sắc xanh lục trong trẻo, dịu dàng như một khoảng xanh được thiên nhiên gìn giữ qua thời gian. Chất ngọc mềm mại cùng thiết kế thanh thoát tạo nên vẻ đẹp tinh tế, tượng trưng cho sự bình an, tươi mới và những điều tốt lành trên hành trình mỗi người.\n",
       "careInstructions": [
         "Tránh va đập mạnh và tiếp xúc với hóa chất tẩy rửa.",
         "Lau nhẹ bằng vải mềm ẩm sau khi sử dụng.",
@@ -227,8 +227,8 @@
         "Định kỳ mang đến MJADE để được kiểm tra và làm sạch chuyên sâu."
       ],
       "shippingNotes": "Giao hàng toàn quốc và quốc tế. Đơn hàng quốc tế được tư vấn phương án vận chuyển và bảo hiểm phù hợp trước khi gửi.",
-      "seoTitle": "Mặt dây chuyền Ngọc phỉ thúy giới hạn | MJADE",
-      "seoDescription": "Mặt dây chuyền ngọc phỉ thúy độc bản thuộc bộ sưu tập giới hạn MJADE. Liên hệ tư vấn riêng."
+      "seoTitle": "Dây chuyền Ngọc Phỉ Thuý Lục Thuỷ Nếp Băng | MJADE",
+      "seoDescription": "Dây chuyền Ngọc Phỉ Thuý Lục Thuỷ Nếp Băng, nổi bật với sắc xanh lục trong dịu cùng chất ngọc mềm mại, thanh thoát.\n"
     },
     {
       "id": "p-102",
