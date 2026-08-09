@@ -108,7 +108,7 @@
       "images": [
         "/images/products/hoa-tai-ngoc-phi-thuy-vang-18k-2-mseiog9r.webp"
       ],
-      "thumbnail": "/images/home/featured-earrings-2-mseio9h4.webp",
+      "thumbnail": "/images/home/featured-earrings-2-mslgvjxn.webp",
       "imageAlt": "Hoa tai ngọc phỉ thúy dáng giọt sắc xanh lục đeo trên tai (ảnh minh họa)",
       "imageIsTemporary": true,
       "jadeType": "Jadeite Type A",
@@ -141,25 +141,25 @@
     {
       "id": "p-004",
       "slug": "lac-tay-ngoc-phi-thuy-thiet-ke-rieng",
-      "name": "Vòng chuỗi phỉ thuý Hoàng phỉ ",
-      "shortName": "Vòng chuỗi phỉ thuý\nHoàng phỉ ",
+      "name": "Vòng bản phỉ thuý Hoàng phỉ ",
+      "shortName": "Vòng bản phỉ thuý\nHoàng phỉ ",
       "productCode": "MJ-B004",
-      "category": "vong-tay",
+      "category": "vong-ban",
       "collection": "signature",
-      "priceVnd": 48000000,
+      "priceVnd": 75000000,
       "availability": "lien-he",
       "stockQuantity": null,
       "limited": false,
       "featured": true,
       "images": [
-        "/images/products/lac-tay-ngoc-phi-thuy-thiet-ke-rieng-1-msejpipf.webp"
+        "/images/products/lac-tay-ngoc-phi-thuy-thiet-ke-rieng-1-mslgxiq6.webp"
       ],
-      "thumbnail": "/images/home/featured-msejpm98.webp",
+      "thumbnail": "/images/home/featured-mslgx76j.webp",
       "imageAlt": "Lắc tay kết từ những hạt ngọc phỉ thúy tròn sắc xanh nhạt, đeo trên cổ tay áo lụa trắng",
       "imageIsTemporary": false,
       "jadeType": "Jadeite Type A",
       "origin": "Myanmar",
-      "color": "xanh-luc",
+      "color": null,
       "colorLabel": "Lục hoa bay ",
       "translucency": null,
       "texture": null,
