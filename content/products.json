@@ -48,26 +48,26 @@
     },
     {
       "id": "p-002",
-      "slug": "nhan-ngoc-phi-thuy-boc-vang-trang",
-      "name": "Nhẫn ngọc phỉ thúy nguyên khối",
-      "shortName": "Nhẫn ngọc phỉ thúy\nnguyên khối",
+      "slug": "dong-dieu-nep-chung-tu-la-lan",
+      "name": "Đồng điếu tử la lan nếp chủng",
+      "shortName": "Đồng điếu phỉ thuý \ntử la lan ",
       "productCode": "MJ-R002",
-      "category": "nhan",
+      "category": "mat-day-chuyen",
       "collection": "signature",
-      "priceVnd": 32500000,
+      "priceVnd": 35000000,
       "availability": "chi-con-1",
       "stockQuantity": 1,
       "limited": false,
       "featured": true,
       "images": [
-        "/images/products/nhan-ngoc-phi-thuy-boc-vang-trang-1-mrysz38l.webp"
+        "/images/products/nhan-ngoc-phi-thuy-boc-vang-trang-1-mslgr6ch.webp"
       ],
-      "thumbnail": "/images/home/featured-ring-mseinjcu.webp",
+      "thumbnail": "/images/home/featured-ring-mslgr2s7.webp",
       "imageAlt": "Chiếc nhẫn ngọc phỉ thuý hoàng phỉ trên nền vải trắng ",
       "imageIsTemporary": false,
       "jadeType": "Jadeite Type A",
       "origin": "Myanmar",
-      "color": "xanh-nhat",
+      "color": "lavender",
       "colorLabel": "Ba thái lục ",
       "translucency": null,
       "texture": null,
@@ -80,8 +80,8 @@
       "certificateImage": null,
       "certificatePdf": null,
       "certificateVerificationUrl": null,
-      "shortDescription": "Nhẫn ngọc phỉ thúy nguyên khối, phom tròn trơn tối giản chủng nếp băng ",
-      "story": "Nhẫn Ngọc Phỉ Thuý Nguyên Khối được chế tác từ Ngọc Phỉ Thuý Myanmar Type A tự nhiên, sở hữu vẻ đẹp nguyên bản, đường nét liền khối thanh lịch và là biểu tượng của sự bền vững, viên mãn theo thời gian.\n",
+      "shortDescription": "Đồng Điếu Phỉ Thuý Tử La Lan nguyên khối, thiết kế tròn cân đối với sắc tím hoa lan thanh nhã, mang vẻ đẹp mềm mại và trang nhã.\n",
+      "story": "Được chế tác từ Ngọc Phỉ Thuý Myanmar Type A tự nhiên, Đồng Điếu Tử La Lan nổi bật với sắc tím dịu dàng, tựa cánh hoa lan nở trên nền ngọc. Dáng tròn viên mãn tượng trưng cho sự đủ đầy và hài hòa, trong khi sắc tím mang đến nét đẹp trầm tĩnh, thanh tao – một món ngọc để nâng niu và gìn giữ theo năm tháng.\n",
       "careInstructions": [
         "Tránh va đập mạnh và tiếp xúc với hóa chất tẩy rửa.",
         "Lau nhẹ bằng vải mềm ẩm sau khi sử dụng.",
@@ -89,8 +89,8 @@
         "Định kỳ mang đến MJADE để được kiểm tra và làm sạch chuyên sâu."
       ],
       "shippingNotes": "Giao hàng toàn quốc và quốc tế. Đơn hàng quốc tế được tư vấn phương án vận chuyển và bảo hiểm phù hợp trước khi gửi.",
-      "seoTitle": "Nhẫn Ngọc phỉ thúy nguyên khối Myanmar Type A | MJADE",
-      "seoDescription": "Nhẫn ngọc phỉ thúy Myanmar Type A nguyên khối, phom tròn trơn tối giản. Chỉ còn một chiếc. Tư vấn riêng và giao hàng quốc tế."
+      "seoTitle": "Đồng Điếu Phỉ Thuý Tử La Lan Myanmar Type A | MJADE",
+      "seoDescription": "Đồng Điếu Phỉ Thuý Tử La Lan nguyên khối, thiết kế tròn cân đối với sắc tím hoa lan thanh nhã, mang vẻ đẹp mềm mại và trang nhã.\n"
     },
     {
       "id": "p-003",
