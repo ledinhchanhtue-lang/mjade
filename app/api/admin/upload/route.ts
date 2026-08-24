@@ -3,6 +3,10 @@ import sharp from "sharp";
 import { isAuthed } from "@/lib/admin-auth";
 import { isSafeImagePath, writeImage } from "@/lib/admin-store";
 
+/** Cần Node runtime (sharp là native) và cho phép chạy lâu hơn khi commit ảnh. */
+export const runtime = "nodejs";
+export const maxDuration = 60;
+
 /** Upload ảnh: tự resize + nén WebP rồi commit vào public/images/... */
 export async function POST(req: Request) {
   if (!(await isAuthed())) {
