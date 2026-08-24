@@ -3,8 +3,9 @@
 import { useRef, useState } from "react";
 
 /**
- * Ô chọn/đổi ảnh. Khi upload, file được resize + nén WebP ở server và lưu với
- * TÊN MỚI (thêm hậu tố thời gian) để trình duyệt/Vercel không phục vụ ảnh cũ trong cache.
+ * Ô chọn/đổi ảnh. Khi upload, file gốc được lưu với TÊN MỚI (thêm hậu tố thời gian)
+ * để trình duyệt/Vercel không phục vụ ảnh cũ trong cache. Kích thước/định dạng hiển
+ * thị do Next/Image tự tối ưu khi phục vụ.
  */
 export default function ImageField({
   label,
@@ -45,10 +46,10 @@ export default function ImageField({
       if (height) fd.append("height", String(height));
 
       const r = await fetch("/api/admin/upload", { method: "POST", body: fd });
-      const j = (await r.json()) as { path?: string; error?: string; width?: number; height?: number };
+      const j = (await r.json()) as { path?: string; error?: string };
       if (!r.ok) throw new Error(j.error || "Upload thất bại");
       onChange(j.path!);
-      setMsg(`Đã tải lên (${j.width}×${j.height}). Nhớ bấm "Lưu thay đổi".`);
+      setMsg(`Đã tải lên. Nhớ bấm "Lưu thay đổi".`);
     } catch (e) {
       setErr(e instanceof Error ? e.message : "Upload thất bại");
     } finally {
