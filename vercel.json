@@ -1,0 +1,3 @@
+{
+  "installCommand": "npm install && npm install --include=optional --os=linux --cpu=x64 --libc=glibc --no-save @img/sharp-linux-x64@0.35.3 @img/sharp-libvips-linux-x64@1.3.2"
+}
