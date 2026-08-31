@@ -367,6 +367,51 @@
       "shippingNotes": "Giao hàng toàn quốc và quốc tế. Đơn hàng quốc tế được tư vấn phương án vận chuyển và bảo hiểm phù hợp trước khi gửi.",
       "seoTitle": "Vòng bản Ngọc phỉ thúy giới hạn | MJADE",
       "seoDescription": "Vòng bản ngọc phỉ thúy Myanmar Type A nguyên khối, tuyển chọn giới hạn. Đặt lịch xem ngọc cùng MJADE."
+    },
+    {
+      "id": "sp-mtgwrshb",
+      "slug": "san-pham-moi-mtgwrshb",
+      "name": "Đồng điếu Tư la lan Nếp hoá",
+      "shortName": "",
+      "productCode": "MJ-MTGWRSHB",
+      "category": "mat-day-chuyen",
+      "collection": "signature",
+      "priceVnd": null,
+      "availability": "lien-he",
+      "stockQuantity": null,
+      "limited": false,
+      "featured": false,
+      "images": [
+        "/images/home/anh-mtgxq656.png"
+      ],
+      "thumbnail": "/images/home/anh-mtgwspqk.png",
+      "imageAlt": "",
+      "imageIsTemporary": false,
+      "jadeType": "Jadeite Type A",
+      "origin": "Myanmar",
+      "color": "lavender",
+      "colorLabel": null,
+      "translucency": null,
+      "texture": null,
+      "dimensions": null,
+      "weight": null,
+      "metal": null,
+      "certificateAvailable": false,
+      "certificateIssuer": null,
+      "certificateNumber": null,
+      "certificateImage": null,
+      "certificatePdf": null,
+      "certificateVerificationUrl": null,
+      "shortDescription": "",
+      "story": "",
+      "careInstructions": [
+        "Tránh va chạm mạnh",
+        "Không để tiếp xúc hoá chất, nước hoa, xà phòng",
+        "Lau bằng vải mềm sau khi đeo"
+      ],
+      "shippingNotes": "Giao hàng trong hộp quà cao cấp, kèm giấy kiểm định (nếu có).",
+      "seoTitle": "",
+      "seoDescription": ""
     }
   ]
 }
