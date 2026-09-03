@@ -101,7 +101,7 @@ export default function Hero() {
         ) : null}
 
         {heroBlock.imageCaption ? (
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/55 to-transparent px-5 py-4 md:px-10 lg:px-[72px]">
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 hidden bg-gradient-to-t from-black/55 to-transparent px-5 py-4 md:block md:px-10 lg:px-[72px]">
             <p className="text-[11px] font-medium uppercase tracking-[0.12em] text-white/80">
               {heroBlock.imageCaption}
             </p>
